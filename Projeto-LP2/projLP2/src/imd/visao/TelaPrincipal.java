@@ -27,7 +27,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		setJMenuBar(mnbar);
 		mnbar.add(menuEdit);
 		mnbar.add(menuAjud);
-		
+
 		ct.add(BorderLayout.CENTER, dtp);
 		
 		setSize(800,600);
