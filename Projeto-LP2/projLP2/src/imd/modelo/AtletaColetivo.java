@@ -1,0 +1,34 @@
+package imd.modelo;
+
+import java.util.Date;
+
+public class AtletaColetivo extends Atleta {
+	private String posicao;
+	private Selecao selecao;
+	
+	public AtletaColetivo(Date dataNascimento, String nome, double altura, double peso, 
+			 String posicao, Selecao selecao, String nacionalidade) {
+		super(dataNascimento, nome, altura, peso, nacionalidade);
+		this.posicao = posicao;
+		this.selecao = selecao;
+	}
+
+	public String getPosicao() {
+		return posicao;
+	}
+
+	public void setPosicao(String posicao) {
+		this.posicao = posicao;
+	}
+
+	public Selecao getSelecao() {
+		return selecao;
+	}
+
+	public void setSelecao(Selecao selecao) {
+		this.selecao = selecao;
+	}
+	
+	
+
+}
