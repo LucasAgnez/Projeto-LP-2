@@ -31,7 +31,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		ct.add(BorderLayout.CENTER, dtp);
 		
 		setSize(800,600);
-		setResizable(false);
+		setResizable(true);
 		setTitle("Agenda Eventos Esportivos");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
