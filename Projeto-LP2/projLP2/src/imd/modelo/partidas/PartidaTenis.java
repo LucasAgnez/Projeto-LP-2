@@ -1,4 +1,6 @@
-package imd.modelo;
+package imd.modelo.partidas;
+
+import imd.modelo.atletas.Selecao;
 
 public class PartidaTenis extends Partida {
 

@@ -1,5 +1,6 @@
-package imd.modelo;
+package imd.modelo.partidas;
 
+import imd.modelo.atletas.Selecao;
 
 public abstract class Partida {
 	private Selecao participante1;

@@ -1,4 +1,4 @@
-package imd.modelo;
+package imd.modelo.atletas;
 
 import java.util.Date;
 

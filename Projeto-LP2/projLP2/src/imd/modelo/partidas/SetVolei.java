@@ -1,4 +1,4 @@
-package imd.modelo;
+package imd.modelo.partidas;
 
 public class SetVolei {
 	private int pontosParticipante1;

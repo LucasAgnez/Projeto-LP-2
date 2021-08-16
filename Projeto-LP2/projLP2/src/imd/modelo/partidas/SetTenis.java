@@ -1,4 +1,4 @@
-package imd.modelo;
+package imd.modelo.partidas;
 
 public class SetTenis {
 	private int gamesParticipante1;

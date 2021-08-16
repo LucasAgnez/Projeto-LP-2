@@ -1,4 +1,6 @@
-package imd.modelo;
+package imd.modelo.partidas;
+
+import imd.modelo.atletas.Selecao;
 
 public class PartidaFutebol extends Partida {
 	private int placarParticipante1;
