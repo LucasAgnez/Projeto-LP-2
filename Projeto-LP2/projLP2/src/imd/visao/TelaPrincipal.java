@@ -43,6 +43,8 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 	}
 	public static void main(String[] args) {
 		TelaPrincipal telaPrincipal = new TelaPrincipal();
+		//teste p ver se eu posso commitar
+		System.out.println("teste");
 		telaPrincipal.setVisible(true);
 	}
 }
