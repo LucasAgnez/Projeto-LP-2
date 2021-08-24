@@ -22,4 +22,15 @@ public class Basquete extends Esporte {
 	public void addPartida(PartidaBasquete partida) {
 		partidas.add(partida);
 	}
+	
+	public ArrayList<PartidaBasquete> buscarPartidasSelecao(String pais){
+		ArrayList<PartidaBasquete> partidasPais = new ArrayList<PartidaBasquete>();
+		for(PartidaBasquete p : partidas) {
+			if(p.getParticipante1().getPais().equalsIgnoreCase(pais) || 
+			p.getParticipante2().getPais().equalsIgnoreCase(pais)) {
+				partidasPais.add(p);
+			}
+		}
+		return partidasPais;
+	}
 }

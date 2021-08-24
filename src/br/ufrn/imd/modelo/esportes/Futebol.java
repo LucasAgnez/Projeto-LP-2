@@ -22,4 +22,15 @@ public class Futebol extends Esporte {
 	public void addPartida(PartidaFutebol partida) {
 		partidas.add(partida);
 	}
+	
+	public ArrayList<PartidaFutebol> buscarPartidasSelecao(String pais){
+		ArrayList<PartidaFutebol> partidasPais = new ArrayList<PartidaFutebol>();
+		for(PartidaFutebol p : partidas) {
+			if(p.getParticipante1().getPais().equalsIgnoreCase(pais) || 
+			p.getParticipante2().getPais().equalsIgnoreCase(pais)) {
+				partidasPais.add(p);
+			}
+		}
+		return partidasPais;
+	}
 }

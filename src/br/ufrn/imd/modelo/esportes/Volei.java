@@ -22,4 +22,15 @@ public class Volei extends Esporte {
 	public void addPartida(PartidaVolei partida) {
 		partidas.add(partida);
 	}
+	
+	public ArrayList<PartidaVolei> buscarPartidasSelecao(String pais){
+		ArrayList<PartidaVolei> partidasPais = new ArrayList<PartidaVolei>();
+		for(PartidaVolei p : partidas) {
+			if(p.getParticipante1().getPais().equalsIgnoreCase(pais) || 
+			p.getParticipante2().getPais().equalsIgnoreCase(pais)) {
+				partidasPais.add(p);
+			}
+		}
+		return partidasPais;
+	}
 }

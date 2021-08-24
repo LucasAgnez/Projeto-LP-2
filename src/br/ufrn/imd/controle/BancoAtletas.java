@@ -1,5 +1,6 @@
 package br.ufrn.imd.controle;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -36,6 +37,33 @@ public class BancoAtletas {
 	
 	public void addAtleta(Atleta atleta) {
 		atletasIndividuais.add(atleta);
+	}
+	
+	public ArrayList<Atleta>  buscarAtleta(String nome) {
+		ArrayList<Atleta> atls = new ArrayList<Atleta>();
+		for(Atleta a : atletasIndividuais) {
+			if(a.getNome().equalsIgnoreCase(nome)) {
+				atls.add(a);
+			}
+		}
+		for(Selecao s : selecoes) {
+			for(Atleta a : s.getTime()) {
+				if(a.getNome().equalsIgnoreCase(nome)) {
+					atls.add(a);
+				}
+			}
+		}
+		return atls;
+	}
+	
+	public Selecao buscarSelecao(String nome) {
+		for(Selecao s : selecoes) {
+			if(nome.equalsIgnoreCase(s.getPais())) {
+				return s;
+			}
+		}
+		System.out.println("selecao nao encontrada");
+		return null;
 	}
 
 }

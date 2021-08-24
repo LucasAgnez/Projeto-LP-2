@@ -22,4 +22,15 @@ public class Tenis extends Esporte {
 	public void addPartida(PartidaTenis partida) {
 		partidas.add(partida);
 	}
+	
+	public ArrayList<PartidaTenis> buscarPartidasSelecao(String pais){
+		ArrayList<PartidaTenis> partidasPais = new ArrayList<PartidaTenis>();
+		for(PartidaTenis p : partidas) {
+			if(p.getParticipante1().getPais().equalsIgnoreCase(pais) || 
+			p.getParticipante2().getPais().equalsIgnoreCase(pais)) {
+				partidasPais.add(p);
+			}
+		}
+		return partidasPais;
+	}
 }
