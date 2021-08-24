@@ -36,15 +36,16 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	public static void main(String[] args) {
 		TelaPrincipal telaPrincipal = new TelaPrincipal();
-		//teste p ver se eu posso commitar
-		System.out.println("teste");
 		telaPrincipal.setVisible(true);
 	}
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+	
 }
