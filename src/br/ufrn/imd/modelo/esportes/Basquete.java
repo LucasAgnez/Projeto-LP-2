@@ -6,7 +6,11 @@ import br.ufrn.imd.modelo.partidas.PartidaBasquete;
 
 public class Basquete extends Esporte {
 	private ArrayList<PartidaBasquete> partidas;
-
+	
+	public Basquete() {
+		this.partidas = new ArrayList<PartidaBasquete>();
+	}
+	
 	public ArrayList<PartidaBasquete> getPartida() {
 		return partidas;
 	}

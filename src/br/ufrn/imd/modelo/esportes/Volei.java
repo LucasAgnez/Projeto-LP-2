@@ -6,7 +6,11 @@ import br.ufrn.imd.modelo.partidas.PartidaVolei;
 
 public class Volei extends Esporte {
 	private ArrayList<PartidaVolei> partidas;
-
+	
+	public Volei() {
+		this.partidas = new ArrayList<PartidaVolei>();
+	}
+	
 	public ArrayList<PartidaVolei> getPartida() {
 		return partidas;
 	}

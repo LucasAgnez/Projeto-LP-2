@@ -6,6 +6,10 @@ import br.ufrn.imd.modelo.partidas.PartidaTenis;
 
 public class Tenis extends Esporte {
 	private ArrayList<PartidaTenis> partidas;
+	
+	public Tenis() {
+		this.partidas = new ArrayList<PartidaTenis>();
+	}
 
 	public ArrayList<PartidaTenis> getPartida() {
 		return partidas;

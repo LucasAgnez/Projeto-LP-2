@@ -7,6 +7,10 @@ import br.ufrn.imd.modelo.partidas.PartidaFutebol;
 public class Futebol extends Esporte {
 	private ArrayList<PartidaFutebol> partidas;
 
+	public Futebol() {
+		this.partidas = new ArrayList<PartidaFutebol>();
+	}
+	
 	public ArrayList<PartidaFutebol> getPartida() {
 		return partidas;
 	}
