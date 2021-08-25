@@ -1,7 +1,6 @@
 package br.ufrn.imd.controle;
 
 import br.ufrn.imd.modelo.esportes.*;
-import br.ufrn.imd.modelo.partidas.*;
 
 public class BancoPartidas{
 	private Basquete eventosBasquete;
