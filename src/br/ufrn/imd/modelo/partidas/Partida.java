@@ -3,10 +3,10 @@ package br.ufrn.imd.modelo.partidas;
 import br.ufrn.imd.modelo.atletas.Selecao;
 
 public abstract class Partida {
-	private Selecao participante1;
-	private Selecao participante2;
-	private Selecao vencedor;
-	private String descricao;
+	protected Selecao participante1;
+	protected Selecao participante2;
+	protected Selecao vencedor;
+	protected String descricao;
 	
 	public Partida(Selecao participante1, Selecao participante2) {
 		super();

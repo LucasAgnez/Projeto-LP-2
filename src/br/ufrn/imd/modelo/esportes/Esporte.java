@@ -1,8 +1,8 @@
 package br.ufrn.imd.modelo.esportes;
 
 public abstract class Esporte {
-	private String nome;
-	private String genero;
+	protected String nome;
+	protected String genero;
 
 	public String getNome() {
 		return nome;

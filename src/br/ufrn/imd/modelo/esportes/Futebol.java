@@ -9,6 +9,7 @@ public class Futebol extends Esporte {
 
 	public Futebol() {
 		this.partidas = new ArrayList<PartidaFutebol>();
+		this.nome = "Futebol";
 	}
 	
 	public ArrayList<PartidaFutebol> getPartida() {

@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -24,6 +25,9 @@ import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingConstants;
 
+import br.ufrn.imd.controle.TelaPrincipalControle;
+import br.ufrn.imd.modelo.esportes.Esporte;
+
 public class TelaPrincipal extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
@@ -33,6 +37,8 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 	JMenuBar mnbar = new JMenuBar();	
 	JMenu menuEdit = new JMenu("Editar");
 	JMenu menuAjud = new JMenu("Ajuda");
+	
+	TelaPrincipalControle telaPrincipalControle = new TelaPrincipalControle();
 	
 
     static JList<String> listaEsportes;
@@ -53,10 +59,13 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		labelEsportes.setAlignmentX(CENTER_ALIGNMENT);
         
 		//Lista de esportes
-		String esportes[]= {"Basquete","Futebol","Tênis", "Vôlei"};
-        listaEsportes = new JList<String>(esportes);  
+        listaEsportes = new JList<String>( (telaPrincipalControle.getEsportes().stream().map(e -> e.getNome() ).toArray(String[]::new)));  
         listaEsportes.setSelectedIndex(2);
-		JScrollPane listScrollPane = new JScrollPane(listaEsportes);
+		listaEsportes.setFont(listaEsportes.getFont().deriveFont(22.0f));
+		listaEsportes.setFixedCellHeight(44);
+        JScrollPane listScrollPane = new JScrollPane(listaEsportes);
+		
+		
 
 		//Adicionando lista de esportes e sua label no painel panelEsportes
 		JPanel panelEsportes = new JPanel();
@@ -105,7 +114,10 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		if(e.getActionCommand().equals("Selecionar")) {
+			System.out.println("Teste");
+			System.out.println(listaEsportes.getSelectedValue());
+		}
 	}
 	
 }

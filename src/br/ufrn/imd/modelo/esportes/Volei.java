@@ -9,6 +9,7 @@ public class Volei extends Esporte {
 	
 	public Volei() {
 		this.partidas = new ArrayList<PartidaVolei>();
+		this.nome = "Vôlei";
 	}
 	
 	public ArrayList<PartidaVolei> getPartida() {

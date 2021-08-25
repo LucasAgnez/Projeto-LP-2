@@ -9,6 +9,7 @@ public class Basquete extends Esporte {
 	
 	public Basquete() {
 		this.partidas = new ArrayList<PartidaBasquete>();
+		this.nome = "Basquete";
 	}
 	
 	public ArrayList<PartidaBasquete> getPartida() {
