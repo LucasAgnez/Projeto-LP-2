@@ -1,7 +1,6 @@
 package br.ufrn.imd.controle;
 
 import br.ufrn.imd.modelo.esportes.*;
-import br.ufrn.imd.modelo.partidas.*;
 
 public class BancoPartidas{
 	private Basquete eventosBasquete;
@@ -24,20 +23,12 @@ public class BancoPartidas{
 		this.eventosBasquete = eventosBasquete;
 	}
 	
-	public void addPartidaBasquete(PartidaBasquete partida) {
-		eventosBasquete.addPartida(partida);
-	}
-
 	public Futebol getEventosFutebol() {
 		return eventosFutebol;
 	}
 
 	public void setEventosFutebol(Futebol eventosFutebol) {
 		this.eventosFutebol = eventosFutebol;
-	}
-
-	public void addPartidaFutebol(PartidaFutebol partida) {
-		eventosFutebol.addPartida(partida);
 	}
 	
 	public Tenis getEventosTenis() {
@@ -46,10 +37,6 @@ public class BancoPartidas{
 
 	public void setEventosTenis(Tenis eventosTenis) {
 		this.eventosTenis = eventosTenis;
-	}
-
-	public void addPartidaTenis(PartidaTenis partida) {
-		eventosTenis.addPartida(partida);
 	}
 	
 	public Volei getEventosVolei() {
@@ -60,7 +47,4 @@ public class BancoPartidas{
 		this.eventosVolei = eventosVolei;
 	}
 	
-	public void addPartidaVolei(PartidaVolei partida) {
-		eventosVolei.addPartida(partida);
-	}
 }

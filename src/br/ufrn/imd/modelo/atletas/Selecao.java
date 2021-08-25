@@ -24,7 +24,7 @@ public class Selecao {
 	public void setTime(ArrayList<Atleta> time) {
 		this.time = time;
 	}
-	public void addAtleta(AtletaColetivo atleta) {
+	public void addAtleta(Atleta atleta) {
 		time.add(atleta);
 	}
 	public String getEsporte() {
