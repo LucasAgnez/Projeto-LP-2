@@ -5,36 +5,31 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import br.ufrn.imd.controle.TelaPrincipalControle;
+import br.ufrn.imd.controle.BancoPartidas;
+import br.ufrn.imd.modelo.esportes.Esporte;
 
 public class TelaEscolherEsporte extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
-		
-	JDesktopPane dtp = new JDesktopPane();
-	
 	static JList<String> listaEsportes;
 	
-	TelaPrincipalControle telaPrincipalControle = new TelaPrincipalControle();
 	
 	public TelaEscolherEsporte() {
-		//super(str,false,true);
 		
 		Container ct = this.getContentPane();
 		ct.setLayout(new BorderLayout());
-		ct.add(BorderLayout.CENTER, dtp);
 		
 		
 		//Label da lista de esportes
@@ -42,7 +37,13 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		labelEsportes.setAlignmentX(CENTER_ALIGNMENT);
         
 		//Lista de esportes
-        listaEsportes = new JList<String>( (telaPrincipalControle.getEsportes().stream().map(e -> e.getNome() ).toArray(String[]::new)));  
+		BancoPartidas bancoPartidas = BancoPartidas.getInstance();
+		ArrayList<Esporte> esportes = new ArrayList<Esporte>();
+		esportes.add(bancoPartidas.getEventosFutebol());
+		esportes.add(bancoPartidas.getEventosBasquete());
+		esportes.add(bancoPartidas.getEventosTenis());
+		esportes.add(bancoPartidas.getEventosVolei());
+        listaEsportes = new JList<String>(esportes.stream().map(e -> e.getNome()).toArray(String[]::new));  
         listaEsportes.setSelectedIndex(2);
 		listaEsportes.setFont(listaEsportes.getFont().deriveFont(22.0f));
 		listaEsportes.setFixedCellHeight(44);
@@ -87,7 +88,6 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		setSize(400,400);
 		setResizable(true);
 		setTitle("Agenda Eventos Esportivos");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	
 	@Override

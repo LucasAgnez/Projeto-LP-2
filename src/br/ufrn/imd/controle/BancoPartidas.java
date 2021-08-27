@@ -7,12 +7,21 @@ public class BancoPartidas{
 	private Futebol eventosFutebol;
 	private Tenis eventosTenis;
 	private Volei eventosVolei;
+	
+	private static BancoPartidas bancoPartidas;
 
 	public BancoPartidas(){
 		this.eventosBasquete = new Basquete();
 		this.eventosFutebol = new Futebol();
 		this.eventosTenis = new Tenis();
 		this.eventosVolei= new Volei();
+	}
+	
+	public static BancoPartidas getInstance() {
+		if (bancoPartidas == null) {
+			bancoPartidas = new BancoPartidas();
+		}
+		return bancoPartidas;
 	}
 
 	public Basquete getEventosBasquete() {
@@ -46,5 +55,7 @@ public class BancoPartidas{
 	public void setEventosVolei(Volei eventosVolei) {
 		this.eventosVolei = eventosVolei;
 	}
+	
+
 	
 }
