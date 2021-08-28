@@ -41,7 +41,6 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		ArrayList<Esporte> esportes = new ArrayList<Esporte>();
 		esportes.add(bancoPartidas.getEventosFutebol());
 		esportes.add(bancoPartidas.getEventosBasquete());
-		esportes.add(bancoPartidas.getEventosTenis());
 		esportes.add(bancoPartidas.getEventosVolei());
         listaEsportes = new JList<String>(esportes.stream().map(e -> e.getNome()).toArray(String[]::new));  
         listaEsportes.setSelectedIndex(2);
