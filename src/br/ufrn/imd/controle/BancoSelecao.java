@@ -87,6 +87,14 @@ public class BancoSelecao {
 				tmpPartida.setDescricao(data[3]);
 				tmpPartida.setPontuacaoParticipante1(Integer.parseInt(data[4]));
 				tmpPartida.setPontuacaoParticipante2(Integer.parseInt(data[5]));
+				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+				
+				try{ 
+					tmpPartida.setData(ft.parse(data[6])); 
+				} catch(ParseException e){ 
+					System.err.println("Erro ao analisar data usando " + ft); 
+					System.exit(1);
+				}
 				
 				partidas.add(tmpPartida);
 				
@@ -130,6 +138,14 @@ public class BancoSelecao {
 				tmpPartida.setPontosSet4Parti2(Integer.parseInt(data[11]));
 				tmpPartida.setPontosSet5Parti1(Integer.parseInt(data[12]));
 				tmpPartida.setPontosSet5Parti2(Integer.parseInt(data[13]));
+				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+				
+				try{ 
+					tmpPartida.setData(ft.parse(data[14])); 
+				} catch(ParseException e){ 
+					System.err.println("Erro ao analisar data usando " + ft); 
+					System.exit(1);
+				}
 				
 				partidas.add(tmpPartida);
 				
