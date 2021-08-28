@@ -15,6 +15,7 @@ import br.ufrn.imd.modelo.esportes.Basquete;
 import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.esportes.Futebol;
 import br.ufrn.imd.modelo.esportes.Volei;
+import br.ufrn.imd.modelo.partidas.Partida;
 
 
 public class BancoSelecao {
@@ -34,76 +35,88 @@ public class BancoSelecao {
 			tmpSelecao.setID(Integer.parseInt(data[0]));
 			tmpSelecao.setPais(data[1]);
 			
-			String idEsporteString = data[2];
+			tmpSelecao.setEsporte(this.buscaEsportePorID(Integer.parseInt(data[2])));
+			tmpSelecao.setTime(this.buscaAtletasPorSelecao(tmpSelecao.getID()));
 			
-			
-			URL urlEsportes = getClass().getResource("esportes.csv");
-			File fileEsportes = new File(urlSelecoes.getPath());
-			Scanner scEsportes = new Scanner(fileSelecoes);
+		}
+		scSelecoes.close();
+		
+	}
+	
+	private Esporte buscaEsportePorID(int ID) {
+		URL urlEsportes = getClass().getResource("esportes.csv");
+		File fileEsportes = new File(urlEsportes.getPath());
+		Scanner scEsportes;
+		Esporte esporte = null;
+		try {
+			scEsportes = new Scanner(fileEsportes);
 			
 			boolean encontrado = false;
 			while(scEsportes.hasNext() && !encontrado) {
-				String lineEsporte = scSelecoes.nextLine();
-				String[] dataEsporte = line.split(",");
-				if(dataEsporte[0].equals(idEsporteString)) {
+				String lineEsporte = scEsportes.nextLine();
+				String[] dataEsporte = lineEsporte.split(",");
+				if(dataEsporte[0].equals(String.valueOf(ID))) {
 					if(dataEsporte[1].equals("Volei")) {
-						Volei tmpVolei = new Volei();
-						tmpVolei.setID(Integer.parseInt(idEsporteString));
-						tmpVolei.setNome(dataEsporte[1]);
-						tmpVolei.setGenero(dataEsporte[2]);
-						tmpSelecao.setEsporte(tmpVolei);
+						esporte = new Volei();
 					}
 					else if(dataEsporte[1].equals("Basquete")) {
-						Basquete tmpBasquete = new Basquete();
-						tmpBasquete.setID(Integer.parseInt(idEsporteString));
-						tmpBasquete.setNome(dataEsporte[1]);
-						tmpBasquete.setGenero(dataEsporte[2]);
-						tmpSelecao.setEsporte(tmpBasquete);
+						esporte = new Basquete();
 					}
 					else if(dataEsporte[1].equals("Futebol")){
-						Futebol tmpFutebol = new Futebol();
-						tmpFutebol.setID(Integer.parseInt(idEsporteString));
-						tmpFutebol.setNome(dataEsporte[1]);
-						tmpFutebol.setGenero(dataEsporte[2]);
-						tmpSelecao.setEsporte(tmpFutebol);
+						esporte = new Futebol();
 					}
+					esporte.setID(ID);
+					esporte.setNome(dataEsporte[1]);
+					esporte.setGenero(dataEsporte[2]);
 					encontrado = true;
 				}
 			}
-			
-			
+			scEsportes.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
-		/*
-		 * URL url = getClass().getResource("atletas.csv"); File file = new
-		 * File(url.getPath()); Scanner sc = new Scanner(file); while(sc.hasNext()) {
-		 * String line = sc.nextLine(); String[] data = line.split(","); AtletaColetivo
-		 * tmpAtleta = new AtletaColetivo();
-		 * 
-		 * tmpAtleta.setNome(data[0]); SimpleDateFormat ft = new
-		 * SimpleDateFormat("dd/MM/yyyy");
-		 * 
-		 * try{ tmpAtleta.setDataNascimento(ft.parse(data[1])); } catch(ParseException
-		 * e){ System.err.println("Erro ao analisar data usando " + ft); System.exit(1);
-		 * }
-		 * 
-		 * tmpAtleta.setPeso(Double.parseDouble(data[2]));
-		 * tmpAtleta.setAltura(Double.parseDouble(data[3]));
-		 * tmpAtleta.setPosicao(data[4]);
-		 * 
-		 * 
-		 * 
-		 * atletasIndividuais.add(tmpAtleta); }
-		 * 
-		 * sc.close(); this.atletas = file;
-		 */
+		return esporte;
+	}
+	
+	private HashSet<Partida> buscaPartidaPorSelecao(int ID){
+		return null;
 	}
 
+	private HashSet<Atleta> buscaAtletasPorSelecao(int ID){
+		URL url = getClass().getResource("atletas.csv"); 
+		File file = new File(url.getPath()); 
+		Scanner sc;
+		HashSet<Atleta> atletas = new HashSet<Atleta>();
+	
+		try {
+			sc = new Scanner(file);
+			while(sc.hasNext()) {
+				String line = sc.nextLine(); 
+				String[] data = line.split(","); 
+				AtletaColetivo tmpAtleta = new AtletaColetivo();
+				tmpAtleta.setNome(data[0]); 
+				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy");
+				
+				try{ 
+					tmpAtleta.setDataNascimento(ft.parse(data[1])); 
+				} catch(ParseException e){ 
+					System.err.println("Erro ao analisar data usando " + ft); 
+					System.exit(1);
+				}
+				tmpAtleta.setPeso(Double.parseDouble(data[2]));
+				tmpAtleta.setAltura(Double.parseDouble(data[3]));
+				tmpAtleta.setPosicao(data[4]);
+				atletas.add(tmpAtleta);
+			}
+			sc.close();
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		} 
+		
+		
+		return atletas;
+	}
+	
 	public HashSet<Selecao> getSelecoes() {
 		return selecoes;
 	}

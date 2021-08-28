@@ -1,6 +1,6 @@
 package br.ufrn.imd.modelo.atletas;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 import br.ufrn.imd.modelo.esportes.Esporte;
 
@@ -8,7 +8,7 @@ public class Selecao {
 	private int ID;
 	private Esporte esporte;
 	private String pais;
-	private ArrayList<Atleta> time;
+	private HashSet<Atleta> time;
 
 	
 	
@@ -17,7 +17,7 @@ public class Selecao {
 	
 	public Selecao(String pais, String esporte) {
 		this.pais = pais;
-		time = new ArrayList<Atleta>();
+		time = new HashSet<Atleta>();
 	}
 	
 	public int getID() {
@@ -40,10 +40,10 @@ public class Selecao {
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
-	public ArrayList<Atleta> getTime() {
+	public HashSet<Atleta> getTime() {
 		return time;
 	}
-	public void setTime(ArrayList<Atleta> time) {
+	public void setTime(HashSet<Atleta> time) {
 		this.time = time;
 	}
 	public void addAtleta(Atleta atleta) {
