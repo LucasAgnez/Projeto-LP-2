@@ -309,7 +309,7 @@ public class BancoSelecao {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		return esportes.toArray(Esporte[]::new);
+		return esportes.stream().sorted((e1, e2) -> e1.toString().compareTo(e2.toString()) ).toArray(Esporte[]::new);
 	}
 	
 	public static BancoSelecao getInstance() {
