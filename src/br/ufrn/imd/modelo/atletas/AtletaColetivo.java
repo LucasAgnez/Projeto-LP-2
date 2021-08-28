@@ -6,6 +6,8 @@ public class AtletaColetivo extends Atleta {
 	private String posicao;
 	private Selecao selecao;
 	
+	public AtletaColetivo() {}
+	
 	public AtletaColetivo(Date dataNascimento, String nome, double altura, double peso, 
 			 String posicao, Selecao selecao, String nacionalidade) {
 		super(dataNascimento, nome, altura, peso, nacionalidade);

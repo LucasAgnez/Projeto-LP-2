@@ -9,6 +9,11 @@ public class Atleta {
 	private double peso;
 	private String nacionalidade;
 
+	
+	public Atleta() {
+		
+	}
+	
 	public Atleta(Date dataNascimento, String nome, double altura, double peso, 
 		String nacionalidade) {
 		super();

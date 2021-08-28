@@ -5,11 +5,15 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+
+import br.ufrn.imd.controle.BancoAtletas;
 
 
 
@@ -52,6 +56,13 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 	public static void main(String[] args) {
 		TelaPrincipal telaPrincipal = new TelaPrincipal();
 		telaPrincipal.setVisible(true);
+		try {
+			BancoAtletas ba = new BancoAtletas();
+			System.out.println(ba.toString());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
