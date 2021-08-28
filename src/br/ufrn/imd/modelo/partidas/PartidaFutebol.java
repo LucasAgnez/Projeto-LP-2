@@ -6,6 +6,9 @@ public class PartidaFutebol extends Partida {
 	private int placarParticipante1;
 	private int placarParticipante2;
 	
+
+	public PartidaFutebol() {}
+	
 	public PartidaFutebol(Selecao participante1, Selecao participante2, int placarParticipante1,
 			int placarParticipante2) {
 		super(participante1, participante2);

@@ -3,6 +3,7 @@ package br.ufrn.imd.modelo.partidas;
 import br.ufrn.imd.modelo.atletas.Selecao;
 
 public abstract class Partida {
+	protected int ID;
 	protected Selecao participante1;
 	protected Selecao participante2;
 	protected Selecao vencedor;
@@ -15,6 +16,16 @@ public abstract class Partida {
 		this.participante1 = participante1;
 		this.participante2 = participante2;
 	}
+	
+	
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
 	public Selecao getParticipante1() {
 		return participante1;
 	}

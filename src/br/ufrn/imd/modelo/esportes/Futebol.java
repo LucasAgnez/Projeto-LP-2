@@ -1,22 +1,22 @@
 package br.ufrn.imd.modelo.esportes;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 import br.ufrn.imd.modelo.partidas.PartidaFutebol;
 
 public class Futebol extends Esporte {
-	private ArrayList<PartidaFutebol> partidas;
+	private HashSet<PartidaFutebol> partidas;
 
 	public Futebol() {
-		this.partidas = new ArrayList<PartidaFutebol>();
+		this.partidas = new HashSet<PartidaFutebol>();
 		this.nome = "Futebol";
 	}
 	
-	public ArrayList<PartidaFutebol> getPartida() {
+	public HashSet<PartidaFutebol> getPartidas() {
 		return partidas;
 	}
 
-	public void setPartida(ArrayList<PartidaFutebol> partidas) {
+	public void setPartidas(HashSet<PartidaFutebol> partidas) {
 		this.partidas = partidas;
 	}
 	
@@ -24,8 +24,8 @@ public class Futebol extends Esporte {
 		partidas.add(partida);
 	}
 	
-	public ArrayList<PartidaFutebol> buscarPartidasSelecao(String pais){
-		ArrayList<PartidaFutebol> partidasPais = new ArrayList<PartidaFutebol>();
+	public HashSet<PartidaFutebol> buscarPartidasSelecao(String pais){
+		HashSet<PartidaFutebol> partidasPais = new HashSet<PartidaFutebol>();
 		for(PartidaFutebol p : partidas) {
 			if(p.getParticipante1().getPais().equalsIgnoreCase(pais) || 
 			p.getParticipante2().getPais().equalsIgnoreCase(pais)) {

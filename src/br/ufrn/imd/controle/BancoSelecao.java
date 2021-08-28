@@ -15,7 +15,9 @@ import br.ufrn.imd.modelo.esportes.Basquete;
 import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.esportes.Futebol;
 import br.ufrn.imd.modelo.esportes.Volei;
-import br.ufrn.imd.modelo.partidas.Partida;
+import br.ufrn.imd.modelo.partidas.PartidaBasquete;
+import br.ufrn.imd.modelo.partidas.PartidaFutebol;
+import br.ufrn.imd.modelo.partidas.PartidaVolei;
 
 
 public class BancoSelecao {
@@ -42,8 +44,137 @@ public class BancoSelecao {
 		}
 		scSelecoes.close();
 		
+	
+		//Setando as partidas
+		for(Selecao selecao : this.selecoes) {
+			Esporte esporte = selecao.getEsporte();
+			if(esporte instanceof Futebol) {
+				((Futebol)esporte).setPartidas(this.buscaPartidasFutebol());
+			}
+			else if(esporte instanceof Volei) {
+				((Volei) esporte).setPartidas(this.buscaPartidasVolei());
+			}
+			else if(esporte instanceof Basquete) {
+				((Basquete) esporte).setPartidas(this.buscaPartidasBasquete());
+			}
+		}
+		
 	}
 	
+	
+	private HashSet<PartidaBasquete> buscaPartidasBasquete() {
+		URL url = getClass().getResource("partidas_basquete.csv");
+		File file = new File(url.getPath());
+		Scanner sc;
+		
+		HashSet<PartidaBasquete> partidas = new HashSet<PartidaBasquete>(); 
+		try {
+			sc = new Scanner(file);
+			
+			while(sc.hasNext()) {
+				PartidaBasquete tmpPartida = new PartidaBasquete();
+				
+				String line = sc.nextLine();
+				String[] data= line.split(",");
+				
+				tmpPartida.setParticipante1(this.encontraSelecaoPorID(Integer.parseInt(data[0])));
+				tmpPartida.setParticipante2(this.encontraSelecaoPorID(Integer.parseInt(data[1])));
+				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
+						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
+				tmpPartida.setVencedor(vencedor);
+				tmpPartida.setDescricao(data[3]);
+				tmpPartida.setPontuacaoParticipante1(Integer.parseInt(data[4]));
+				tmpPartida.setPontuacaoParticipante2(Integer.parseInt(data[5]));
+				
+				partidas.add(tmpPartida);
+				
+			}			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return partidas;
+	}
+
+
+	private HashSet<PartidaVolei> buscaPartidasVolei() {
+		URL url = getClass().getResource("partidas_volei.csv");
+		File file = new File(url.getPath());
+		Scanner sc;
+		
+		HashSet<PartidaVolei> partidas = new HashSet<PartidaVolei>(); 
+		try {
+			sc = new Scanner(file);
+			
+			while(sc.hasNext()) {
+				PartidaVolei tmpPartida = new PartidaVolei();
+				
+				String line = sc.nextLine();
+				String[] data= line.split(",");
+				
+				tmpPartida.setParticipante1(this.encontraSelecaoPorID(Integer.parseInt(data[0])));
+				tmpPartida.setParticipante2(this.encontraSelecaoPorID(Integer.parseInt(data[1])));
+				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
+						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
+				tmpPartida.setVencedor(vencedor);
+				tmpPartida.setDescricao(data[3]);
+				tmpPartida.setPontosSet1Parti1(Integer.parseInt(data[4]));
+				tmpPartida.setPontosSet1Parti2(Integer.parseInt(data[5]));
+				tmpPartida.setPontosSet2Parti1(Integer.parseInt(data[6]));
+				tmpPartida.setPontosSet2Parti2(Integer.parseInt(data[7]));
+				tmpPartida.setPontosSet3Parti1(Integer.parseInt(data[8]));
+				tmpPartida.setPontosSet3Parti2(Integer.parseInt(data[9]));
+				tmpPartida.setPontosSet4Parti1(Integer.parseInt(data[10]));
+				tmpPartida.setPontosSet4Parti2(Integer.parseInt(data[11]));
+				tmpPartida.setPontosSet5Parti1(Integer.parseInt(data[12]));
+				tmpPartida.setPontosSet5Parti2(Integer.parseInt(data[13]));
+				
+				partidas.add(tmpPartida);
+				
+			}			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return partidas;
+	}
+
+
+	private HashSet<PartidaFutebol> buscaPartidasFutebol() {
+		URL url = getClass().getResource("partidas_futebol.csv");
+		File file = new File(url.getPath());
+		Scanner sc;
+		
+		HashSet<PartidaFutebol> partidas = new HashSet<PartidaFutebol>(); 
+		try {
+			sc = new Scanner(file);
+			
+			while(sc.hasNext()) {
+				PartidaFutebol tmpPartida = new PartidaFutebol();
+				
+				String line = sc.nextLine();
+				String[] data= line.split(",");
+				
+				tmpPartida.setParticipante1(this.encontraSelecaoPorID(Integer.parseInt(data[0])));
+				tmpPartida.setParticipante2(this.encontraSelecaoPorID(Integer.parseInt(data[1])));
+				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
+						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
+				tmpPartida.setVencedor(vencedor);
+				tmpPartida.setDescricao(data[3]);
+				tmpPartida.setPlacarParticipante1(Integer.parseInt(data[4]));
+				tmpPartida.setPlacarParticipante2(Integer.parseInt(data[5]));
+				
+				partidas.add(tmpPartida);
+				
+			}			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return partidas;
+	}
+
+
 	private Esporte buscaEsportePorID(int ID) {
 		URL urlEsportes = getClass().getResource("esportes.csv");
 		File fileEsportes = new File(urlEsportes.getPath());
@@ -79,39 +210,7 @@ public class BancoSelecao {
 		return esporte;
 	}
 	
-	private HashSet<Partida> buscaPartidaPorSelecao(int ID){
-		URL url = getClass().getResource("partidas.csv");
-		File file = new File(url.getPath());
-		Scanner sc;
-		HashSet<Partida> partidas = new HashSet<Partida>();
-		try {
-			sc = new Scanner(file);
-			
-			boolean encontrado = false;
-			while(sc.hasNext()) {
-				String line = sc.nextLine();
-				String[] data = line.split(",");
-				if(data[0].equals(String.valueOf(ID)) || data[1].equals(String.valueOf(ID))) {
-					
-					//Partida partida = new Partida();
-					if(data[0].equals(String.valueOf(ID))) {
-						//tmpPartida.setParticipante1();
-					}
-					else {
-						
-					}
-
-				}
-			}			
-			sc.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		
-		return null;
-	}
-
+	
 	private HashSet<Atleta> buscaAtletasPorSelecao(int ID){
 		URL url = getClass().getResource("atletas.csv"); 
 		File file = new File(url.getPath()); 
@@ -145,6 +244,17 @@ public class BancoSelecao {
 		
 		
 		return atletas;
+	}
+	
+	
+	
+	public Selecao encontraSelecaoPorID(int ID) {
+		for(Selecao selecao : this.selecoes) {
+			if(selecao.getID() == ID) {
+				return selecao;
+			}
+		}
+		return null;
 	}
 	
 	public HashSet<Selecao> getSelecoes() {

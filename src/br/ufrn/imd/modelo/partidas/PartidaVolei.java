@@ -17,6 +17,8 @@ public class PartidaVolei extends Partida{
 	private int pontosSet5Parti2;
 	
 	
+	public PartidaVolei() {}
+	
 	public PartidaVolei(Selecao participante1, Selecao participante2) {
 		super(participante1, participante2);
 		setsParticipante1 = 0;

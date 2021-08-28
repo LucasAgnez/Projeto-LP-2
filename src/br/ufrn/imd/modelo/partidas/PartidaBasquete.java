@@ -6,6 +6,8 @@ public class PartidaBasquete extends Partida{
 	private int pontuacaoParticipante1;
 	private int pontuacaoParticipante2;
 	
+	public PartidaBasquete() {}
+	
 	public PartidaBasquete(Selecao participante1, Selecao participante2, int pontuacaoParticipante1,
 			int pontuacaoParticipante2) {
 		super(participante1, participante2);
