@@ -24,6 +24,8 @@ public class BancoSelecao {
 
 	private HashSet<Selecao> selecoes;
 	
+	private static BancoSelecao bancoSelecao;
+	
 	public BancoSelecao() throws FileNotFoundException {
 		this.selecoes = new HashSet<Selecao>();
 		
@@ -247,7 +249,6 @@ public class BancoSelecao {
 	}
 	
 	
-	
 	public Selecao encontraSelecaoPorID(int ID) {
 		for(Selecao selecao : this.selecoes) {
 			if(selecao.getID() == ID) {
@@ -264,6 +265,62 @@ public class BancoSelecao {
 	public void setSelecoes(HashSet<Selecao> selecoes) {
 		this.selecoes = selecoes;
 	}
+	
+	public String[] encontraPaisesPorEsporte(int ID){
+		HashSet<String> paises = new HashSet<String>();
+		for(Selecao selecao : this.selecoes) {
+			if(selecao.getEsporte().getID() == ID) {
+				paises.add(selecao.getPais());
+			}
+		}
+		return paises.toArray(String[]::new);
+	}
+	
+	public Esporte[] encontraEsportes() {
+		URL urlEsportes = getClass().getResource("esportes.csv");
+		File fileEsportes = new File(urlEsportes.getPath());
+		Scanner sc;
+		HashSet<Esporte> esportes = new HashSet<Esporte>();
+		try {
+			sc = new Scanner(fileEsportes);
+			
+			while(sc.hasNext()) {
+				String line= sc.nextLine();
+				String[] data = line.split(",");
+				Esporte tmpEsporte = null;
+				
+				if(data[1].equals("Volei")) {
+					tmpEsporte = new Volei();
+				}
+				else if(data[1].equals("Basquete")) {
+					tmpEsporte = new Basquete();
+				}
+				else if(data[1].equals("Futebol")){
+					tmpEsporte = new Futebol();
+				}
+				
+				tmpEsporte.setID(Integer.parseInt(data[0]));
+				tmpEsporte.setNome(data[1]);
+				tmpEsporte.setGenero(data[2]);
 
+				esportes.add(tmpEsporte);
+			}			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return esportes.toArray(Esporte[]::new);
+	}
+	
+	public static BancoSelecao getInstance() {
+		if (bancoSelecao == null) {
+			try {
+				bancoSelecao = new BancoSelecao();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+		return bancoSelecao;
+	}
 		
 }

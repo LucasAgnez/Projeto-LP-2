@@ -18,12 +18,13 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import br.ufrn.imd.controle.BancoPartidas;
+import br.ufrn.imd.controle.BancoSelecao;
 import br.ufrn.imd.modelo.esportes.Esporte;
 
 public class TelaEscolherEsporte extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
-	static JList<String> listaEsportes;
+	static JList<Esporte> listaEsportes;
 	
 	
 	public TelaEscolherEsporte() {
@@ -37,12 +38,11 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		labelEsportes.setAlignmentX(CENTER_ALIGNMENT);
         
 		//Lista de esportes
-		BancoPartidas bancoPartidas = BancoPartidas.getInstance();
-		ArrayList<Esporte> esportes = new ArrayList<Esporte>();
-		esportes.add(bancoPartidas.getEventosFutebol());
-		esportes.add(bancoPartidas.getEventosBasquete());
-		esportes.add(bancoPartidas.getEventosVolei());
-        listaEsportes = new JList<String>(esportes.stream().map(e -> e.getNome()).toArray(String[]::new));  
+		BancoSelecao bs = BancoSelecao.getInstance();
+	
+		
+		
+        listaEsportes = new JList<Esporte>(bs.encontraEsportes());
         listaEsportes.setSelectedIndex(2);
 		listaEsportes.setFont(listaEsportes.getFont().deriveFont(22.0f));
 		listaEsportes.setFixedCellHeight(44);

@@ -5,7 +5,6 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -13,9 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
-import br.ufrn.imd.controle.BancoAtletas;
-import br.ufrn.imd.controle.BancoSelecao;
-import br.ufrn.imd.modelo.atletas.Selecao;
+//import br.ufrn.imd.controle.BancoSelecao;
+//import br.ufrn.imd.modelo.atletas.Selecao;
 
 
 
@@ -56,16 +54,11 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 
 	
 	public static void main(String[] args) {
+		//BancoSelecao bs = BancoSelecao.getInstance();
+		//for(Selecao selecao  : bs.getSelecoes()) System.out.println(selecao.getID());
+		
 		TelaPrincipal telaPrincipal = new TelaPrincipal();
 		telaPrincipal.setVisible(true);
-		try {
-			BancoSelecao ba = new BancoSelecao();
-			for(Selecao selecao  : ba.getSelecoes()) System.out.println(selecao.getID());
-			System.out.println(ba.getSelecoes().toString());
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		
 	}
 	
 	

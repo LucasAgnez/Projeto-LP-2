@@ -28,4 +28,9 @@ public abstract class Esporte {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
+	
+	@Override
+    public String toString() {
+        return this.nome + " - " + this.genero;
+    }
 }
