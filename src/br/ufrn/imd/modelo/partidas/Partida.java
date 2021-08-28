@@ -8,6 +8,8 @@ public abstract class Partida {
 	protected Selecao vencedor;
 	protected String descricao;
 	
+	public Partida() {}
+	
 	public Partida(Selecao participante1, Selecao participante2) {
 		super();
 		this.participante1 = participante1;

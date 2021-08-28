@@ -37,6 +37,7 @@ public class BancoSelecao {
 			
 			tmpSelecao.setEsporte(this.buscaEsportePorID(Integer.parseInt(data[2])));
 			tmpSelecao.setTime(this.buscaAtletasPorSelecao(tmpSelecao.getID()));
+			this.selecoes.add(tmpSelecao);
 			
 		}
 		scSelecoes.close();
@@ -70,7 +71,7 @@ public class BancoSelecao {
 					esporte.setGenero(dataEsporte[2]);
 					encontrado = true;
 				}
-			}
+			}			
 			scEsportes.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -79,6 +80,35 @@ public class BancoSelecao {
 	}
 	
 	private HashSet<Partida> buscaPartidaPorSelecao(int ID){
+		URL url = getClass().getResource("partidas.csv");
+		File file = new File(url.getPath());
+		Scanner sc;
+		HashSet<Partida> partidas = new HashSet<Partida>();
+		try {
+			sc = new Scanner(file);
+			
+			boolean encontrado = false;
+			while(sc.hasNext()) {
+				String line = sc.nextLine();
+				String[] data = line.split(",");
+				if(data[0].equals(String.valueOf(ID)) || data[1].equals(String.valueOf(ID))) {
+					
+					//Partida partida = new Partida();
+					if(data[0].equals(String.valueOf(ID))) {
+						//tmpPartida.setParticipante1();
+					}
+					else {
+						
+					}
+
+				}
+			}			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		
 		return null;
 	}
 

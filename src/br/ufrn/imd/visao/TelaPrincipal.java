@@ -14,6 +14,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
 import br.ufrn.imd.controle.BancoAtletas;
+import br.ufrn.imd.controle.BancoSelecao;
+import br.ufrn.imd.modelo.atletas.Selecao;
 
 
 
@@ -57,8 +59,9 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		TelaPrincipal telaPrincipal = new TelaPrincipal();
 		telaPrincipal.setVisible(true);
 		try {
-			BancoAtletas ba = new BancoAtletas();
-			System.out.println(ba.toString());
+			BancoSelecao ba = new BancoSelecao();
+			for(Selecao selecao  : ba.getSelecoes()) System.out.println(selecao.getID());
+			System.out.println(ba.getSelecoes().toString());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

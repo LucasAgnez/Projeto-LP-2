@@ -1,12 +1,892 @@
-"Emmaculate Che, emtai",14/10/1993,70,180,Quenia,Oposto
-Gladys Ekaru,02/10/1999,70,192,Quenia,Central
-Pamela Jepkirui,08/02/1996,70,178,Quenia,Ponteiro
-Lorine Chebet,08/10/1999,69,179,Quenia,Central
-Leonida Kasaya,10/10/1993,67,168,Quenia,Ponteiro
-Sharon Kiprono,26/10/1998,82,183,Quenia,Oposto
-Agripina Kundu,24/04/1993,63,155,Quenia,Libero
-Joy Lusenaka,25/02/1991,69,177,Quenia,Levantador
-Mercy Moim,01/01/1989,72,183,Quenia,Ponteiro
-Edith Mukuvilani,20/07/1994,72,184,Quenia,Central
-Noel Murambi,29/01/1989,68,178,Quenia,Ponteiro
-Jane Wacu,24/03/1985,59,174,Quenia,Levantador
+Fernando Cachopa,13/01/1996,85,185,Brasil,Levantador,1
+Douglas,20/08/1995,75,199,Brasil,Ponteiro,1
+M. de Souza,29/09/1988,93,207,Brasil,Central,1
+Wallace,26/06/1987,103,198,Brasil,Oposto,1
+Thales,26/04/1989,80,190,Brasil,Libero,1
+Bruno Rezende,02/07/1986,76,190,Brasil,Levantador,1
+Leal,31/08/1988,105,202,Brasil,Ponteiro,1
+Lucao,06/03/1986,101,209,Brasil,Central,1
+Mauricio,04/02/1989,99,199,Brasil,Ponteiro,1
+Isaac,13/12/1990,99,208,Brasil,Central,1
+Lucarelli,14/02/1992,90,196,Brasil,Oposto,1
+Gabriela,19/05/1994,65,180,Brasil,Ponteiro,2
+Camila,28/10/1988,58,168,Brasil,Líbero,2
+Tandara,30/10/1988,87,184,Brasil,Oposto,2
+Ana Beatriz,07/02/1992,78,188,Brasil,Central,2
+Ana Carolina,08/04/1991,73,183,Brasil,Central,2
+Carol Gattaz,27/07/1981,78,192,Brasil,Central,2
+Ana Cristina,07/04/2004,79,192,Brasil,Ponteiro,2
+Rosamaria,09/04/1994,76,185,Brasil,Oposto,2
+Roberta Ratzke,28/04/1990,71,185,Brasil,Levantador,2
+Fernanda Garay,10/05/1986,74,179,Brasil,Ponteiro,2
+Macris Carneiro,03/03/1989,64,178,Brasil,Levantador,2
+Haruyo Shimamura,04/03/1992,78,182,Japao,Central,3
+Nichika Yamada,24/02/0200,73,184,Japao,Central,3
+Kanami Tashiro,25/03/1991,68,173,Japao,Levantador,3
+Erika Araki,03/08/1984,78,186,Japao,Central,3
+Kotona Hayashi,13/11/1999,60,173,Japao,Ponteiro,3
+Yuki Ishii,08/05/1991,67,180,Japao,Ponteiro,3
+Mayu Ishikawa,14/05/2000,66,173,Japao,Ponteiro,3
+Mako Kobata,15/08/1992,55,164,Japao,Libero,3
+Ai Kurogo ,14/06/1998,69,180,Japao,Ponteiro,3
+Aki Momii,07/10/2000,65,176,Japao,Levantador,3
+Mai Okumura,31/10/1990,66,177,Japao,Central,3
+Sarina Koga,21/05/1996,66,180,Japao,Ponteiro,3
+Daniela Simia,05/09/1997,67,178,Argentina,Ponteiro,4
+Bianca Farriol,18/12/2001,77,185,Argentina,Central,4
+Antonela Fortuna,10/05/1995,67,178,Argentina,Ponteiro,4
+Sabrina Soledad,07/06/1999,70,174,Argentina,Levantador,4
+Candelaria Lucia,28/01/1999,77,182,Argentina,Central,4
+Julieta Lascano,25/07/1989,79,189,Argentina,Central,4
+Victoria Mayer,19/06/2001,66,178,Argentina,Levantador,4
+Erika Mercado,27/02/1992,82,185,Argentina,Oposto,4
+Paula Yamila,27/01/1989,74,182,Argentina,Poteiro,4
+Eugenia Nosach,31/03/1993,66,175,Argentina,Oposto,4
+Tatiana Soledad,30/12/1986,64,178,Argentina,Libero,4
+Eliana Maria,11/02/1997,75,189,Argentina,Ponteiro,4
+Simone Anzani,24/02/1992,100,204,Italia,Central,5
+Massimo Colaci,21/02/1985,73,180,Italia,Libero,5
+Gianluca Galassi,24/06/1997,94,201,Italia,Central,5
+Simone Giannelli,09/08/1996,89,200,Italia,Levantador,5
+Osmany Juantorena,12/08/1985,85,200,Italia,Ponteiro,5
+Jiri Kovar,10/04/1989,95,202,Italia,Ponteiro,5
+Daniele Lavia,04/11/1999,89,200,Italia,Ponteiro,5
+Alessandro Michieletto,05/12/2001,88,205,Italia,Ponteiro,5
+Matteo Piano,24/10/1990,101,208,Italia,Central,5
+Riccardo Sbertoli,23/05/1998,85,188,Italia,Levantador,5
+Luca Vettori,26/04/1991,94,202,Italia,Oposto,5
+Ivan Zaytsev,02/10/1988,103,204,Italia,Oposto,5
+Paola Egonu,18/12/1998,74,193,Italia,Oposto,6
+Monica de Gennaro,08/01/1987,67,174,Italia,Libero,6
+Sarah Luisa,12/09/2001,90,192,Italia,Central,6
+Raphaela Folie,07/03/1991,73,187,Italia,Central,6
+Ofelia Malinov,29/02/1996,70,182,Italia,Levantador,6
+Alessia Orro,18/07/1998,74,178,Italia,Levantador,6
+Elena Pietrini,17/03/2000,73,188,Italia,Ponteiro,6
+Indre Sorokaite,02/07/1988,83,183,Italia,Oposto,6
+Miryam Sylla,08/01/1995,80,184,Italia,Ponteiro,6
+Caterina Chiara,02/02/1994,62,179,Italia,Ponteiro,6
+Cristina Chirichella,10/02/1994,79,191,Italia,Central,6
+Anna Danesi,20/04/1996,78,195,Italia,Central,6
+Matt Anderson,18/04/1987,96,208,EUA,Oposto,7
+Micah Christenson,08/05/1993,88,198,EUA,Levantador,7
+Torey Defalco,10/04/1997,95,195,EUA,Ponteiro,7
+Kyle Ensing,06/03/1997,100,201,EUA,Oposto,7
+Maxwell Holt,13/12/1987,90,206,EUA,Central,7
+Thomas Jaeschke,04/09/1993,94,198,EUA,Ponteiro,7
+Garrett Muagutia,26/02/1988,104,196,EUA,Ponteiro,7
+Taylor Sander,17/03/1992,80,196,EUA,Ponteiro,7
+Erik Shoji,24/08/1989,75,184,EUA,Libero,7
+Kawika Shoji,11/11/1987,79,190,EUA,Levantador,7
+David Smith,15/05/1985,86,203,EUA,Central,7
+Mitchell Stahl,31/08/1994,100,203,EUA,Central,7
+Foluke Akinradewo,05/10/1987,79,191,EUA,Central,8
+Michelle Bartsch-Hackley,12/02/1990,78,190,EUA,Oposto,8
+Andrea Drews,25/12/1993,77,191,EUA,Oposto,8
+Micha Hancock,10/11/1992,76,190,EUA,Levantador,8
+Kimberly Hill,30/11/1989,72,193,EUA,Ponteiro,8
+Jordan Larson,16/10/1986,75,188,EUA,Ponteiro,8
+Chiaka Ogbogu,15/04/1995,73,188,EUA,Central,8
+	Jordyn Poulter,31/07/1997,77,188,EUA,Levantador,8
+Jordan Thompson,05/05/1997,73,193,EUA,Oposto,8
+Haleigh Washington,22/09/1995,82,192,EUA,Central,8
+Justine Wong-Orantes,06/10/1995,66,168,EUA,Libero,8
+Ding Xia,13/01/1990,67,180,China,Oposto,9
+Gong Xiangyu,21/04/1997,67,188,China,Oposto,9
+Zhu Ting ,29/11/1994,74,198,China,Ponteiro,9
+Zhang Changing,06/11/1995,80,195,China,Ponteiro,9
+Yuan Xinyue,21/12/1996,78,201,China,Central,9
+Yao Di,15/08/1992,65,182,China,Levantador,9
+Yan Ni,02/03/1987,74,192,China,Central,9
+Yuanyuan Wang,14/07/1997,75,195,China,Central,9
+Mangjie Wang,14/11/1995,65,172,China,Libero,9
+Liu Yanhan,19/01/1993,75,188,China,Ponteiro,9
+Xiaotong Liu,16/02/1990,80,188,China,Ponteiro,9
+Yingying Li,19/02/0200,71,192,China,Ponteiro,9
+Hyejin An,16/02/1998,64,175,Coreia do Sul,Levantador,10
+Jiyun Jeong,01/01/2001,71,180,Coreia do Sul,Oposto,10
+Su Ji Kim,11/07/1987,68,188,Coreia do Sul,Central,10
+Kim Yeon-koung,26/02/1988,73,192,Coreia do Sul,Ponteiro,10
+Lee So-young,17/11/1994,68,176,Coreia do Sul,Ponteiro,10
+Jiyoung Oh,11/07/1988,61,170,Coreia do Sul,Libero,10
+Eunjin Park,15/12/1999,73,187,Coreia do Sul,Central,10
+Jeongah Park,26/03/1993,75,187,Coreia do Sul,Ponteiro,10
+Hye Seon  Yeum,03/02/0991,66,176,Coreia do Sul,Levantador,10
+Heejin Kim,29/04/1991,80,185,Coreia do Sul,Oposto,10
+Hyo Jin Yang,14/12/1989,70,190,Coreia do Sul,Central,10
+Seungju Pyo,07/08/1992,76,182,Coreia do Sul,Ponteiro,10
+Brenda Castillo,05/06/1992,55,168,Rep. Dominicana,Libero,11
+Bethania de la Cruz,13/05/1987,68,188,Rep. Dominicana,Ponteiro,11
+Camil Dominguez,07/12/1991,75,176,Rep. Dominicana,Levantador,11
+Lisvel Elisa Eve,10/09/1991,70,193,Rep. Dominicana,Central,11
+Gaila Lopez,25/06/1997,73,190,Rep. Dominicana,Oposto,11
+Niverka Marte,19/10/1990,71,178,Rep. Dominicana,Levantador,11
+Brayelin Martinez,11/09/1996,83,201,Rep. Dominicana,Ponteiro,11
+Larysmer Martinez,18/10/1996,68,174,Rep. Dominicana,Libero,11
+Annerys Victoria,07/08/1981,70,196,Rep. Dominicana,Central,11
+Priscilla Riveria,29/12/1984,67,186,Rep. Dominicana,Ponteiro,11
+Yonkaira Paola,10/05/1993,70,190,Rep. Dominicana,Ponteiro,11
+Jineiru Martinez,03/12/1997,68,192,Rep. Dominicana,Central,11
+Emmaculate Chemtai,14/10/1993,70,180,Quenia,Oposto,12
+Gladys Ekaru,02/10/1999,70,192,Quenia,Central,12
+Pamela Jepkirui,08/02/1996,70,178,Quenia,Ponteiro,12
+Lorine Chebet,08/10/1999,69,179,Quenia,Central,12
+Leonida Kasaya,10/10/1993,67,168,Quenia,Ponteiro,12
+Sharon Kiprono,26/10/1998,82,183,Quenia,Oposto,12
+Agripina Kundu,24/04/1993,63,155,Quenia,Libero,12
+Joy Lusenaka,25/02/1991,69,177,Quenia,Levantador,12
+Mercy Moim,01/01/1989,72,183,Quenia,Ponteiro,12
+Edith Mukuvilani,20/07/1994,72,184,Quenia,Central,12
+Noel Murambi,29/01/1989,68,178,Quenia,Ponteiro,12
+Jane Wacu,24/03/1985,59,174,Quenia,Levantador,12
+Ekaterina Enina,10/05/1993,72,192,Russia,Central,13
+Ariana Fedorovtseva,19/01/2004,69,190,Russia,Oposto,13
+Irina Fetisova,07/09/1994,76,190,Russia,Central,13
+Nataliya Olegovna,01/07/1989,75,196,Russia,Oposto,13
+Irina Koroleva,04/10/1991,78,196,Russia,Central,13
+Anna Lazareva,31/01/1997,67,190,Russia,Oposto,13
+Polina Matveeva,08/08/2002,74,194,Russia,Levantador,13
+Daria Pilipenko,09/06/1990,69,177,Russia,Libero,13
+Anna Podkopaeva,16/04/1990,59,175,Russia,Libero,13
+Kseniia Smirnova,24/04/1998,76,188,Russia,Ponteiro,13
+Evgeniya Startseva,12/01/1989,68,185,Russia,Levantador,13
+Irina Voronkova,20/10/1995,84,190,Russia,Ponteiro,13
+Maja Aleksic,06/06/1997,72,188,Servia,Central,14
+Ana Bjelica,03/04/1992,78,190,Servia,Oposto,14
+Milena Rasic,25/10/1990,75,193,Servia,Central,14
+Jalena Blagojevic,01/12/1988,67,181,Servia,Ponteiro,14
+Tijana Boskovic,08/03/1997,82,193,Servia,Oposto,14
+Bianka Busa,25/07/1994,74,187,Servia,Ponteiro,14
+Brankica Mihajlovic,13/04/1991,83,190,Servia,Ponteiro,14
+Bojana Milenkovic,06/03/1997,70,185,Servia,Ponteiro,14
+Sladjana Mirkovic,07/10/1995,78,185,Servia,Levantador,14
+Maja Savic,14/08/1993,70,189,Servia,Central,14
+Mina Popovic,16/09/1994,73,187,Servia,Central,14
+Marija Popovic,20/08/1996,60,162,Servia,Libero,14
+Simge Sebnem,23/04/1991,55,168,Turquia,Libero,15
+Naz Aydemir,14/08/1990,65,186,Turquia,Levantador,15
+Hande Baladin,01/09/1997,71,189,Turquia,Ponteiro,15
+Meryem Boz,03/02/1988,63,191,Turquia,Ponteiro,15
+Kubra Akman,13/10/1994,89,200,Turquia,Central,15
+Seyma Ercan,05/07/1994,69,186,Turquia,Ponteiro,15
+Eda Erdem ,22/06/1987,73,188,Turquia,Central,15
+Zehra Gunes,07/07/1999,88,197,Turquia,Central,15
+Meliha Ismailoglu,17/09/1993,71,188,Turquia,Ponteiro,15
+Ebrar Karakurt,17/01/0200,72,196,Turquia,Oposto,15
+Cansu Ozbay,17/10/1996,75,182,Turquia,Levantador,15
+Tugba Senoglu,02/02/1998,64,184,Turquia,Ponteiro,15
+Blair Cameron Bann,26/02/1988,84,184,Canada,Libero,16
+Jay Blankenau,27/07/1989,90,194,Canada,Levantador,16
+Nicholas Hoag,19/08/1992,97,200,Canada,Ponteiro,16
+Stephen Maar Timothy,06/12/1994,103,202,Canada,Ponteiro,16
+Steven Marshall,23/11/1989,87,193,Canada,Ponteiro,16
+John Gordon Perrin,17/08/1989,95,201,Canada,Ponteiro,16
+Tyler Sanders,14/12/1991,81,191,Canada,Levantador,16
+Ryan Joseph Sclater,10/02/1994,92,200,Canada,Oposto,16
+Arthur Szwarc,30/03/1995,99,209,Canada,Central,16
+Lucas Van Berkel,29/11/1991,108,201,Canada,Central,16
+Sharone Vernon-Evans,28/08/1998,94,202,Canada,Oposto,16
+Graham Vigrass,17/06/1989,97,205,Canada,Central,16
+Milad Ebadipour Ghara H.,17/10/1993,78,196,Iran,Ponteiro,17
+Amir Ghafour,06/06/1991,90,202,Iran,Oposto,17
+Masoud Gholami,02/04/1990,93,204,Iran,Central,17
+Javad Karimisouchelmaei,01/03/1998,104,204,Iran,Levantador,17
+Saber Kazemi,24/12/1998,87,205,Iran,Oposto,17
+Mahdi Marandi,12/05/1986,69,172,iran,Libero,17
+Mir Saeid Marouflakrani,20/10/1985,81,189,Iran,Levantador,17
+Aliasghar Mojarad,30/10/1997,90,205,Iran,Central,17
+Seyed Mohammad Mousavi Eraghi,22/08/1987,86,203,Iran,Central,17
+Meisam Salehi,17/11/1998,89,198,Iran,Ponteiro,17
+Arman Salehi,29/10/1992,81,180,Iran,Libero,17
+Morteza Sharifi,27/05/1999,83,193,Iran,Ponteiro,17
+Mateus Birniek,05/04/1994,98,201,Polonia,Central,18
+Fabian Drzyzga,03/01/1990,90,196,Polonia,Levantador,18
+Lucasz Kaczmarek,29/06/1994,99,204,Polonia,Oposto,18
+Jakub Kochanowski,17/06/1997,85,199,Polonia,Central,18
+Michal Kubiak,23/02/1988,87,191,Polonia,Ponteiro,18
+Bartosz Kurek,29/08/1988,104,205,Polonia,Ponteiro,18
+Wilfredo León Venero,31/06/1993,96,202,Polonia,Ponteiro,18
+Grzegorz Lomacz,01/10/1987,80,187,Polonia,Levantador,18
+Piotr Nowakowski,18/12/1987,105,206,Polonia,Central,18
+Kamil Semeniuk,16/06/1996,84,195,Polonia,Ponteiro,18
+Aleksander Sliwka,24/05/1995,83,196,Polonia,Ponteiro,18
+Pawel Zatorski,21/06/1990,72,184,Polonia,Libero,18
+Luis Antonio Arias Guzman,17/01/1989,87,196,Venezuela,Oposto,19
+Eliecer Alfonso Canelo Sanchez,30/07/1998,78,196,Venezuela,Ponteiro,19
+Jose Manuel Carrasco Angulo,20/05/1989,86,192,Venezuela,Levantador,19
+Ronald Daniel Fayola Hurtado,20/06/1995,88,198,Venezuela,Ponteiro,19
+Fernando Gonzalez,30/06/1989,84,194,Venezuela,Ponteiro,19
+Héctor Mata,27/01/1991,77,179,Venezuela,Libero,19
+Robert Manuel Oramas Brizuela,09/06/1984,90,200,Venezuela,Central,19
+Willner Enrique Rivas Quijada,02/04/1995,81,194,Venezuela,Ponteiro,19
+Emerson Alexander Rodriguez Gonzalez,02/02/1993,96,204,Venezuela,Oposto,19
+Edson Alberto Valencia Gonzalez,02/12/1987,80,200,Venezuela,Central,19
+Armando Fernando Velasquez Escalante,18/09/1988,80,185,Venezuela,Levantador,19
+Jose Verdi,06/02/1990,84,196,Venezuela,Central,19
+Naonobu Fujii,05/01/1992,80,183,Japao,Levantador,20
+Yuki Ishikawa,11/12/1995,84,192,Japao,Ponteiro,20
+Yuji Nishida,30/01/2000,87,186,Japao,Oposto,20
+Taishi Onodera,27/02/1996,98,201,Japao,Central,20
+Tatsunori Otsuka,05/11/2000,80,194,Japao,Ponteiro,20
+Haku Ri,27/12/1990,82,194,Japao,Central,20
+Masahiro Sekita,20/11/1993,72,175,Japao,Levantador,20
+Kunihiro Shimizu,11/08/1986,94,193,Japao,Oposto,20
+Ran Takahashi,02/07/2001,72,188,Japao,Ponteiro,20
+Kenta Takanashi,25/05/1997,78,189,Japao,Ponteiro,20
+Tomohiro Yamamoto,05/11/1994,69,171,Japao,Libero,20
+Akihiro Yamauchi,30/11/1993,72,203,Japao,Central,20
+Santos,17/03/1990,79,188,Brasil,Goleiro,21
+Brenno,01/03/1999,82,190,Brasil,Goleiro,21
+Lucao,26/02/2001,86,190,Brasil,Goleiro,21
+Daniel Alves,06/03/1983,70,172,Brasil,Lateral,21
+Gabriel Menino,29/09/2000,74,176,Brasil,Lateral,21
+Guilherme Arana,14/04/1997,78,176,Brasil,Lateral,21
+Abner,27/05/2000,79,181,Brasil,Lateral,21
+Gabriel Magalhães,19/12/1997,78,190,Brasil,Zagueiro,21
+Nino,10/04/1997,86,188,Brasil,Zagueiro,21
+Diego Carlos,15/03/1993,73,186,Brasil,Zagueiro,21
+Bruno Fuchs,01/04/1999,92,199,Brasil,Zagueiro,21
+Douglas Luiz,09/05/1998,75,178,Brasil,Meia,21
+Bruno Guimarães,16/11/1997,77,182,Brasil,Meia,21
+Ricardo Graca,16/02/1997,78,183,Brasil,Meia,21
+Claudinho ,28/01/1997,79,172,Brasil,Meia,21
+Matheus Henrique,19/12/1997,81,173,Brasil,Meia,21
+Reinier,19/01/2002,81,185,Brasil,Meia,21
+Matheus Cunha,27/05/1997,77,184,Brasil,Atacante,21
+Martinelli,18/06/2001,78,178,Brasil,Atacante,21
+Malcom,26/02/1997,71,171,Brasil,Atacante,21
+Paulinho,15/06/2000,77,177,Brasil,Atacante,21
+Richarlison,10/05/1997,84,184,Brasil,Atacante,21
+Jogador Volei 1,01/01/2001,80,180,Argentina,Central,22
+Jogador Volei 2,02/01/2001,80,180,Argentina,Central,22
+Jogador Volei 3,03/01/2001,80,180,Argentina,Central,22
+Jogador Volei 4,04/01/2001,80,180,Argentina,Libero,22
+Jogador Volei 5,05/01/2001,80,180,Argentina,Oposto,22
+Jogador Volei 6,06/01/2001,80,180,Argentina,Oposto,22
+Jogador Volei 7,07/01/2001,80,180,Argentina,Oposto,22
+Jogador Volei 8,08/01/2001,80,180,Argentina,Ponteiro,22
+Jogador Volei 9,09/01/2001,80,180,Argentina,Ponteiro,22
+Jogador Volei 10,10/01/2001,80,180,Argentina,Ponteiro,22
+Jogador Volei 11,11/01/2001,80,180,Argentina,Levantador,22
+Jogador Volei 12,12/01/2001,80,180,Argentina,Levantador,22
+Jogador Volei 13,13/01/2001,80,180,Franca,Central,23
+Jogador Volei 14,14/01/2001,80,180,Franca,Central,23
+Jogador Volei 15,15/01/2001,80,180,Franca,Central,23
+Jogador Volei 16,16/01/2001,80,180,Franca,Libero,23
+Jogador Volei 17,17/01/2001,80,180,Franca,Oposto,23
+Jogador Volei 18,18/01/2001,80,180,Franca,Oposto,23
+Jogador Volei 19,19/01/2001,80,180,Franca,Oposto,23
+Jogador Volei 20,20/01/2001,80,180,Franca,Ponteiro,23
+Jogador Volei 21,21/01/2001,80,180,Franca,Ponteiro,23
+Jogador Volei 22,22/01/2001,80,180,Franca,Ponteiro,23
+Jogador Volei 23,23/01/2001,80,180,Franca,Levantador,23
+Jogador Volei 24,24/01/2001,80,180,Franca,Levantador,23
+Jogador Volei 25,25/01/2001,80,180,Tunisia,Central,24
+Jogador Volei 26,26/01/2001,80,180,Tunisia,Central,24
+Jogador Volei 27,27/01/2001,80,180,Tunisia,Central,24
+Jogador Volei 28,28/01/2001,80,180,Tunisia,Libero,24
+Jogador Volei 29,29/01/2001,80,180,Tunisia,Oposto,24
+Jogador Volei 30,30/01/2001,80,180,Tunisia,Oposto,24
+Jogador Volei 31,31/01/2001,80,180,Tunisia,Oposto,24
+Jogador Volei 32,01/02/2001,80,180,Tunisia,Ponteiro,24
+Jogador Volei 33,02/02/2001,80,180,Tunisia,Ponteiro,24
+Jogador Volei 34,03/02/2001,80,180,Tunisia,Ponteiro,24
+Jogador Volei 35,04/02/2001,80,180,Tunisia,Levantador,24
+Jogador Volei 36,05/02/2001,80,180,Tunisia,Levantador,24
+Jogador Volei 37,06/02/2001,80,180,Russia,Central,25
+Jogador Volei 38,07/02/2001,80,180,Russia,Central,25
+Jogador Volei 39,08/02/2001,80,180,Russia,Central,25
+Jogador Volei 40,09/02/2001,80,180,Russia,Libero,25
+Jogador Volei 41,10/02/2001,80,180,Russia,Oposto,25
+Jogador Volei 42,11/02/2001,80,180,Russia,Oposto,25
+Jogador Volei 43,12/02/2001,80,180,Russia,Oposto,25
+Jogador Volei 44,13/02/2001,80,180,Russia,Ponteiro,25
+Jogador Volei 45,14/02/2001,80,180,Russia,Ponteiro,25
+Jogador Volei 46,15/02/2001,80,180,Russia,Ponteiro,25
+Jogador Volei 47,16/02/2001,80,180,Russia,Levantador,25
+Jogador Volei 48,17/02/2001,80,180,Russia,Levantador,25
+Luka Doncic,28/02/1999,104,201,Eslovenia,Armador,26
+Jog. Basquete 1,01/01/2001,100,200,Eslovenia,Armador,26
+Jog. Basquete 2,02/01/2001,100,200,Eslovenia,Ala,26
+Jog. Basquete 3,03/01/2001,100,200,Eslovenia,Ala,26
+Jog. Basquete 4,04/01/2001,100,200,Eslovenia,Pivo,26
+Jog. Basquete 5,05/01/2001,100,200,Eslovenia,Armador,26
+Jog. Basquete 6,06/01/2001,100,200,Eslovenia,Armador,26
+Jog. Basquete 7,07/01/2001,100,200,Eslovenia,Ala,26
+Jog. Basquete 8,08/01/2001,100,200,Eslovenia,Ala,26
+Jog. Basquete 9,09/01/2001,100,200,Eslovenia,Pivo,26
+Jog. Basquete 10,10/01/2001,100,200,Eslovenia,Armador,26
+Jog. Basquete 11,11/01/2001,100,200,Eslovenia,Ala,26
+Bam Adebayo,18/07/1997,116,217,EUA,Pivo,27
+Javale McGee,19/01/1988,122,21,EUA,Pivo,27
+Jason Tatum,03/03/1998,95,203,EUA,Ala,27
+Khris Middleton,12/08/1991,101,201,EUA,Ala,27
+Keldon Johnson,11/10/1999,100,196,EUA,Ala,27
+Draymond Green,04/04/1990,104,198,EUA,Ala,27
+Jerami Grant,20/03/1994,95,198,EUA,Ala,27
+Kevin Durant,29/09/1988,109,208,EUA,Ala,27
+Damian Lillard,15/06/1990,88,188,EUA,Armador,27
+Devin Booker,30/10/1996,93,196,EUA,Armador,27
+Jrue Holliday,12/06/1990,93,190,EUA,Armador,27
+Zach Lavine,10/03/1995,91,198,EUA,Armador,27
+Jog. Basquete 12,01/01/2001,100,200,Australia,Pivo,28
+Jog. Basquete 13,02/01/2001,100,200,Australia,Pivo,28
+Jog. Basquete 14,03/01/2001,100,200,Australia,Ala,28
+Jog. Basquete 15,04/01/2001,100,200,Australia,Ala,28
+Jog. Basquete 16,05/01/2001,100,200,Australia,Ala,28
+Jog. Basquete 17,06/01/2001,100,200,Australia,Ala,28
+Jog. Basquete 18,07/01/2001,100,200,Australia,Ala,28
+Jog. Basquete 19,08/01/2001,100,200,Australia,Ala,28
+Jog. Basquete 20,09/01/2001,100,200,Australia,Armador,28
+Jog. Basquete 21,10/01/2001,100,200,Australia,Armador,28
+Jog. Basquete 22,11/01/2001,100,200,Australia,Armador,28
+Jog. Basquete 23,12/01/2001,100,200,Australia,Armador,28
+Jog. Basquete 24,13/01/2001,100,200,Franca,Pivo,29
+Jog. Basquete 25,14/01/2001,100,200,Franca,Pivo,29
+Jog. Basquete 26,15/01/2001,100,200,Franca,Ala,29
+Jog. Basquete 27,16/01/2001,100,200,Franca,Ala,29
+Jog. Basquete 28,17/01/2001,100,200,Franca,Ala,29
+Jog. Basquete 29,18/01/2001,100,200,Franca,Ala,29
+Jog. Basquete 30,19/01/2001,100,200,Franca,Ala,29
+Jog. Basquete 31,20/01/2001,100,200,Franca,Ala,29
+Jog. Basquete 32,21/01/2001,100,200,Franca,Armador,29
+Jog. Basquete 33,22/01/2001,100,200,Franca,Armador,29
+Jog. Basquete 34,23/01/2001,100,200,Franca,Armador,29
+Jog. Basquete 35,24/01/2001,100,200,Franca,Armador,29
+Jog. Basquete 36,25/01/2001,100,200,Iran,Pivo,30
+Jog. Basquete 37,26/01/2001,100,200,Iran,Pivo,30
+Jog. Basquete 38,27/01/2001,100,200,Iran,Ala,30
+Jog. Basquete 39,28/01/2001,100,200,Iran,Ala,30
+Jog. Basquete 40,29/01/2001,100,200,Iran,Ala,30
+Jog. Basquete 41,30/01/2001,100,200,Iran,Ala,30
+Jog. Basquete 42,31/01/2001,100,200,Iran,Ala,30
+Jog. Basquete 43,01/02/2001,100,200,Iran,Ala,30
+Jog. Basquete 44,02/02/2001,100,200,Iran,Armador,30
+Jog. Basquete 45,03/02/2001,100,200,Iran,Armador,30
+Jog. Basquete 46,04/02/2001,100,200,Iran,Armador,30
+Jog. Basquete 47,05/02/2001,100,200,Iran,Armador,30
+Jog. Basquete 48,06/02/2001,100,200,Rep. Tcheca,Pivo,31
+Jog. Basquete 49,07/02/2001,100,200,Rep. Tcheca,Pivo,31
+Jog. Basquete 50,08/02/2001,100,200,Rep. Tcheca,Ala,31
+Jog. Basquete 51,09/02/2001,100,200,Rep. Tcheca,Ala,31
+Jog. Basquete 52,10/02/2001,100,200,Rep. Tcheca,Ala,31
+Jog. Basquete 53,11/02/2001,100,200,Rep. Tcheca,Ala,31
+Jog. Basquete 54,12/02/2001,100,200,Rep. Tcheca,Ala,31
+Jog. Basquete 55,13/02/2001,100,200,Rep. Tcheca,Ala,31
+Jog. Basquete 56,14/02/2001,100,200,Rep. Tcheca,Armador,31
+Jog. Basquete 57,15/02/2001,100,200,Rep. Tcheca,Armador,31
+Jog. Basquete 58,16/02/2001,100,200,Rep. Tcheca,Armador,31
+Jog. Basquete 59,17/02/2001,100,200,Rep. Tcheca,Armador,31
+Jog. Basquete 60,18/02/2001,100,200,Italia,Pivo,32
+Jog. Basquete 61,19/02/2001,100,200,Italia,Pivo,32
+Jog. Basquete 62,20/02/2001,100,200,Italia,Ala,32
+Jog. Basquete 63,21/02/2001,100,200,Italia,Ala,32
+Jog. Basquete 64,22/02/2001,100,200,Italia,Ala,32
+Jog. Basquete 65,23/02/2001,100,200,Italia,Ala,32
+Jog. Basquete 66,24/02/2001,100,200,Italia,Ala,32
+Jog. Basquete 67,25/02/2001,100,200,Italia,Ala,32
+Jog. Basquete 68,26/02/2001,100,200,Italia,Armador,32
+Jog. Basquete 69,27/02/2001,100,200,Italia,Armador,32
+Jog. Basquete 70,28/02/2001,100,200,Italia,Armador,32
+Jog. Basquete 71,01/03/2001,100,200,Italia,Armador,32
+Jog. Basquete 72,02/03/2001,100,200,Alemanha,Pivo,33
+Jog. Basquete 73,03/03/2001,100,200,Alemanha,Pivo,33
+Jog. Basquete 74,04/03/2001,100,200,Alemanha,Ala,33
+Jog. Basquete 75,05/03/2001,100,200,Alemanha,Ala,33
+Jog. Basquete 76,06/03/2001,100,200,Alemanha,Ala,33
+Jog. Basquete 77,07/03/2001,100,200,Alemanha,Ala,33
+Jog. Basquete 78,08/03/2001,100,200,Alemanha,Ala,33
+Jog. Basquete 79,09/03/2001,100,200,Alemanha,Ala,33
+Jog. Basquete 80,10/03/2001,100,200,Alemanha,Armador,33
+Jog. Basquete 81,11/03/2001,100,200,Alemanha,Armador,33
+Jog. Basquete 82,12/03/2001,100,200,Alemanha,Armador,33
+Jog. Basquete 83,13/03/2001,100,200,Alemanha,Armador,33
+Jog. Basquete 84,14/03/2001,100,200,Nigeria,Pivo,34
+Jog. Basquete 85,15/03/2001,100,200,Nigeria,Pivo,34
+Jog. Basquete 86,16/03/2001,100,200,Nigeria,Ala,34
+Jog. Basquete 87,17/03/2001,100,200,Nigeria,Ala,34
+Jog. Basquete 88,18/03/2001,100,200,Nigeria,Ala,34
+Jog. Basquete 89,19/03/2001,100,200,Nigeria,Ala,34
+Jog. Basquete 90,20/03/2001,100,200,Nigeria,Ala,34
+Jog. Basquete 91,21/03/2001,100,200,Nigeria,Ala,34
+Jog. Basquete 92,22/03/2001,100,200,Nigeria,Armador,34
+Jog. Basquete 93,23/03/2001,100,200,Nigeria,Armador,34
+Jog. Basquete 94,24/03/2001,100,200,Nigeria,Armador,34
+Jog. Basquete 95,25/03/2001,100,200,Nigeria,Armador,34
+Jog. Basquete 96,26/03/2001,100,200,Espanha,Pivo,35
+Jog. Basquete 97,27/03/2001,100,200,Espanha,Pivo,35
+Jog. Basquete 98,28/03/2001,100,200,Espanha,Ala,35
+Jog. Basquete 99,29/03/2001,100,200,Espanha,Ala,35
+Jog. Basquete 100,30/03/2001,100,200,Espanha,Ala,35
+Jog. Basquete 101,31/03/2001,100,200,Espanha,Ala,35
+Jog. Basquete 102,01/04/2001,100,200,Espanha,Ala,35
+Jog. Basquete 103,02/04/2001,100,200,Espanha,Ala,35
+Jog. Basquete 104,03/04/2001,100,200,Espanha,Armador,35
+Jog. Basquete 105,04/04/2001,100,200,Espanha,Armador,35
+Jog. Basquete 106,05/04/2001,100,200,Espanha,Armador,35
+Jog. Basquete 107,06/04/2001,100,200,Espanha,Armador,35
+Jog. Basquete 108,07/04/2001,100,200,Japao,Pivo,36
+Jog. Basquete 109,08/04/2001,100,200,Japao,Pivo,36
+Jog. Basquete 110,09/04/2001,100,200,Japao,Ala,36
+Jog. Basquete 111,10/04/2001,100,200,Japao,Ala,36
+Jog. Basquete 112,11/04/2001,100,200,Japao,Ala,36
+Jog. Basquete 113,12/04/2001,100,200,Japao,Ala,36
+Jog. Basquete 114,13/04/2001,100,200,Japao,Ala,36
+Jog. Basquete 115,14/04/2001,100,200,Japao,Ala,36
+Jog. Basquete 116,15/04/2001,100,200,Japao,Armador,36
+Jog. Basquete 117,16/04/2001,100,200,Japao,Armador,36
+Jog. Basquete 118,17/04/2001,100,200,Japao,Armador,36
+Jog. Basquete 119,18/04/2001,100,200,Japao,Armador,36
+Jog. Basquete 120,19/04/2001,100,200,Argentina,Pivo,37
+Jog. Basquete 121,20/04/2001,100,200,Argentina,Pivo,37
+Jog. Basquete 122,21/04/2001,100,200,Argentina,Ala,37
+Jog. Basquete 123,22/04/2001,100,200,Argentina,Ala,37
+Jog. Basquete 124,23/04/2001,100,200,Argentina,Ala,37
+Jog. Basquete 125,24/04/2001,100,200,Argentina,Ala,37
+Jog. Basquete 126,25/04/2001,100,200,Argentina,Ala,37
+Jog. Basquete 127,26/04/2001,100,200,Argentina,Ala,37
+Jog. Basquete 128,27/04/2001,100,200,Argentina,Armador,37
+Jog. Basquete 129,28/04/2001,100,200,Argentina,Armador,37
+Jog. Basquete 130,29/04/2001,100,200,Argentina,Armador,37
+Jog. Basquete 131,30/04/2001,100,200,Argentina,Armador,37
+Joga Basquete 1,01/01/2001,85,186,Espanha,Pivo,38
+Joga Basquete 2,02/01/2001,85,186,Espanha,Pivo,38
+Joga Basquete 3,03/01/2001,85,186,Espanha,Ala,38
+Joga Basquete 4,04/01/2001,85,186,Espanha,Ala,38
+Joga Basquete 5,05/01/2001,85,186,Espanha,Ala,38
+Joga Basquete 6,06/01/2001,85,186,Espanha,Ala,38
+Joga Basquete 7,07/01/2001,85,186,Espanha,Ala,38
+Joga Basquete 8,08/01/2001,85,186,Espanha,Ala,38
+Joga Basquete 9,09/01/2001,85,186,Espanha,Armador,38
+Joga Basquete 10,10/01/2001,85,186,Espanha,Armador,38
+Joga Basquete 11,11/01/2001,85,186,Espanha,Armador,38
+Joga Basquete 12,12/01/2001,85,186,Espanha,Armador,38
+Joga Basquete 13,13/01/2001,85,186,Servia,Pivo,39
+Joga Basquete 14,14/01/2001,85,186,Servia,Pivo,39
+Joga Basquete 15,15/01/2001,85,186,Servia,Ala,39
+Joga Basquete 16,16/01/2001,85,186,Servia,Ala,39
+Joga Basquete 17,17/01/2001,85,186,Servia,Ala,39
+Joga Basquete 18,18/01/2001,85,186,Servia,Ala,39
+Joga Basquete 19,19/01/2001,85,186,Servia,Ala,39
+Joga Basquete 20,20/01/2001,85,186,Servia,Ala,39
+Joga Basquete 21,21/01/2001,85,186,Servia,Armador,39
+Joga Basquete 22,22/01/2001,85,186,Servia,Armador,39
+Joga Basquete 23,23/01/2001,85,186,Servia,Armador,39
+Joga Basquete 24,24/01/2001,85,186,Servia,Armador,39
+Joga Basquete 25,25/01/2001,85,186,Canada,Pivo,40
+Joga Basquete 26,26/01/2001,85,186,Canada,Pivo,40
+Joga Basquete 27,27/01/2001,85,186,Canada,Ala,40
+Joga Basquete 28,28/01/2001,85,186,Canada,Ala,40
+Joga Basquete 29,29/01/2001,85,186,Canada,Ala,40
+Joga Basquete 30,30/01/2001,85,186,Canada,Ala,40
+Joga Basquete 31,31/01/2001,85,186,Canada,Ala,40
+Joga Basquete 32,01/02/2001,85,186,Canada,Ala,40
+Joga Basquete 33,02/02/2001,85,186,Canada,Armador,40
+Joga Basquete 34,03/02/2001,85,186,Canada,Armador,40
+Joga Basquete 35,04/02/2001,85,186,Canada,Armador,40
+Joga Basquete 36,05/02/2001,85,186,Canada,Armador,40
+Joga Basquete 37,06/02/2001,85,186,Coreia do Sul,Pivo,41
+Joga Basquete 38,07/02/2001,85,186,Coreia do Sul,Pivo,41
+Joga Basquete 39,08/02/2001,85,186,Coreia do Sul,Ala,41
+Joga Basquete 40,09/02/2001,85,186,Coreia do Sul,Ala,41
+Joga Basquete 41,10/02/2001,85,186,Coreia do Sul,Ala,41
+Joga Basquete 42,11/02/2001,85,186,Coreia do Sul,Ala,41
+Joga Basquete 43,12/02/2001,85,186,Coreia do Sul,Ala,41
+Joga Basquete 44,13/02/2001,85,186,Coreia do Sul,Ala,41
+Joga Basquete 45,14/02/2001,85,186,Coreia do Sul,Armador,41
+Joga Basquete 46,15/02/2001,85,186,Coreia do Sul,Armador,41
+Joga Basquete 47,16/02/2001,85,186,Coreia do Sul,Armador,41
+Joga Basquete 48,17/02/2001,85,186,Coreia do Sul,Armador,41
+Joga Basquete 49,18/02/2001,85,186,EUA,Pivo,42
+Joga Basquete 50,19/02/2001,85,186,EUA,Pivo,42
+Joga Basquete 51,20/02/2001,85,186,EUA,Ala,42
+Joga Basquete 52,21/02/2001,85,186,EUA,Ala,42
+Joga Basquete 53,22/02/2001,85,186,EUA,Ala,42
+Joga Basquete 54,23/02/2001,85,186,EUA,Ala,42
+Joga Basquete 55,24/02/2001,85,186,EUA,Ala,42
+Joga Basquete 56,25/02/2001,85,186,EUA,Ala,42
+Joga Basquete 57,26/02/2001,85,186,EUA,Armador,42
+Joga Basquete 58,27/02/2001,85,186,EUA,Armador,42
+Joga Basquete 59,28/02/2001,85,186,EUA,Armador,42
+Joga Basquete 60,01/03/2001,85,186,EUA,Armador,42
+Joga Basquete 61,02/03/2001,85,186,Japao,Pivo,43
+Joga Basquete 62,03/03/2001,85,186,Japao,Pivo,43
+Joga Basquete 63,04/03/2001,85,186,Japao,Ala,43
+Joga Basquete 64,05/03/2001,85,186,Japao,Ala,43
+Joga Basquete 65,06/03/2001,85,186,Japao,Ala,43
+Joga Basquete 66,07/03/2001,85,186,Japao,Ala,43
+Joga Basquete 67,08/03/2001,85,186,Japao,Ala,43
+Joga Basquete 68,09/03/2001,85,186,Japao,Ala,43
+Joga Basquete 69,10/03/2001,85,186,Japao,Armador,43
+Joga Basquete 70,11/03/2001,85,186,Japao,Armador,43
+Joga Basquete 71,12/03/2001,85,186,Japao,Armador,43
+Joga Basquete 72,13/03/2001,85,186,Japao,Armador,43
+Joga Basquete 73,14/03/2001,85,186,Franca,Pivo,44
+Joga Basquete 74,15/03/2001,85,186,Franca,Pivo,44
+Joga Basquete 75,16/03/2001,85,186,Franca,Ala,44
+Joga Basquete 76,17/03/2001,85,186,Franca,Ala,44
+Joga Basquete 77,18/03/2001,85,186,Franca,Ala,44
+Joga Basquete 78,19/03/2001,85,186,Franca,Ala,44
+Joga Basquete 79,20/03/2001,85,186,Franca,Ala,44
+Joga Basquete 80,21/03/2001,85,186,Franca,Ala,44
+Joga Basquete 81,22/03/2001,85,186,Franca,Armador,44
+Joga Basquete 82,23/03/2001,85,186,Franca,Armador,44
+Joga Basquete 83,24/03/2001,85,186,Franca,Armador,44
+Joga Basquete 84,25/03/2001,85,186,Franca,Armador,44
+Joga Basquete 85,26/03/2001,85,186,Nigeria,Pivo,45
+Joga Basquete 86,27/03/2001,85,186,Nigeria,Pivo,45
+Joga Basquete 87,28/03/2001,85,186,Nigeria,Ala,45
+Joga Basquete 88,29/03/2001,85,186,Nigeria,Ala,45
+Joga Basquete 89,30/03/2001,85,186,Nigeria,Ala,45
+Joga Basquete 90,31/03/2001,85,186,Nigeria,Ala,45
+Joga Basquete 91,01/04/2001,85,186,Nigeria,Ala,45
+Joga Basquete 92,02/04/2001,85,186,Nigeria,Ala,45
+Joga Basquete 93,03/04/2001,85,186,Nigeria,Armador,45
+Joga Basquete 94,04/04/2001,85,186,Nigeria,Armador,45
+Joga Basquete 95,05/04/2001,85,186,Nigeria,Armador,45
+Joga Basquete 96,06/04/2001,85,186,Nigeria,Armador,45
+Joga Basquete 97,07/04/2001,85,186,China,Pivo,46
+Joga Basquete 98,08/04/2001,85,186,China,Pivo,46
+Joga Basquete 99,09/04/2001,85,186,China,Ala,46
+Joga Basquete 100,10/04/2001,85,186,China,Ala,46
+Joga Basquete 101,11/04/2001,85,186,China,Ala,46
+Joga Basquete 102,12/04/2001,85,186,China,Ala,46
+Joga Basquete 103,13/04/2001,85,186,China,Ala,46
+Joga Basquete 104,14/04/2001,85,186,China,Ala,46
+Joga Basquete 105,15/04/2001,85,186,China,Armador,46
+Joga Basquete 106,16/04/2001,85,186,China,Armador,46
+Joga Basquete 107,17/04/2001,85,186,China,Armador,46
+Joga Basquete 108,18/04/2001,85,186,China,Armador,46
+Joga Basquete 109,19/04/2001,85,186,Belgica,Pivo,47
+Joga Basquete 110,20/04/2001,85,186,Belgica,Pivo,47
+Joga Basquete 111,21/04/2001,85,186,Belgica,Ala,47
+Joga Basquete 112,22/04/2001,85,186,Belgica,Ala,47
+Joga Basquete 113,23/04/2001,85,186,Belgica,Ala,47
+Joga Basquete 114,24/04/2001,85,186,Belgica,Ala,47
+Joga Basquete 115,25/04/2001,85,186,Belgica,Ala,47
+Joga Basquete 116,26/04/2001,85,186,Belgica,Ala,47
+Joga Basquete 117,27/04/2001,85,186,Belgica,Armador,47
+Joga Basquete 118,28/04/2001,85,186,Belgica,Armador,47
+Joga Basquete 119,29/04/2001,85,186,Belgica,Armador,47
+Joga Basquete 120,30/04/2001,85,186,Belgica,Armador,47
+Joga Basquete 121,01/05/2001,85,186,Australia,Pivo,48
+Joga Basquete 122,02/05/2001,85,186,Australia,Pivo,48
+Joga Basquete 123,03/05/2001,85,186,Australia,Ala,48
+Joga Basquete 124,04/05/2001,85,186,Australia,Ala,48
+Joga Basquete 125,05/05/2001,85,186,Australia,Ala,48
+Joga Basquete 126,06/05/2001,85,186,Australia,Ala,48
+Joga Basquete 127,07/05/2001,85,186,Australia,Ala,48
+Joga Basquete 128,08/05/2001,85,186,Australia,Ala,48
+Joga Basquete 129,09/05/2001,85,186,Australia,Armador,48
+Joga Basquete 130,10/05/2001,85,186,Australia,Armador,48
+Joga Basquete 131,11/05/2001,85,186,Australia,Armador,48
+Joga Basquete 132,12/05/2001,85,186,Australia,Armador,48
+Joga Basquete 133,13/05/2001,85,186,Porto Rico,Pivo,49
+Joga Basquete 134,14/05/2001,85,186,Porto Rico,Pivo,49
+Joga Basquete 135,15/05/2001,85,186,Porto Rico,Ala,49
+Joga Basquete 136,16/05/2001,85,186,Porto Rico,Ala,49
+Joga Basquete 137,17/05/2001,85,186,Porto Rico,Ala,49
+Joga Basquete 138,18/05/2001,85,186,Porto Rico,Ala,49
+Joga Basquete 139,19/05/2001,85,186,Porto Rico,Ala,49
+Joga Basquete 140,20/05/2001,85,186,Porto Rico,Ala,49
+Joga Basquete 141,21/05/2001,85,186,Porto Rico,Armador,49
+Joga Basquete 142,22/05/2001,85,186,Porto Rico,Armador,49
+Joga Basquete 143,23/05/2001,85,186,Porto Rico,Armador,49
+Joga Basquete 144,24/05/2001,85,186,Porto Rico,Armador,49
+Jog. Fut 1,01/01/2001,75,180,Japao,Goleiro,50
+Jog. Fut 2,02/01/2001,75,180,Japao,Lateral,50
+Jog. Fut 3,03/01/2001,75,180,Japao,Lateral,50
+Jog. Fut 4,04/01/2001,75,180,Japao,Zagueiro,50
+Jog. Fut 5,05/01/2001,75,180,Japao,Zagueiro,50
+Jog. Fut 6,06/01/2001,75,180,Japao,Meia,50
+Jog. Fut 7,07/01/2001,75,180,Japao,Meia,50
+Jog. Fut 8,08/01/2001,75,180,Japao,Meia,50
+Jog. Fut 9,09/01/2001,75,180,Japao,Atacante,50
+Jog. Fut 10,10/01/2001,75,180,Japao,Atacante,50
+Jog. Fut 11,11/01/2001,75,180,Japao,Atacante,50
+Jog. Fut 12,12/01/2001,75,180,Mexico,Goleiro,51
+Jog. Fut 13,13/01/2001,75,180,Mexico,Lateral,51
+Jog. Fut 14,14/01/2001,75,180,Mexico,Lateral,51
+Jog. Fut 15,15/01/2001,75,180,Mexico,Zagueiro,51
+Jog. Fut 16,16/01/2001,75,180,Mexico,Zagueiro,51
+Jog. Fut 17,17/01/2001,75,180,Mexico,Meia,51
+Jog. Fut 18,18/01/2001,75,180,Mexico,Meia,51
+Jog. Fut 19,19/01/2001,75,180,Mexico,Meia,51
+Jog. Fut 20,20/01/2001,75,180,Mexico,Atacante,51
+Jog. Fut 21,21/01/2001,75,180,Mexico,Atacante,51
+Jog. Fut 22,22/01/2001,75,180,Mexico,Atacante,51
+Jog. Fut 23,23/01/2001,75,180,Franca,Goleiro,52
+Jog. Fut 24,24/01/2001,75,180,Franca,Lateral,52
+Jog. Fut 25,25/01/2001,75,180,Franca,Lateral,52
+Jog. Fut 26,26/01/2001,75,180,Franca,Zagueiro,52
+Jog. Fut 27,27/01/2001,75,180,Franca,Zagueiro,52
+Jog. Fut 28,28/01/2001,75,180,Franca,Meia,52
+Jog. Fut 29,29/01/2001,75,180,Franca,Meia,52
+Jog. Fut 30,30/01/2001,75,180,Franca,Meia,52
+Jog. Fut 31,31/01/2001,75,180,Franca,Atacante,52
+Jog. Fut 32,01/02/2001,75,180,Franca,Atacante,52
+Jog. Fut 33,02/02/2001,75,180,Franca,Atacante,52
+Jog. Fut 34,03/02/2001,75,180,Africa do Sul,Goleiro,53
+Jog. Fut 35,04/02/2001,75,180,Africa do Sul,Lateral,53
+Jog. Fut 36,05/02/2001,75,180,Africa do Sul,Lateral,53
+Jog. Fut 37,06/02/2001,75,180,Africa do Sul,Zagueiro,53
+Jog. Fut 38,07/02/2001,75,180,Africa do Sul,Zagueiro,53
+Jog. Fut 39,08/02/2001,75,180,Africa do Sul,Meia,53
+Jog. Fut 40,09/02/2001,75,180,Africa do Sul,Meia,53
+Jog. Fut 41,10/02/2001,75,180,Africa do Sul,Meia,53
+Jog. Fut 42,11/02/2001,75,180,Africa do Sul,Atacante,53
+Jog. Fut 43,12/02/2001,75,180,Africa do Sul,Atacante,53
+Jog. Fut 44,13/02/2001,75,180,Africa do Sul,Atacante,53
+Jog. Fut 45,14/02/2001,75,180,Coreia do Sul,Goleiro,54
+Jog. Fut 46,15/02/2001,75,180,Coreia do Sul,Lateral,54
+Jog. Fut 47,16/02/2001,75,180,Coreia do Sul,Lateral,54
+Jog. Fut 48,17/02/2001,75,180,Coreia do Sul,Zagueiro,54
+Jog. Fut 49,18/02/2001,75,180,Coreia do Sul,Zagueiro,54
+Jog. Fut 50,19/02/2001,75,180,Coreia do Sul,Meia,54
+Jog. Fut 51,20/02/2001,75,180,Coreia do Sul,Meia,54
+Jog. Fut 52,21/02/2001,75,180,Coreia do Sul,Meia,54
+Jog. Fut 53,22/02/2001,75,180,Coreia do Sul,Atacante,54
+Jog. Fut 54,23/02/2001,75,180,Coreia do Sul,Atacante,54
+Jog. Fut 55,24/02/2001,75,180,Coreia do Sul,Atacante,54
+Jog. Fut 56,25/02/2001,75,180,Nova Zelandia,Goleiro,55
+Jog. Fut 57,26/02/2001,75,180,Nova Zelandia,Lateral,55
+Jog. Fut 58,27/02/2001,75,180,Nova Zelandia,Lateral,55
+Jog. Fut 59,28/02/2001,75,180,Nova Zelandia,Zagueiro,55
+Jog. Fut 60,01/03/2001,75,180,Nova Zelandia,Zagueiro,55
+Jog. Fut 61,02/03/2001,75,180,Nova Zelandia,Meia,55
+Jog. Fut 62,03/03/2001,75,180,Nova Zelandia,Meia,55
+Jog. Fut 63,04/03/2001,75,180,Nova Zelandia,Meia,55
+Jog. Fut 64,05/03/2001,75,180,Nova Zelandia,Atacante,55
+Jog. Fut 65,06/03/2001,75,180,Nova Zelandia,Atacante,55
+Jog. Fut 66,07/03/2001,75,180,Nova Zelandia,Atacante,55
+Jog. Fut 67,08/03/2001,75,180,Romenia,Goleiro,56
+Jog. Fut 68,09/03/2001,75,180,Romenia,Lateral,56
+Jog. Fut 69,10/03/2001,75,180,Romenia,Lateral,56
+Jog. Fut 70,11/03/2001,75,180,Romenia,Zagueiro,56
+Jog. Fut 71,12/03/2001,75,180,Romenia,Zagueiro,56
+Jog. Fut 72,13/03/2001,75,180,Romenia,Meia,56
+Jog. Fut 73,14/03/2001,75,180,Romenia,Meia,56
+Jog. Fut 74,15/03/2001,75,180,Romenia,Meia,56
+Jog. Fut 75,16/03/2001,75,180,Romenia,Atacante,56
+Jog. Fut 76,17/03/2001,75,180,Romenia,Atacante,56
+Jog. Fut 77,18/03/2001,75,180,Romenia,Atacante,56
+Jog. Fut 78,19/03/2001,75,180,Honduras,Goleiro,57
+Jog. Fut 79,20/03/2001,75,180,Honduras,Lateral,57
+Jog. Fut 80,21/03/2001,75,180,Honduras,Lateral,57
+Jog. Fut 81,22/03/2001,75,180,Honduras,Zagueiro,57
+Jog. Fut 82,23/03/2001,75,180,Honduras,Zagueiro,57
+Jog. Fut 83,24/03/2001,75,180,Honduras,Meia,57
+Jog. Fut 84,25/03/2001,75,180,Honduras,Meia,57
+Jog. Fut 85,26/03/2001,75,180,Honduras,Meia,57
+Jog. Fut 86,27/03/2001,75,180,Honduras,Atacante,57
+Jog. Fut 87,28/03/2001,75,180,Honduras,Atacante,57
+Jog. Fut 88,29/03/2001,75,180,Honduras,Atacante,57
+Jog. Fut 89,30/03/2001,75,180,Espanha,Goleiro,58
+Jog. Fut 90,31/03/2001,75,180,Espanha,Lateral,58
+Jog. Fut 91,01/04/2001,75,180,Espanha,Lateral,58
+Jog. Fut 92,02/04/2001,75,180,Espanha,Zagueiro,58
+Jog. Fut 93,03/04/2001,75,180,Espanha,Zagueiro,58
+Jog. Fut 94,04/04/2001,75,180,Espanha,Meia,58
+Jog. Fut 95,05/04/2001,75,180,Espanha,Meia,58
+Jog. Fut 96,06/04/2001,75,180,Espanha,Meia,58
+Jog. Fut 97,07/04/2001,75,180,Espanha,Atacante,58
+Jog. Fut 98,08/04/2001,75,180,Espanha,Atacante,58
+Jog. Fut 99,09/04/2001,75,180,Espanha,Atacante,58
+Jog. Fut 100,10/04/2001,75,180,Egito,Goleiro,59
+Jog. Fut 101,11/04/2001,75,180,Egito,Lateral,59
+Jog. Fut 102,12/04/2001,75,180,Egito,Lateral,59
+Jog. Fut 103,13/04/2001,75,180,Egito,Zagueiro,59
+Jog. Fut 104,14/04/2001,75,180,Egito,Zagueiro,59
+Jog. Fut 105,15/04/2001,75,180,Egito,Meia,59
+Jog. Fut 106,16/04/2001,75,180,Egito,Meia,59
+Jog. Fut 107,17/04/2001,75,180,Egito,Meia,59
+Jog. Fut 108,18/04/2001,75,180,Egito,Atacante,59
+Jog. Fut 109,19/04/2001,75,180,Egito,Atacante,59
+Jog. Fut 110,20/04/2001,75,180,Egito,Atacante,59
+Jog. Fut 111,21/04/2001,75,180,Argentina,Goleiro,60
+Jog. Fut 112,22/04/2001,75,180,Argentina,Lateral,60
+Jog. Fut 113,23/04/2001,75,180,Argentina,Lateral,60
+Jog. Fut 114,24/04/2001,75,180,Argentina,Zagueiro,60
+Jog. Fut 115,25/04/2001,75,180,Argentina,Zagueiro,60
+Jog. Fut 116,26/04/2001,75,180,Argentina,Meia,60
+Jog. Fut 117,27/04/2001,75,180,Argentina,Meia,60
+Jog. Fut 118,28/04/2001,75,180,Argentina,Meia,60
+Jog. Fut 119,29/04/2001,75,180,Argentina,Atacante,60
+Jog. Fut 120,30/04/2001,75,180,Argentina,Atacante,60
+Jog. Fut 121,01/05/2001,75,180,Argentina,Atacante,60
+Jog. Fut 122,02/05/2001,75,180,Australia,Goleiro,61
+Jog. Fut 123,03/05/2001,75,180,Australia,Lateral,61
+Jog. Fut 124,04/05/2001,75,180,Australia,Lateral,61
+Jog. Fut 125,05/05/2001,75,180,Australia,Zagueiro,61
+Jog. Fut 126,06/05/2001,75,180,Australia,Zagueiro,61
+Jog. Fut 127,07/05/2001,75,180,Australia,Meia,61
+Jog. Fut 128,08/05/2001,75,180,Australia,Meia,61
+Jog. Fut 129,09/05/2001,75,180,Australia,Meia,61
+Jog. Fut 130,10/05/2001,75,180,Australia,Atacante,61
+Jog. Fut 131,11/05/2001,75,180,Australia,Atacante,61
+Jog. Fut 132,12/05/2001,75,180,Australia,Atacante,61
+Jog. Fut 133,13/05/2001,75,180,Costa do Marfim,Goleiro,62
+Jog. Fut 134,14/05/2001,75,180,Costa do Marfim,Lateral,62
+Jog. Fut 135,15/05/2001,75,180,Costa do Marfim,Lateral,62
+Jog. Fut 136,16/05/2001,75,180,Costa do Marfim,Zagueiro,62
+Jog. Fut 137,17/05/2001,75,180,Costa do Marfim,Zagueiro,62
+Jog. Fut 138,18/05/2001,75,180,Costa do Marfim,Meia,62
+Jog. Fut 139,19/05/2001,75,180,Costa do Marfim,Meia,62
+Jog. Fut 140,20/05/2001,75,180,Costa do Marfim,Meia,62
+Jog. Fut 141,21/05/2001,75,180,Costa do Marfim,Atacante,62
+Jog. Fut 142,22/05/2001,75,180,Costa do Marfim,Atacante,62
+Jog. Fut 143,23/05/2001,75,180,Costa do Marfim,Atacante,62
+Jog. Fut 144,24/05/2001,75,180,Alemanha,Goleiro,63
+Jog. Fut 145,25/05/2001,75,180,Alemanha,Lateral,63
+Jog. Fut 146,26/05/2001,75,180,Alemanha,Lateral,63
+Jog. Fut 147,27/05/2001,75,180,Alemanha,Zagueiro,63
+Jog. Fut 148,28/05/2001,75,180,Alemanha,Zagueiro,63
+Jog. Fut 149,29/05/2001,75,180,Alemanha,Meia,63
+Jog. Fut 150,30/05/2001,75,180,Alemanha,Meia,63
+Jog. Fut 151,31/05/2001,75,180,Alemanha,Meia,63
+Jog. Fut 152,01/06/2001,75,180,Alemanha,Atacante,63
+Jog. Fut 153,02/06/2001,75,180,Alemanha,Atacante,63
+Jog. Fut 154,03/06/2001,75,180,Alemanha,Atacante,63
+Jog. Fut 155,04/06/2001,75,180,Arabia Saudita,Goleiro,64
+Jog. Fut 156,05/06/2001,75,180,Arabia Saudita,Lateral,64
+Jog. Fut 157,06/06/2001,75,180,Arabia Saudita,Lateral,64
+Jog. Fut 158,07/06/2001,75,180,Arabia Saudita,Zagueiro,64
+Jog. Fut 159,08/06/2001,75,180,Arabia Saudita,Zagueiro,64
+Jog. Fut 160,09/06/2001,75,180,Arabia Saudita,Meia,64
+Jog. Fut 161,10/06/2001,75,180,Arabia Saudita,Meia,64
+Jog. Fut 162,11/06/2001,75,180,Arabia Saudita,Meia,64
+Jog. Fut 163,12/06/2001,75,180,Arabia Saudita,Atacante,64
+Jog. Fut 164,13/06/2001,75,180,Arabia Saudita,Atacante,64
+Jog. Fut 165,14/06/2001,75,180,Arabia Saudita,Atacante,64
+Joga. Fut 1,01/01/2001,70,175,Inglaterra,Goleiro,65
+Joga. Fut 2,02/01/2001,70,175,Inglaterra,Lateral,65
+Joga. Fut 3,03/01/2001,70,175,Inglaterra,Lateral,65
+Joga. Fut 4,04/01/2001,70,175,Inglaterra,Zagueiro,65
+Joga. Fut 5,05/01/2001,70,175,Inglaterra,Zagueiro,65
+Joga. Fut 6,06/01/2001,70,175,Inglaterra,Meia,65
+Joga. Fut 7,07/01/2001,70,175,Inglaterra,Meia,65
+Joga. Fut 8,08/01/2001,70,175,Inglaterra,Meia,65
+Joga. Fut 9,09/01/2001,70,175,Inglaterra,Atacante,65
+Joga. Fut 10,10/01/2001,70,175,Inglaterra,Atacante,65
+Joga. Fut 11,11/01/2001,70,175,Inglaterra,Atacante,65
+Joga. Fut 12,12/01/2001,70,175,Canada,Goleiro,66
+Joga. Fut 13,13/01/2001,70,175,Canada,Lateral,66
+Joga. Fut 14,14/01/2001,70,175,Canada,Lateral,66
+Joga. Fut 15,15/01/2001,70,175,Canada,Zagueiro,66
+Joga. Fut 16,16/01/2001,70,175,Canada,Zagueiro,66
+Joga. Fut 17,17/01/2001,70,175,Canada,Meia,66
+Joga. Fut 18,18/01/2001,70,175,Canada,Meia,66
+Joga. Fut 19,19/01/2001,70,175,Canada,Meia,66
+Joga. Fut 20,20/01/2001,70,175,Canada,Atacante,66
+Joga. Fut 21,21/01/2001,70,175,Canada,Atacante,66
+Joga. Fut 22,22/01/2001,70,175,Canada,Atacante,66
+Joga. Fut 23,23/01/2001,70,175,Japao,Goleiro,67
+Joga. Fut 24,24/01/2001,70,175,Japao,Lateral,67
+Joga. Fut 25,25/01/2001,70,175,Japao,Lateral,67
+Joga. Fut 26,26/01/2001,70,175,Japao,Zagueiro,67
+Joga. Fut 27,27/01/2001,70,175,Japao,Zagueiro,67
+Joga. Fut 28,28/01/2001,70,175,Japao,Meia,67
+Joga. Fut 29,29/01/2001,70,175,Japao,Meia,67
+Joga. Fut 30,30/01/2001,70,175,Japao,Meia,67
+Joga. Fut 31,31/01/2001,70,175,Japao,Atacante,67
+Joga. Fut 32,01/02/2001,70,175,Japao,Atacante,67
+Joga. Fut 33,02/02/2001,70,175,Japao,Atacante,67
+Joga. Fut 34,03/02/2001,70,175,Chile,Goleiro,68
+Joga. Fut 35,04/02/2001,70,175,Chile,Lateral,68
+Joga. Fut 36,05/02/2001,70,175,Chile,Lateral,68
+Joga. Fut 37,06/02/2001,70,175,Chile,Zagueiro,68
+Joga. Fut 38,07/02/2001,70,175,Chile,Zagueiro,68
+Joga. Fut 39,08/02/2001,70,175,Chile,Meia,68
+Joga. Fut 40,09/02/2001,70,175,Chile,Meia,68
+Joga. Fut 41,10/02/2001,70,175,Chile,Meia,68
+Joga. Fut 42,11/02/2001,70,175,Chile,Atacante,68
+Joga. Fut 43,12/02/2001,70,175,Chile,Atacante,68
+Joga. Fut 44,13/02/2001,70,175,Chile,Atacante,68
+Joga. Fut 45,14/02/2001,70,175,Holanda,Goleiro,69
+Joga. Fut 46,15/02/2001,70,175,Holanda,Lateral,69
+Joga. Fut 47,16/02/2001,70,175,Holanda,Lateral,69
+Joga. Fut 48,17/02/2001,70,175,Holanda,Zagueiro,69
+Joga. Fut 49,18/02/2001,70,175,Holanda,Zagueiro,69
+Joga. Fut 50,19/02/2001,70,175,Holanda,Meia,69
+Joga. Fut 51,20/02/2001,70,175,Holanda,Meia,69
+Joga. Fut 52,21/02/2001,70,175,Holanda,Meia,69
+Joga. Fut 53,22/02/2001,70,175,Holanda,Atacante,69
+Joga. Fut 54,23/02/2001,70,175,Holanda,Atacante,69
+Joga. Fut 55,24/02/2001,70,175,Holanda,Atacante,69
+Joga. Fut 56,25/02/2001,70,175,Brasil,Goleiro,70
+Joga. Fut 57,26/02/2001,70,175,Brasil,Lateral,70
+Joga. Fut 58,27/02/2001,70,175,Brasil,Lateral,70
+Joga. Fut 59,28/02/2001,70,175,Brasil,Zagueiro,70
+Joga. Fut 60,01/03/2001,70,175,Brasil,Zagueiro,70
+Joga. Fut 61,02/03/2001,70,175,Brasil,Meia,70
+Joga. Fut 62,03/03/2001,70,175,Brasil,Meia,70
+Joga. Fut 63,04/03/2001,70,175,Brasil,Meia,70
+Joga. Fut 64,05/03/2001,70,175,Brasil,Atacante,70
+Joga. Fut 65,06/03/2001,70,175,Brasil,Atacante,70
+Joga. Fut 66,07/03/2001,70,175,Brasil,Atacante,70
+Joga. Fut 67,08/03/2001,70,175,Zambia,Goleiro,71
+Joga. Fut 68,09/03/2001,70,175,Zambia,Lateral,71
+Joga. Fut 69,10/03/2001,70,175,Zambia,Lateral,71
+Joga. Fut 70,11/03/2001,70,175,Zambia,Zagueiro,71
+Joga. Fut 71,12/03/2001,70,175,Zambia,Zagueiro,71
+Joga. Fut 72,13/03/2001,70,175,Zambia,Meia,71
+Joga. Fut 73,14/03/2001,70,175,Zambia,Meia,71
+Joga. Fut 74,15/03/2001,70,175,Zambia,Meia,71
+Joga. Fut 75,16/03/2001,70,175,Zambia,Atacante,71
+Joga. Fut 76,17/03/2001,70,175,Zambia,Atacante,71
+Joga. Fut 77,18/03/2001,70,175,Zambia,Atacante,71
+Joga. Fut 78,19/03/2001,70,175,China,Goleiro,72
+Joga. Fut 79,20/03/2001,70,175,China,Lateral,72
+Joga. Fut 80,21/03/2001,70,175,China,Lateral,72
+Joga. Fut 81,22/03/2001,70,175,China,Zagueiro,72
+Joga. Fut 82,23/03/2001,70,175,China,Zagueiro,72
+Joga. Fut 83,24/03/2001,70,175,China,Meia,72
+Joga. Fut 84,25/03/2001,70,175,China,Meia,72
+Joga. Fut 85,26/03/2001,70,175,China,Meia,72
+Joga. Fut 86,27/03/2001,70,175,China,Atacante,72
+Joga. Fut 87,28/03/2001,70,175,China,Atacante,72
+Joga. Fut 88,29/03/2001,70,175,China,Atacante,72
+Joga. Fut 89,30/03/2001,70,175,Suecia,Goleiro,73
+Joga. Fut 90,31/03/2001,70,175,Suecia,Lateral,73
+Joga. Fut 91,01/04/2001,70,175,Suecia,Lateral,73
+Joga. Fut 92,02/04/2001,70,175,Suecia,Zagueiro,73
+Joga. Fut 93,03/04/2001,70,175,Suecia,Zagueiro,73
+Joga. Fut 94,04/04/2001,70,175,Suecia,Meia,73
+Joga. Fut 95,05/04/2001,70,175,Suecia,Meia,73
+Joga. Fut 96,06/04/2001,70,175,Suecia,Meia,73
+Joga. Fut 97,07/04/2001,70,175,Suecia,Atacante,73
+Joga. Fut 98,08/04/2001,70,175,Suecia,Atacante,73
+Joga. Fut 99,09/04/2001,70,175,Suecia,Atacante,73
+Joga. Fut 100,10/04/2001,70,175,EUA,Goleiro,74
+Joga. Fut 101,11/04/2001,70,175,EUA,Lateral,74
+Joga. Fut 102,12/04/2001,70,175,EUA,Lateral,74
+Joga. Fut 103,13/04/2001,70,175,EUA,Zagueiro,74
+Joga. Fut 104,14/04/2001,70,175,EUA,Zagueiro,74
+Joga. Fut 105,15/04/2001,70,175,EUA,Meia,74
+Joga. Fut 106,16/04/2001,70,175,EUA,Meia,74
+Joga. Fut 107,17/04/2001,70,175,EUA,Meia,74
+Joga. Fut 108,18/04/2001,70,175,EUA,Atacante,74
+Joga. Fut 109,19/04/2001,70,175,EUA,Atacante,74
+Joga. Fut 110,20/04/2001,70,175,EUA,Atacante,74
+Joga. Fut 111,21/04/2001,70,175,Australia,Goleiro,75
+Joga. Fut 112,22/04/2001,70,175,Australia,Lateral,75
+Joga. Fut 113,23/04/2001,70,175,Australia,Lateral,75
+Joga. Fut 114,24/04/2001,70,175,Australia,Zagueiro,75
+Joga. Fut 115,25/04/2001,70,175,Australia,Zagueiro,75
+Joga. Fut 116,26/04/2001,70,175,Australia,Meia,75
+Joga. Fut 117,27/04/2001,70,175,Australia,Meia,75
+Joga. Fut 118,28/04/2001,70,175,Australia,Meia,75
+Joga. Fut 119,29/04/2001,70,175,Australia,Atacante,75
+Joga. Fut 120,30/04/2001,70,175,Australia,Atacante,75
+Joga. Fut 121,01/05/2001,70,175,Australia,Atacante,75
+Joga. Fut 122,02/05/2001,70,175,Nova Zelandia,Goleiro,76
+Joga. Fut 123,03/05/2001,70,175,Nova Zelandia,Lateral,76
+Joga. Fut 124,04/05/2001,70,175,Nova Zelandia,Lateral,76
+Joga. Fut 125,05/05/2001,70,175,Nova Zelandia,Zagueiro,76
+Joga. Fut 126,06/05/2001,70,175,Nova Zelandia,Zagueiro,76
+Joga. Fut 127,07/05/2001,70,175,Nova Zelandia,Meia,76
+Joga. Fut 128,08/05/2001,70,175,Nova Zelandia,Meia,76
+Joga. Fut 129,09/05/2001,70,175,Nova Zelandia,Meia,76
+Joga. Fut 130,10/05/2001,70,175,Nova Zelandia,Atacante,76
+Joga. Fut 131,11/05/2001,70,175,Nova Zelandia,Atacante,76
+Joga. Fut 132,12/05/2001,70,175,Nova Zelandia,Atacante,76
