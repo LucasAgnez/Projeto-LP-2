@@ -5,7 +5,6 @@ import br.ufrn.imd.modelo.esportes.*;
 public class BancoPartidas{
 	private Basquete eventosBasquete;
 	private Futebol eventosFutebol;
-	private Tenis eventosTenis;
 	private Volei eventosVolei;
 	
 	private static BancoPartidas bancoPartidas;
@@ -13,7 +12,6 @@ public class BancoPartidas{
 	public BancoPartidas(){
 		this.eventosBasquete = new Basquete();
 		this.eventosFutebol = new Futebol();
-		this.eventosTenis = new Tenis();
 		this.eventosVolei= new Volei();
 	}
 	
@@ -38,14 +36,6 @@ public class BancoPartidas{
 
 	public void setEventosFutebol(Futebol eventosFutebol) {
 		this.eventosFutebol = eventosFutebol;
-	}
-	
-	public Tenis getEventosTenis() {
-		return eventosTenis;
-	}
-
-	public void setEventosTenis(Tenis eventosTenis) {
-		this.eventosTenis = eventosTenis;
 	}
 	
 	public Volei getEventosVolei() {

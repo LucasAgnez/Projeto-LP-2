@@ -5,88 +5,106 @@ import br.ufrn.imd.modelo.atletas.Selecao;
 public class PartidaVolei extends Partida{
 	private int setsParticipante1;
 	private int setsParticipante2;
-	private SetVolei primeiroSet;
-	private SetVolei segundoSet;
-	private SetVolei terceiroSet;
-	private SetVolei quartoSet;
-	private SetVolei tieBreak;
+	private int pontosSet1Parti1;
+	private int pontosSet1Parti2;
+	private int pontosSet2Parti1;
+	private int pontosSet2Parti2;
+	private int pontosSet3Parti1;
+	private int pontosSet3Parti2;
+	private int pontosSet4Parti1;
+	private int pontosSet4Parti2;
+	private int pontosSet5Parti1;
+	private int pontosSet5Parti2;
+	
 	
 	public PartidaVolei(Selecao participante1, Selecao participante2) {
 		super(participante1, participante2);
-		primeiroSet = new SetVolei();
-		segundoSet = new SetVolei();
-		terceiroSet = new SetVolei();
-		quartoSet = new SetVolei();
-		tieBreak = new SetVolei();
 		setsParticipante1 = 0;
 		setsParticipante2 = 0;
 	}
-	
+
 	public int getSetsParticipante1() {
 		return setsParticipante1;
 	}
+	public void setSetsParticipante1(int setsParticipante1) {
+		this.setsParticipante1 = setsParticipante1;
+	}
+
 	public int getSetsParticipante2() {
 		return setsParticipante2;
 	}
-	public SetVolei getPrimeroSet() {
-		return primeiroSet;
+	public void setSetsParticipante2(int setsParticipante2) {
+		this.setsParticipante2 = setsParticipante2;
 	}
-	public void setPrimeroSet(SetVolei primeroSet) {
-		if(primeiroSet.getPontosParticipante1() > primeiroSet.getPontosParticipante2()) {
-			setsParticipante1++;
-		}
-		else if(primeiroSet.getPontosParticipante1()  < primeiroSet.getPontosParticipante2()) {
-			setsParticipante2++;
-		}
-		this.primeiroSet = primeroSet;
+
+	public int getPontosSet1Parti1() {
+		return pontosSet1Parti1;
 	}
-	public SetVolei getSegundoSet() {
-		return segundoSet;
+	public void setPontosSet1Parti1(int pontosSet1Parti1) {
+		this.pontosSet1Parti1 = pontosSet1Parti1;
 	}
-	public void setSegundoSet(SetVolei segundoSet) {
-		if(segundoSet.getPontosParticipante1() > segundoSet.getPontosParticipante2()) {
-			setsParticipante1++;
-		}
-		else if(segundoSet.getPontosParticipante1()  < segundoSet.getPontosParticipante2()) {
-			setsParticipante2++;
-		}
-		this.segundoSet = segundoSet;
+
+	public int getPontosSet1Parti2() {
+		return pontosSet1Parti2;
 	}
-	public SetVolei getTerceiroSet() {
-		return terceiroSet;
+	public void setPontosSet1Parti2(int pontosSet1Parti2) {
+		this.pontosSet1Parti2 = pontosSet1Parti2;
 	}
-	public void setTerceiroSet(SetVolei terceiroSet) {
-		if(terceiroSet.getPontosParticipante1() > terceiroSet.getPontosParticipante2()) {
-			setsParticipante1++;
-		}
-		else if(terceiroSet.getPontosParticipante1()  < terceiroSet.getPontosParticipante2()) {
-			setsParticipante2++;
-		}
-		this.terceiroSet = terceiroSet;
+
+	public int getPontosSet2Parti1() {
+		return pontosSet2Parti1;
 	}
-	public SetVolei getQuartoSet() {
-		return quartoSet;
+	public void setPontosSet2Parti1(int pontosSet2Parti1) {
+		this.pontosSet2Parti1 = pontosSet2Parti1;
 	}
-	public void setQuartoSet(SetVolei quartoSet) {
-		if(quartoSet.getPontosParticipante1() > quartoSet.getPontosParticipante2()) {
-			setsParticipante1++;
-		}
-		else if(quartoSet.getPontosParticipante1()  < quartoSet.getPontosParticipante2()) {
-			setsParticipante2++;
-		}
-		this.quartoSet = quartoSet;
+
+	public int getPontosSet2Parti2() {
+		return pontosSet2Parti2;
 	}
-	public SetVolei getTieBreak() {
-		return tieBreak;
+	public void setPontosSet2Parti2(int pontosSet2Parti2) {
+		this.pontosSet2Parti2 = pontosSet2Parti2;
 	}
-	public void setTieBreak(SetVolei tieBreak) {
-		if(tieBreak.getPontosParticipante1() > tieBreak.getPontosParticipante2()) {
-			setsParticipante1++;
-		}
-		else if(tieBreak.getPontosParticipante1()  < tieBreak.getPontosParticipante2()) {
-			setsParticipante2++;
-		}
-		this.tieBreak = tieBreak;
-	}	
+
+	public int getPontosSet3Parti1() {
+		return pontosSet3Parti1;
+	}
+	public void setPontosSet3Parti1(int pontosSet3Parti1) {
+		this.pontosSet3Parti1 = pontosSet3Parti1;
+	}
+
+	public int getPontosSet3Parti2() {
+		return pontosSet3Parti2;
+	}
+	public void setPontosSet3Parti2(int pontosSet3Parti2) {
+		this.pontosSet3Parti2 = pontosSet3Parti2;
+	}
+
+	public int getPontosSet4Parti1() {
+		return pontosSet4Parti1;
+	}
+	public void setPontosSet4Parti1(int pontosSet4Parti1) {
+		this.pontosSet4Parti1 = pontosSet4Parti1;
+	}
+
+	public int getPontosSet4Parti2() {
+		return pontosSet4Parti2;
+	}
+	public void setPontosSet4Parti2(int pontosSet4Parti2) {
+		this.pontosSet4Parti2 = pontosSet4Parti2;
+	}
+
+	public int getPontosSet5Parti1() {
+		return pontosSet5Parti1;
+	}
+	public void setPontosSet5Parti1(int pontosSet5Parti1) {
+		this.pontosSet5Parti1 = pontosSet5Parti1;
+	}
+
+	public int getPontosSet5Parti2() {
+		return pontosSet5Parti2;
+	}
+	public void setPontosSet5Parti2(int pontosSet5Parti2) {
+		this.pontosSet5Parti2 = pontosSet5Parti2;
+	}
 
 }
