@@ -58,7 +58,6 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		panelEsportes.add(listScrollPane);
 		panelEsportes.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 		
-		
 		//Criando botões da janela de seleção de esporte
 		JButton buttonCancelar = new JButton("Cancelar");
 		buttonCancelar.setActionCommand("Cancelar");
@@ -75,14 +74,12 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		panelBotoesEsporte.add(buttonCancelar);
 		panelBotoesEsporte.add(Box.createRigidArea(new Dimension(10, 0)));
 		panelBotoesEsporte.add(buttonSelecionar);
-
-		
 		
 		//Adicionando todos paineis ao container principal
 		ct.add(panelEsportes, BorderLayout.CENTER);
 		ct.add(panelBotoesEsporte, BorderLayout.PAGE_END);
 		
-		
+		//Configurando tamanho, posição e título da janela
 		int larguraJanela = 400;
         int alturaJanela = 400;
 		setSize(larguraJanela, alturaJanela);

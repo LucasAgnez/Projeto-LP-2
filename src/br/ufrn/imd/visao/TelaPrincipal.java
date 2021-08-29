@@ -14,9 +14,6 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
-//import br.ufrn.imd.controle.BancoSelecao;
-//import br.ufrn.imd.modelo.atletas.Selecao;
-
 
 
 
@@ -43,10 +40,12 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		//buttonAdicionarPartida.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		buttonAdicionarPartida.setAlignmentX(CENTER_ALIGNMENT);
 
+		//Adicionando todos paineis ao container principal
 		ct.add(Box.createRigidArea(new Dimension(0, 10)));
 		ct.add(buttonAdicionarPartida);
 		ct.add(Box.createRigidArea(new Dimension(0, 10)));
 		
+		//Configurando tamanho, posição e título da janela
         int larguraJanela = 1200;
         int alturaJanela = 625;
 		setSize(larguraJanela, alturaJanela);
@@ -57,14 +56,6 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
-	
-	public static void main(String[] args) {
-		//BancoSelecao bs = BancoSelecao.getInstance();
-		//for(Selecao selecao  : bs.getSelecoes()) System.out.println(selecao.getID());
-		
-		TelaPrincipal telaPrincipal = new TelaPrincipal();
-		telaPrincipal.setVisible(true);
-	}
 	
 	
 	@Override

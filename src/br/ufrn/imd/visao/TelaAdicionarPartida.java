@@ -1,6 +1,7 @@
 package br.ufrn.imd.visao;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -46,28 +47,31 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener{
 		
 		//Adicionando selects dos países
 		BancoSelecao bs = BancoSelecao.getInstance();
-		
-		System.out.println(esporte.getID());
 		paises1 = new JComboBox<String>(bs.encontraPaisesPorEsporte(esporte.getID()));
 		paises2 = new JComboBox<String>(bs.encontraPaisesPorEsporte(esporte.getID()));
 		
 		
-		JPanel panelBoxSelectPaises = new JPanel();
-		panelBoxSelectPaises.setLayout(new BorderLayout());
+		JPanel panelBoxCentral = new JPanel();
+		panelBoxCentral.setLayout(new BorderLayout());
+		
+		JPanel panelCardCentral = new JPanel();
+		panelCardCentral.setLayout(new CardLayout());
 		
 		JPanel panelSelectsPaises = new JPanel();
-		panelSelectsPaises.setLayout(new FlowLayout());
+		panelSelectsPaises.setLayout(new BoxLayout(panelSelectsPaises, BoxLayout.LINE_AXIS));
+		//panelSelectsPaises.setLayout(new FlowLayout());
 		panelSelectsPaises.setBorder(BorderFactory.createEmptyBorder(0, 20, 20, 20));
 		panelSelectsPaises.add(Box.createVerticalGlue());
-		paises1.setMinimumSize(new Dimension(400, 30));
-		paises2.setMinimumSize(new Dimension(400, 30));
+		paises1.setMaximumSize(new Dimension(400, 30));
+		paises2.setMaximumSize(new Dimension(400, 30));
 		panelSelectsPaises.add(paises1);
 		JLabel labelX = new JLabel("X");
 		labelX.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 30));
 		panelSelectsPaises.add(labelX);
 		panelSelectsPaises.add(paises2);
 		
-		panelBoxSelectPaises.add(panelSelectsPaises);
+		panelCardCentral.add(panelSelectsPaises);
+		panelBoxCentral.add(panelCardCentral, BorderLayout.CENTER);
 		
 		
 		//Criando botões da janela de seleção de esporte
@@ -79,20 +83,20 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener{
         buttonSelecionar.addActionListener(this);
 		
 		//Adicionando botões ao seu painel
-		JPanel panelBotoesEsporte = new JPanel();
-		panelBotoesEsporte.setLayout(new BoxLayout(panelBotoesEsporte, BoxLayout.LINE_AXIS));
-		panelBotoesEsporte.setBorder(BorderFactory.createEmptyBorder(0, 20, 20, 20));
-		panelBotoesEsporte.add(Box.createHorizontalGlue());
-		panelBotoesEsporte.add(buttonCancelar);
-		panelBotoesEsporte.add(Box.createRigidArea(new Dimension(10, 0)));
-		panelBotoesEsporte.add(buttonSelecionar);
+		JPanel panelBotoes = new JPanel();
+		panelBotoes.setLayout(new BoxLayout(panelBotoes, BoxLayout.LINE_AXIS));
+		panelBotoes.setBorder(BorderFactory.createEmptyBorder(0, 20, 20, 20));
+		panelBotoes.add(Box.createHorizontalGlue());
+		panelBotoes.add(buttonCancelar);
+		panelBotoes.add(Box.createRigidArea(new Dimension(10, 0)));
+		panelBotoes.add(buttonSelecionar);
 		
-		
+		//Adicionando todos paineis ao container principal
 		ct.add(panelLabel, BorderLayout.PAGE_START);
-		ct.add(panelBoxSelectPaises, BorderLayout.CENTER);
-		ct.add(panelBotoesEsporte, BorderLayout.PAGE_END);
-		//ct.add(panelBoxSelectPaises);
+		ct.add(panelBoxCentral, BorderLayout.CENTER);
+		ct.add(panelBotoes, BorderLayout.PAGE_END);
 		
+		//Configurando tamanho, posição e título da janela
 		int larguraJanela = 600;
         int alturaJanela = 400;
 		setSize(larguraJanela, alturaJanela);
