@@ -2,7 +2,8 @@ package br.ufrn.imd.controle;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.net.URL;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,8 +31,7 @@ public class BancoSelecao {
 	public BancoSelecao() throws FileNotFoundException {
 		this.selecoes = new HashSet<Selecao>();
 		
-		URL urlSelecoes = getClass().getResource("selecoes.csv");
-		File fileSelecoes = new File(urlSelecoes.getPath());
+		File fileSelecoes = new File("resources" + File.separator + "selecoes.csv");
 		Scanner scSelecoes = new Scanner(fileSelecoes);
 		while(scSelecoes.hasNext()) {
 			String line = scSelecoes.nextLine();
@@ -66,8 +66,8 @@ public class BancoSelecao {
 	
 	
 	private HashSet<PartidaBasquete> buscaPartidasBasquete() {
-		URL url = getClass().getResource("partidas_basquete.csv");
-		File file = new File(url.getPath());
+		//URL url = getClass().getResource("partidas_basquete.csv");
+		File file = new File("resources" + File.separator + "partidas_basquete.csv");
 		Scanner sc;
 		
 		HashSet<PartidaBasquete> partidas = new HashSet<PartidaBasquete>(); 
@@ -109,8 +109,8 @@ public class BancoSelecao {
 
 
 	private HashSet<PartidaVolei> buscaPartidasVolei() {
-		URL url = getClass().getResource("partidas_volei.csv");
-		File file = new File(url.getPath());
+		//URL url = getClass().getResource( "partidas_volei.csv");
+		File file = new File("resources" + File.separator +  "partidas_volei.csv");
 		Scanner sc;
 		
 		HashSet<PartidaVolei> partidas = new HashSet<PartidaVolei>(); 
@@ -160,8 +160,8 @@ public class BancoSelecao {
 
 
 	private HashSet<PartidaFutebol> buscaPartidasFutebol() {
-		URL url = getClass().getResource("partidas_futebol.csv");
-		File file = new File(url.getPath());
+		//URL url = getClass().getResource("partidas_futebol.csv");
+		File file = new File("resources" + File.separator + "partidas_futebol.csv");
 		Scanner sc;
 		
 		HashSet<PartidaFutebol> partidas = new HashSet<PartidaFutebol>(); 
@@ -195,8 +195,8 @@ public class BancoSelecao {
 
 
 	private Esporte buscaEsportePorID(int ID) {
-		URL urlEsportes = getClass().getResource("esportes.csv");
-		File fileEsportes = new File(urlEsportes.getPath());
+		//URL urlEsportes = getClass().getResource("esportes.csv");
+		File fileEsportes = new File("resources" + File.separator + "esportes.csv");
 		Scanner scEsportes;
 		Esporte esporte = null;
 		try {
@@ -231,30 +231,34 @@ public class BancoSelecao {
 	
 	
 	private HashSet<Atleta> buscaAtletasPorSelecao(int ID){
-		URL url = getClass().getResource("atletas.csv"); 
-		File file = new File(url.getPath()); 
+		//URL url = getClass().getResource("atletas.csv"); 
+		File file = new File("resources" + File.separator + "atletas.csv"); 
 		Scanner sc;
 		HashSet<Atleta> atletas = new HashSet<Atleta>();
 	
 		try {
 			sc = new Scanner(file);
 			while(sc.hasNext()) {
+				
 				String line = sc.nextLine(); 
 				String[] data = line.split(","); 
-				AtletaColetivo tmpAtleta = new AtletaColetivo();
-				tmpAtleta.setNome(data[0]); 
-				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy");
-				
-				try{ 
-					tmpAtleta.setDataNascimento(ft.parse(data[1])); 
-				} catch(ParseException e){ 
-					System.err.println("Erro ao analisar data usando " + ft); 
-					System.exit(1);
+				if(data[6].equals(String.valueOf(ID))){
+					AtletaColetivo tmpAtleta = new AtletaColetivo();
+					tmpAtleta.setNome(data[0]); 
+					SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy");
+					
+					try{ 
+						tmpAtleta.setDataNascimento(ft.parse(data[1])); 
+					} catch(ParseException e){ 
+						System.err.println("Erro ao analisar data usando " + ft); 
+						System.exit(1);
+					}
+					tmpAtleta.setPeso(Double.parseDouble(data[2]));
+					tmpAtleta.setAltura(Integer.parseInt(data[3]));
+					tmpAtleta.setNacionalidade(data[4]);
+					tmpAtleta.setPosicao(data[5]);
+					atletas.add(tmpAtleta);
 				}
-				tmpAtleta.setPeso(Double.parseDouble(data[2]));
-				tmpAtleta.setAltura(Integer.parseInt(data[3]));
-				tmpAtleta.setPosicao(data[4]);
-				atletas.add(tmpAtleta);
 			}
 			sc.close();
 		} catch (FileNotFoundException e1) {
@@ -294,8 +298,8 @@ public class BancoSelecao {
 	}
 	
 	public Esporte[] encontraEsportes() {
-		URL urlEsportes = getClass().getResource("esportes.csv");
-		File fileEsportes = new File(urlEsportes.getPath());
+		//URL urlEsportes = getClass().getResource("esportes.csv");
+		File fileEsportes = new File("resources" + File.separator + "esportes.csv");
 		Scanner sc;
 		HashSet<Esporte> esportes = new HashSet<Esporte>();
 		try {
@@ -406,21 +410,47 @@ public class BancoSelecao {
 		return partidas;
 	}
 	
+
 	public ArrayList<Atleta>  buscarAtleta(String nome) {
 		//System.out.println("teste");
 		ArrayList<Atleta> atls = new ArrayList<Atleta>();
 		for(Selecao s : selecoes) {
 			for(Atleta a : s.getTime()) {
-				//System.out.println(a.getNome() +" " + nome );
-			//	System.out.println(a.getNome().equalsIgnoreCase(nome));
 				if(a.getNome().equalsIgnoreCase(nome)) {
+					System.out.println(s.getID());
 					atls.add(a);
-				//	System.out.println(s.getID());
 				}
 			}
 
 		}
+		System.out.println(atls.size());
+		for(Atleta a : atls) {
+			System.out.println(a.getNome());
+			System.out.println(a.getNacionalidade());
+		}
+		
 		return atls;
+	}
+
+	public void salvarPartidaFutebol(PartidaFutebol partida) {
+		String linha = String.valueOf(partida.getParticipante1().getID()) + "," + 
+				String.valueOf(partida.getParticipante2().getID()) + "," +
+				String.valueOf(partida.getVencedor().getID()) + "," + 
+				partida.getDescricao() + "," +
+				String.valueOf(partida.getPlacarParticipante1()) + "," +
+				String.valueOf(partida.getPlacarParticipante2()) + "," + 
+				String.format("%td/%<tm/%<tY %<tH:%<tM", partida.getData());
+		
+		try
+		{
+		    FileWriter fw = new FileWriter("resources" + File.separator + "partidas_futebol.csv", true); //the true will append the new data
+		    fw.write(System.getProperty("line.separator") + linha);//appends the string to the file
+		    fw.close();
+		}
+		catch(IOException ioe)
+		{
+		    System.err.println("IOException: " + ioe.getMessage());
+		}		
 	}
 		
 }

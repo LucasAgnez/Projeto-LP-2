@@ -1,3 +1,4 @@
+package br.ufrn.imd;
 import br.ufrn.imd.controle.BancoSelecao;
 import br.ufrn.imd.visao.TelaPrincipal;
 

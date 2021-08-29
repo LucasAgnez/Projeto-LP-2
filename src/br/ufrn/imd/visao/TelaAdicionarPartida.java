@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -18,6 +20,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -34,11 +37,14 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private static final int T_BORDA = 20;
 	
+	JLabel labelTitulo;
 	private JPanel panelCardCentral;
 	private JComboBox<Selecao> comboBoxPaises1;
 	private JComboBox<Selecao> comboBoxPaises2;
 	private JTextField fieldPlacarFutebol1;
 	private JTextField fieldPlacarFutebol2;
+	private JTextField fieldData;
+	private JTextField fieldHora;
 	private JTextArea textAreaDescricao;
 	private JButton buttonCancelar;
 	private JButton buttonSelecionar;
@@ -54,13 +60,13 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		ct.setLayout(new BorderLayout());
 		
 		//Label de seleção dos países
-		JLabel labelPaises = new JLabel("Selecione os países da partida:");
-		labelPaises.setAlignmentX(CENTER_ALIGNMENT);
+		labelTitulo = new JLabel("Selecione os países da partida:");
+		labelTitulo.setAlignmentX(CENTER_ALIGNMENT);
 		
 		//Adicionando label
 		JPanel panelLabel = new JPanel();
 		panelLabel.setLayout(new BoxLayout(panelLabel, BoxLayout.PAGE_AXIS));
-		panelLabel.add(labelPaises);
+		panelLabel.add(labelTitulo);
 		panelLabel.add(Box.createRigidArea(new Dimension(0, 10)));
 		panelLabel.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
 		
@@ -105,7 +111,6 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		setTitle("Adicionar partida de " + esporte);
 	}
 
-	
 	private JPanel montaEtapaPaises() {
 		//Adicionando selects dos países
 		BancoSelecao bs = BancoSelecao.getInstance();
@@ -127,21 +132,54 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	
 	private JPanel montaEtapaPartida() {
 		
+		JPanel panelPontos = null;
+		
 		if(esporte instanceof Futebol) {
 			partida = new PartidaFutebol();
+			panelPontos = montaPainelPontosFutebol();
+			panelPontos.setPreferredSize(new Dimension(100, 30));
 		}
 		
 		
+		//Define painel de descrição
+		JPanel panelDescricao = new JPanel();
+		panelDescricao.setLayout(new BoxLayout(panelDescricao, BoxLayout.LINE_AXIS));
+		textAreaDescricao = new JTextArea();
+		panelDescricao.setBorder(BorderFactory.createEmptyBorder(T_BORDA, 0, T_BORDA, 0));
+		panelDescricao.add(textAreaDescricao);
+		
+		JPanel panelPartida = new JPanel();
+		panelPartida.setLayout(new BoxLayout(panelPartida, BoxLayout.PAGE_AXIS));
+		
+		//Define painel de data e hora
+		fieldData = new JTextField();
+		fieldHora = new JTextField();
+		JPanel panelDataHora = new JPanel();
+		panelDataHora.setPreferredSize(new Dimension(200, 30));
+		panelDataHora.setLayout(new BoxLayout(panelDataHora, BoxLayout.LINE_AXIS));
+		fieldData.setMaximumSize(new Dimension(200, 30));
+		fieldHora.setMaximumSize(new Dimension(200, 30));
+		panelDataHora.add(fieldData);
+		panelDataHora.add(Box.createRigidArea(new Dimension(60, 0)));
+		panelDataHora.add(fieldHora);
+		
+		panelPartida.add(panelPontos);
+		panelPartida.add(panelDescricao);
+		panelPartida.add(panelDataHora);
+		
+		return panelPartida;
+	}
+	
+	private JPanel montaPainelPontosFutebol() {
+		//Define painel de placares
 		JPanel panelPlacares = new JPanel();
 		panelPlacares.setLayout(new BoxLayout(panelPlacares, BoxLayout.LINE_AXIS));
 		JLabel labelX = new JLabel("X");
 		labelX.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 30));
-		
-
 		fieldPlacarFutebol1 = new JTextField();
 		fieldPlacarFutebol2 = new JTextField();
-		fieldPlacarFutebol1.setMaximumSize(new Dimension(400, 30));
-		fieldPlacarFutebol2.setMaximumSize(new Dimension(400, 30));
+		fieldPlacarFutebol1.setMaximumSize(new Dimension(200, 30));
+		fieldPlacarFutebol2.setMaximumSize(new Dimension(200, 30));
 		
 		//Ignora qualquer entrada que não for número ou a tecla de backspace
 		fieldPlacarFutebol1.addKeyListener(new KeyAdapter() {
@@ -161,23 +199,11 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 			}
 		});
 		
-		
 		panelPlacares.add(fieldPlacarFutebol1);
 		panelPlacares.add(labelX);
 		panelPlacares.add(fieldPlacarFutebol2);
 		
-		JPanel panelDescricao = new JPanel();
-		panelDescricao.setLayout(new BoxLayout(panelDescricao, BoxLayout.LINE_AXIS));
-		textAreaDescricao = new JTextArea();
-		panelDescricao.add(textAreaDescricao);
-		
-		JPanel panelPartida = new JPanel();
-		panelPartida.setLayout(new BoxLayout(panelPartida, BoxLayout.PAGE_AXIS));
-		
-		panelPartida.add(panelPlacares);
-		panelPartida.add(panelDescricao);
-		
-		return panelPartida;
+		return panelPlacares;
 	}
 	
 	@Override
@@ -188,7 +214,7 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 				((PartidaFutebol) partida).setParticipante1((Selecao) comboBoxPaises1.getSelectedItem());
 				((PartidaFutebol) partida).setParticipante2((Selecao) comboBoxPaises2.getSelectedItem());
 			}
-			
+			labelTitulo.setText("Adicione dados da partida:");
 			CardLayout cl = (CardLayout)(panelCardCentral.getLayout());
 	        cl.show(panelCardCentral, "Teste2");
 	        buttonSelecionar.setText("Salvar");
@@ -196,19 +222,32 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	        buttonCancelar.setText("Voltar");
 	        buttonCancelar.setActionCommand("Voltar");
 		}
+		
 		else if(e.getActionCommand().equals("Salvar")) {
 			if(esporte instanceof Futebol) {
 				((PartidaFutebol) partida).setPlacarParticipante1(Integer.parseInt(fieldPlacarFutebol1.getText()));
 				((PartidaFutebol) partida).setPlacarParticipante2(Integer.parseInt(fieldPlacarFutebol2.getText()));
 				((PartidaFutebol) partida).calculaVencedor();
-				((PartidaFutebol) partida).setData(null);
-				((PartidaFutebol) partida).setDescricao(null);
+				
+				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+				
+				try{ 
+					((PartidaFutebol) partida).setData(ft.parse(fieldData.getText() + " " + fieldHora.getText()));
+				} catch(ParseException ex){ 
+					JOptionPane.showMessageDialog(null, "Campos de data e hora estão em formatos inválidos. Tente novamente.");
+				}
+				((PartidaFutebol) partida).setDescricao(textAreaDescricao.getText());
+				BancoSelecao bs = BancoSelecao.getInstance();
+				bs.salvarPartidaFutebol((PartidaFutebol) partida);
 			}
 		}
+		
 		else if(e.getActionCommand().equals("Cancelar")) {
 			this.dispose();
 		}
+		
 		else if(e.getActionCommand().equals("Voltar")) {
+			labelTitulo.setText("Selecione os países da partida:");
 			CardLayout cl = (CardLayout)(panelCardCentral.getLayout());
 	        cl.show(panelCardCentral, "Teste");
 	        buttonSelecionar.setText("Avançar");
