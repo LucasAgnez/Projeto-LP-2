@@ -384,7 +384,6 @@ public class BancoSelecao {
 						partidas.add(p);
 					}
 				}
-				
 			}
 		}
 		return partidas;  

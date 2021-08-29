@@ -1,27 +1,38 @@
-package br.ufrn.imd.visao;
+package br.ufrn.imd.modelo.tablemodel;
 
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
 import br.ufrn.imd.controle.BancoSelecao;
-import br.ufrn.imd.modelo.partidas.PartidaBasquete;
+import br.ufrn.imd.modelo.partidas.PartidaVolei;
 
-public class PartidaBasqueteTableModel extends AbstractTableModel{
+public class PartidaVoleiTableModel extends AbstractTableModel{
 	private static final long serialVersionUID = 1L;
 	private BancoSelecao bs = BancoSelecao.getInstance();
-	private ArrayList<PartidaBasquete> dados;
-	private String[] colunas = {"Data", "Participante 1", "Gols", "Participante 2", "Vencedor", "Descricao"};
-
+	private ArrayList<PartidaVolei> dados;
 	
-	public PartidaBasqueteTableModel() {
-		dados = bs.getPartidasBasquete();
+	public PartidaVoleiTableModel() {
+		dados = bs.getPartidasVolei();
 	}
 
 	@Override
 	public String getColumnName(int column) {
-		// TODO Auto-generated method stub
-		return colunas[column];
+		switch(column) {
+			case 0:
+				return "Data";
+			case 1: 
+				return "Participante 1";
+			case 2:	
+				return "Pontos";
+			case 3:
+				return "Participante 2";
+			case 4:
+				return "Vencedor";
+			case 5:
+				return "Descricao";
+		}
+		return null;
 	}
 	
 	@Override
@@ -44,7 +55,7 @@ public class PartidaBasqueteTableModel extends AbstractTableModel{
 			case 1:
 				return dados.get(coluna).getParticipante1();
 			case 2:
-				return dados.get(coluna).getPontuacaoParticipante1() + "x" + dados.get(coluna).getPontuacaoParticipante2();
+				return dados.get(coluna).getSetsParticipante1() + "x" + dados.get(coluna).getSetsParticipante2();
 			case 3:
 				return dados.get(coluna).getParticipante2();
 			case 4:

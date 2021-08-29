@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 import javax.swing.JFrame;
 import javax.swing.JTable;
 
-import br.ufrn.imd.modelo.atletas.AtletaTableModel;
+import br.ufrn.imd.modelo.tablemodel.AtletaTableModel;
 
 public class TelaExibirAtletas extends JFrame implements ActionListener{
 
@@ -36,6 +36,7 @@ public class TelaExibirAtletas extends JFrame implements ActionListener{
 		Point centro = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
 		setBounds(centro.x - larguraJanela / 2, centro.y - alturaJanela / 2, larguraJanela, alturaJanela);
 		setResizable(true);
+		setTitle("Resultado da Pesquisa: " + s);
 		
 		
 	}
