@@ -1,21 +1,20 @@
-package br.ufrn.imd.modelo.atletas;
+package br.ufrn.imd.modelo.partidas;
 
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
-
 import br.ufrn.imd.controle.BancoSelecao;
 
-public class AtletaTableModel extends AbstractTableModel {
+public class PartidaFutebolTableModel extends AbstractTableModel{
 	private static final long serialVersionUID = 1L;
 	private BancoSelecao bs = BancoSelecao.getInstance();
-	private ArrayList<Atleta> dados;
-	private String[] colunas = {"Nome", "Data de Nascimento", "Peso", "Altura", "Nacionalidade", "Posicao"};
+	private ArrayList<PartidaFutebol> dados;
+	private String[] colunas = {"Data", "Participante 1", "Gols", "Participante 2", "Vencedor", "Descricao"};
 
 	
-	public AtletaTableModel(String s) {
-		dados = bs.buscarAtleta(s);
+	public PartidaFutebolTableModel() {
+		dados = bs.getPartidasFutebol();
 	}
 
 	@Override
@@ -40,19 +39,18 @@ public class AtletaTableModel extends AbstractTableModel {
 	public Object getValueAt(int linha, int coluna) {
 		switch (coluna){
 			case 0:
-				return dados.get(linha).getNome();
+				return String.format("%td/%<tm/%<tY %<tH:%<tM", dados.get(coluna).getData());
 			case 1:
-				return String.format("%td/%<tm/%<tY %<tH:%<tM", dados.get(linha).getDataNascimento());
+				return dados.get(coluna).getParticipante1();
 			case 2:
-				return dados.get(linha).getPeso();
+				return dados.get(coluna).getPlacarParticipante1() + "x" + dados.get(coluna).getPlacarParticipante2();
 			case 3:
-				return dados.get(linha).getAltura();
+				return dados.get(coluna).getParticipante2();
 			case 4:
-				return dados.get(linha).getNacionalidade();	
+				return dados.get(coluna).getVencedor();
 			case 5:
-				return ((AtletaColetivo) (dados.get(linha))).getPosicao();
+				return dados.get(coluna).getDescricao();
 		}
 		return null;
 	}
-
 }

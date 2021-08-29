@@ -344,8 +344,8 @@ public class BancoSelecao {
 		return bancoSelecao;
 	}
 	
-	public HashSet<PartidaFutebol> getPartidasFutebol(){
-	HashSet<PartidaFutebol> partidas = new HashSet<PartidaFutebol>();
+	public ArrayList<PartidaFutebol> getPartidasFutebol(){
+		ArrayList<PartidaFutebol> partidas = new ArrayList<PartidaFutebol>();
 	for(Selecao s : selecoes) {
 		if(s.getEsporte() instanceof Futebol) {
 			((Futebol)s.getEsporte()).getPartidas();
@@ -354,24 +354,26 @@ public class BancoSelecao {
 	return partidas;
 	}
 	
-	public HashSet<PartidaBasquete> getPartidasBasquete(){
-		HashSet<PartidaBasquete> partidas = new HashSet<PartidaBasquete>();
+	public ArrayList<PartidaBasquete> getPartidasBasquete(){
+		ArrayList<PartidaBasquete> partidas = new ArrayList<PartidaBasquete>();
 		for(Selecao s : selecoes) {
 			if(s.getEsporte() instanceof Basquete) {
-				((Basquete)s.getEsporte()).getPartidas();
+				for( PartidaBasquete p :((Basquete)s.getEsporte()).getPartidas()) {
+					partidas.add(p);
+				}
 			}
 		}
 		return partidas;
-		}
+	}
 	
-	public HashSet<PartidaVolei> getPartidasVolei(){
-		HashSet<PartidaVolei> partidas = new HashSet<PartidaVolei>();
+	public ArrayList<PartidaVolei> getPartidasVolei(){
+		ArrayList<PartidaVolei> partidas = new ArrayList<PartidaVolei>();
 		for(Selecao s : selecoes) {
 			if(s.getEsporte() instanceof Volei) {
 				((Volei)s.getEsporte()).getPartidas();
 			}
 		}
-		return partidas;
+		return partidas;  
 	}
 	
 	public HashSet<PartidaFutebol> getPartidasFutebolPorSelecao(String pais){
@@ -412,23 +414,15 @@ public class BancoSelecao {
 	
 
 	public ArrayList<Atleta>  buscarAtleta(String nome) {
-		//System.out.println("teste");
 		ArrayList<Atleta> atls = new ArrayList<Atleta>();
 		for(Selecao s : selecoes) {
 			for(Atleta a : s.getTime()) {
-				if(a.getNome().equalsIgnoreCase(nome)) {
-					System.out.println(s.getID());
+				if(a.getNome().toLowerCase().contains(nome.toLowerCase())) {
 					atls.add(a);
 				}
 			}
+		}
 
-		}
-		System.out.println(atls.size());
-		for(Atleta a : atls) {
-			System.out.println(a.getNome());
-			System.out.println(a.getNacionalidade());
-		}
-		
 		return atls;
 	}
 
