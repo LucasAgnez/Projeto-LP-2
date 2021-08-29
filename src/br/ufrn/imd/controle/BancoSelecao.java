@@ -338,5 +338,71 @@ public class BancoSelecao {
 		}
 		return bancoSelecao;
 	}
+	
+	public HashSet<PartidaFutebol> getPartidasFutebol(){
+	HashSet<PartidaFutebol> partidas = new HashSet<PartidaFutebol>();
+	for(Selecao s : selecoes) {
+		if(s.getEsporte() instanceof Futebol) {
+			((Futebol)s.getEsporte()).getPartidas();
+		}
+	}
+	return partidas;
+	}
+	
+	public HashSet<PartidaBasquete> getPartidasBasquete(){
+		HashSet<PartidaBasquete> partidas = new HashSet<PartidaBasquete>();
+		for(Selecao s : selecoes) {
+			if(s.getEsporte() instanceof Basquete) {
+				((Basquete)s.getEsporte()).getPartidas();
+			}
+		}
+		return partidas;
+		}
+	
+	public HashSet<PartidaVolei> getPartidasVolei(){
+		HashSet<PartidaVolei> partidas = new HashSet<PartidaVolei>();
+		for(Selecao s : selecoes) {
+			if(s.getEsporte() instanceof Volei) {
+				((Volei)s.getEsporte()).getPartidas();
+			}
+		}
+		return partidas;
+	}
+	
+	public HashSet<PartidaFutebol> getPartidasFutebolPorSelecao(String pais){
+	HashSet<PartidaFutebol> partidas = new HashSet<PartidaFutebol>();
+	for(Selecao s : selecoes) {
+		if(s.getPais().equalsIgnoreCase(pais)) {
+			if(s.getEsporte() instanceof Futebol) {
+				((Futebol)s.getEsporte()).getPartidas();
+			}
+		}
+	}
+	return partidas;
+	}
+	
+	public HashSet<PartidaBasquete> getPartidasBasquetePorSelecao(String pais){
+		HashSet<PartidaBasquete> partidas = new HashSet<PartidaBasquete>();
+		for(Selecao s : selecoes) {
+			if(s.getPais().equalsIgnoreCase(pais)) {
+				if(s.getEsporte() instanceof Basquete) {
+					((Basquete)s.getEsporte()).getPartidas();
+				}
+			}
+		}
+		return partidas;
+		}
+	
+	public HashSet<PartidaVolei> getPartidasVoleiPorSelecao(String pais){
+		HashSet<PartidaVolei> partidas = new HashSet<PartidaVolei>();
+		for(Selecao s : selecoes) {
+			if(s.getPais().equalsIgnoreCase(pais)) {
+				if(s.getEsporte() instanceof Volei) {
+					((Volei)s.getEsporte()).getPartidas();
+				}
+			}
+		}
+		return partidas;
+	}
 		
 }
