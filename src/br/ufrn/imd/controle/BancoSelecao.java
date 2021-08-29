@@ -28,6 +28,10 @@ public class BancoSelecao {
 	
 	private static BancoSelecao bancoSelecao;
 	
+	private static HashSet<PartidaFutebol> partidasFutebol;
+	private static HashSet<PartidaBasquete> partidasBasquete;
+	private static HashSet<PartidaVolei> partidasVolei;
+	
 	public BancoSelecao() throws FileNotFoundException {
 		this.selecoes = new HashSet<Selecao>();
 		
@@ -49,9 +53,9 @@ public class BancoSelecao {
 		
 	
 		//Setando as partidas
-		HashSet<PartidaFutebol> partidasFutebol = this.buscaPartidasFutebol();
-		HashSet<PartidaBasquete> partidasBasquete = this.buscaPartidasBasquete();
-		HashSet<PartidaVolei> partidasVolei = this.buscaPartidasVolei();
+		partidasFutebol = this.buscaPartidasFutebol();
+		partidasBasquete = this.buscaPartidasBasquete();
+		partidasVolei = this.buscaPartidasVolei();
 		for(Selecao selecao : this.selecoes) {
 			Esporte esporte = selecao.getEsporte();
 			if(esporte instanceof Futebol) {
@@ -348,45 +352,15 @@ public class BancoSelecao {
 	}
 	
 	public ArrayList<PartidaFutebol> getPartidasFutebol(){
-		ArrayList<PartidaFutebol> partidas = new ArrayList<PartidaFutebol>();
-		for(Selecao s : selecoes) {
-			if(s.getEsporte() instanceof Futebol) {
-				for(PartidaFutebol p :((Futebol)s.getEsporte()).getPartidas()) {
-					if(p.getParticipante1().equals(s)  || p.getParticipante2().equals(s)) {
-						partidas.add(p);
-					}
-				}
-			}
-		}
-		return partidas;
+		return new ArrayList<>(partidasFutebol);
 	}
 	
 	public ArrayList<PartidaBasquete> getPartidasBasquete(){
-		ArrayList<PartidaBasquete> partidas = new ArrayList<PartidaBasquete>();
-		for(Selecao s : selecoes) {
-			if(s.getEsporte() instanceof Basquete) {
-				for(PartidaBasquete p :((Basquete)s.getEsporte()).getPartidas()) {
-					if(p.getParticipante1().equals(s)  || p.getParticipante2().equals(s)) {
-						partidas.add(p);
-					}
-				}
-			}
-		}
-		return partidas;
+		return new ArrayList<>(partidasBasquete);
 	}
 	
 	public ArrayList<PartidaVolei> getPartidasVolei(){
-		ArrayList<PartidaVolei> partidas = new ArrayList<PartidaVolei>();
-		for(Selecao s : selecoes) {
-			if(s.getEsporte() instanceof Volei) {
-				for(PartidaVolei p :((Volei)s.getEsporte()).getPartidas()) {
-					if(p.getParticipante1().equals(s) || p.getParticipante2().equals(s)) {
-						partidas.add(p);
-					}
-				}
-			}
-		}
-		return partidas;  
+		return new ArrayList<>(partidasVolei);
 	}
 	
 	public HashSet<PartidaFutebol> getPartidasFutebolPorSelecao(String pais){
@@ -451,6 +425,7 @@ public class BancoSelecao {
 	    FileWriter fw = new FileWriter("resources" + File.separator + "partidas_futebol.csv", true); 
 	    fw.write(System.getProperty("line.separator") + linha);
 	    fw.close();	
+	    partidasFutebol.add(partida);
 	}
 		
 }
