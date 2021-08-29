@@ -49,20 +49,19 @@ public class BancoSelecao {
 		
 	
 		//Setando as partidas
+		HashSet<PartidaFutebol> partidasFutebol = this.buscaPartidasFutebol();
+		HashSet<PartidaBasquete> partidasBasquete = this.buscaPartidasBasquete();
+		HashSet<PartidaVolei> partidasVolei = this.buscaPartidasVolei();
 		for(Selecao selecao : this.selecoes) {
 			Esporte esporte = selecao.getEsporte();
-			
 			if(esporte instanceof Futebol) {
-				((Futebol)esporte).setPartidas(this.buscaPartidasFutebol());
+				((Futebol)esporte).setPartidas(partidasFutebol);
 			}
 			else if(esporte instanceof Volei) {
-				((Volei) esporte).setPartidas(this.buscaPartidasVolei());
+				((Volei) esporte).setPartidas(partidasVolei);
 			}
 			else if(esporte instanceof Basquete) {
-				((Basquete) esporte).setPartidas(this.buscaPartidasBasquete());
-				for(PartidaBasquete b : ((Basquete) esporte).getPartidas()) {
-					System.out.println(b.getPontuacaoParticipante1() + " " + b.getPontuacaoParticipante2());
-				}
+				((Basquete) esporte).setPartidas(partidasBasquete);
 			}
 		}
 		
@@ -352,7 +351,11 @@ public class BancoSelecao {
 		ArrayList<PartidaFutebol> partidas = new ArrayList<PartidaFutebol>();
 		for(Selecao s : selecoes) {
 			if(s.getEsporte() instanceof Futebol) {
-				((Futebol)s.getEsporte()).getPartidas();
+				for(PartidaFutebol p :((Futebol)s.getEsporte()).getPartidas()) {
+					if(p.getParticipante1().equals(s)  || p.getParticipante2().equals(s)) {
+						partidas.add(p);
+					}
+				}
 			}
 		}
 		return partidas;
@@ -362,8 +365,10 @@ public class BancoSelecao {
 		ArrayList<PartidaBasquete> partidas = new ArrayList<PartidaBasquete>();
 		for(Selecao s : selecoes) {
 			if(s.getEsporte() instanceof Basquete) {
-				for( PartidaBasquete p :((Basquete)s.getEsporte()).getPartidas()) {
-					partidas.add(p);
+				for(PartidaBasquete p :((Basquete)s.getEsporte()).getPartidas()) {
+					if(p.getParticipante1().equals(s)  || p.getParticipante2().equals(s)) {
+						partidas.add(p);
+					}
 				}
 			}
 		}
@@ -374,7 +379,12 @@ public class BancoSelecao {
 		ArrayList<PartidaVolei> partidas = new ArrayList<PartidaVolei>();
 		for(Selecao s : selecoes) {
 			if(s.getEsporte() instanceof Volei) {
-				((Volei)s.getEsporte()).getPartidas();
+				for(PartidaVolei p :((Volei)s.getEsporte()).getPartidas()) {
+					if(p.getParticipante1().equals(s) || p.getParticipante2().equals(s)) {
+						partidas.add(p);
+					}
+				}
+				
 			}
 		}
 		return partidas;  
