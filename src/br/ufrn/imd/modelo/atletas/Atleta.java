@@ -5,7 +5,7 @@ import java.util.Date;
 public class Atleta {
 	private Date dataNascimento;
 	private String nome;
-	private double altura;
+	private int altura;
 	private double peso;
 	private String nacionalidade;
 
@@ -14,7 +14,7 @@ public class Atleta {
 		
 	}
 	
-	public Atleta(Date dataNascimento, String nome, double altura, double peso, 
+	public Atleta(Date dataNascimento, String nome, int altura, double peso, 
 		String nacionalidade) {
 		super();
 		this.dataNascimento = dataNascimento;
@@ -36,10 +36,10 @@ public class Atleta {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public double getAltura() {
+	public int getAltura() {
 		return altura;
 	}
-	public void setAltura(double altura) {
+	public void setAltura(int altura) {
 		this.altura = altura;
 	}
 	public double getPeso() {

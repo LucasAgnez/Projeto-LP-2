@@ -8,7 +8,7 @@ public class AtletaColetivo extends Atleta {
 	
 	public AtletaColetivo() {}
 	
-	public AtletaColetivo(Date dataNascimento, String nome, double altura, double peso, 
+	public AtletaColetivo(Date dataNascimento, String nome, int altura, double peso, 
 			 String posicao, Selecao selecao, String nacionalidade) {
 		super(dataNascimento, nome, altura, peso, nacionalidade);
 		this.posicao = posicao;

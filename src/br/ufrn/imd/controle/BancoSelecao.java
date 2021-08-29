@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -251,7 +252,7 @@ public class BancoSelecao {
 					System.exit(1);
 				}
 				tmpAtleta.setPeso(Double.parseDouble(data[2]));
-				tmpAtleta.setAltura(Double.parseDouble(data[3]));
+				tmpAtleta.setAltura(Integer.parseInt(data[3]));
 				tmpAtleta.setPosicao(data[4]);
 				atletas.add(tmpAtleta);
 			}
@@ -403,6 +404,23 @@ public class BancoSelecao {
 			}
 		}
 		return partidas;
+	}
+	
+	public ArrayList<Atleta>  buscarAtleta(String nome) {
+		//System.out.println("teste");
+		ArrayList<Atleta> atls = new ArrayList<Atleta>();
+		for(Selecao s : selecoes) {
+			for(Atleta a : s.getTime()) {
+				//System.out.println(a.getNome() +" " + nome );
+			//	System.out.println(a.getNome().equalsIgnoreCase(nome));
+				if(a.getNome().equalsIgnoreCase(nome)) {
+					atls.add(a);
+				//	System.out.println(s.getID());
+				}
+			}
+
+		}
+		return atls;
 	}
 		
 }
