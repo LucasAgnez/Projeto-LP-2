@@ -21,9 +21,9 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
 
-	JMenuBar mnbar = new JMenuBar();
-	JMenu menuEdit = new JMenu("Editar");
-	JMenu menuAjud = new JMenu("Ajuda");
+	private JMenuBar mnbar = new JMenuBar();
+	private JMenu menuEdit = new JMenu("Editar");
+	private JMenu menuAjud = new JMenu("Ajuda");
 
 	public TelaPrincipal() {
 		Container ct = this.getContentPane();
