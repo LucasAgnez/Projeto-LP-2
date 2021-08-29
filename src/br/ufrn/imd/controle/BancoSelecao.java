@@ -28,9 +28,9 @@ public class BancoSelecao {
 	
 	private static BancoSelecao bancoSelecao;
 	
-	private static HashSet<PartidaFutebol> partidasFutebol;
-	private static HashSet<PartidaBasquete> partidasBasquete;
-	private static HashSet<PartidaVolei> partidasVolei;
+	private HashSet<PartidaFutebol> partidasFutebol;
+	private HashSet<PartidaBasquete> partidasBasquete;
+	private HashSet<PartidaVolei> partidasVolei;
 	
 	public BancoSelecao() throws FileNotFoundException {
 		this.selecoes = new HashSet<Selecao>();

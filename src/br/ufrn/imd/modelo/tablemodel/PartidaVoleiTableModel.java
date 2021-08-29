@@ -51,17 +51,17 @@ public class PartidaVoleiTableModel extends AbstractTableModel{
 	public Object getValueAt(int linha, int coluna) {
 		switch (coluna){
 			case 0:
-				return String.format("%td/%<tm/%<tY %<tH:%<tM", dados.get(coluna).getData());
+				return String.format("%td/%<tm/%<tY %<tH:%<tM", dados.get(linha).getData());
 			case 1:
-				return dados.get(coluna).getParticipante1();
+				return dados.get(linha).getParticipante1();
 			case 2:
-				return dados.get(coluna).getSetsParticipante1() + "x" + dados.get(coluna).getSetsParticipante2();
+				return dados.get(linha).getSetsParticipante1() + "x" + dados.get(linha).getSetsParticipante2();
 			case 3:
-				return dados.get(coluna).getParticipante2();
+				return dados.get(linha).getParticipante2();
 			case 4:
-				return dados.get(coluna).getVencedor();
+				return dados.get(linha).getVencedor();
 			case 5:
-				return dados.get(coluna).getDescricao();
+				return dados.get(linha).getDescricao();
 		}
 		return null;
 	}
