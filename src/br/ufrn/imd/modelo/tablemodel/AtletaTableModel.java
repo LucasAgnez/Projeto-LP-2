@@ -1,4 +1,4 @@
-package br.ufrn.imd.modelo.atletas;
+package br.ufrn.imd.modelo.tablemodel;
 
 import java.util.ArrayList;
 
@@ -6,12 +6,13 @@ import javax.swing.table.AbstractTableModel;
 
 
 import br.ufrn.imd.controle.BancoSelecao;
+import br.ufrn.imd.modelo.atletas.Atleta;
+import br.ufrn.imd.modelo.atletas.AtletaColetivo;
 
 public class AtletaTableModel extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	private BancoSelecao bs = BancoSelecao.getInstance();
 	private ArrayList<Atleta> dados;
-	private String[] colunas = {"Nome", "Data de Nascimento", "Peso", "Altura", "Nacionalidade", "Posicao"};
 
 	
 	public AtletaTableModel(String s) {
@@ -20,8 +21,21 @@ public class AtletaTableModel extends AbstractTableModel {
 
 	@Override
 	public String getColumnName(int column) {
-		// TODO Auto-generated method stub
-		return colunas[column];
+		switch(column) {
+			case 0:
+				return "Nome";
+			case 1: 
+				return "Data de Nascimento";
+			case 2:	
+				return "Peso";
+			case 3:
+				return "Altura";
+			case 4:
+				return "Nacionalidade";
+			case 5:
+				return "Posicao";
+		}
+		return null;
 	}
 	
 	@Override

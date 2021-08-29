@@ -352,7 +352,9 @@ public class BancoSelecao {
 		ArrayList<PartidaFutebol> partidas = new ArrayList<PartidaFutebol>();
 		for(Selecao s : selecoes) {
 			if(s.getEsporte() instanceof Futebol) {
-				((Futebol)s.getEsporte()).getPartidas();
+				for(PartidaFutebol p : ((Futebol)s.getEsporte()).getPartidas()) {
+					partidas.add(p);
+				}
 			}
 		}
 		return partidas;
@@ -374,7 +376,9 @@ public class BancoSelecao {
 		ArrayList<PartidaVolei> partidas = new ArrayList<PartidaVolei>();
 		for(Selecao s : selecoes) {
 			if(s.getEsporte() instanceof Volei) {
-				((Volei)s.getEsporte()).getPartidas();
+				for(PartidaVolei p : ((Volei)s.getEsporte()).getPartidas()) {
+					partidas.add(p);
+				}
 			}
 		}
 		return partidas;  

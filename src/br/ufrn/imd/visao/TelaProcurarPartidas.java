@@ -15,7 +15,9 @@ import br.ufrn.imd.modelo.esportes.Basquete;
 import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.esportes.Futebol;
 import br.ufrn.imd.modelo.esportes.Volei;
-import br.ufrn.imd.modelo.partidas.PartidaFutebolTableModel;
+import br.ufrn.imd.modelo.tablemodel.PartidaBasqueteTableModel;
+import br.ufrn.imd.modelo.tablemodel.PartidaFutebolTableModel;
+import br.ufrn.imd.modelo.tablemodel.PartidaVoleiTableModel;
 
 public class TelaProcurarPartidas extends JFrame implements ActionListener{
 	
