@@ -2,7 +2,9 @@ package br.ufrn.imd.visao;
 
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -45,8 +47,11 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		ct.add(buttonAdicionarPartida);
 		ct.add(Box.createRigidArea(new Dimension(0, 10)));
 		
-        
-		setSize(1200,625);
+        int larguraJanela = 1200;
+        int alturaJanela = 625;
+		setSize(larguraJanela, alturaJanela);
+		Point centro = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
+		setBounds(centro.x - larguraJanela / 2, centro.y - alturaJanela / 2, larguraJanela, alturaJanela);
 		setResizable(true);
 		setTitle("Agenda Eventos Esportivos");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

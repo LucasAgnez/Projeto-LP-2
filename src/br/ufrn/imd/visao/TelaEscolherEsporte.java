@@ -3,6 +3,8 @@ package br.ufrn.imd.visao;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GraphicsEnvironment;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -41,7 +43,7 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		
 		
         listaEsportes = new JList<Esporte>(bs.encontraEsportes());
-        listaEsportes.setSelectedIndex(2);
+        listaEsportes.setSelectedIndex(0);
 		listaEsportes.setFont(listaEsportes.getFont().deriveFont(22.0f));
 		listaEsportes.setFixedCellHeight(44);
         JScrollPane listScrollPane = new JScrollPane(listaEsportes);
@@ -81,8 +83,11 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 		ct.add(panelBotoesEsporte, BorderLayout.PAGE_END);
 		
 		
-		
-		setSize(400,400);
+		int larguraJanela = 400;
+        int alturaJanela = 400;
+		setSize(larguraJanela, alturaJanela);
+		Point centro = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
+		setBounds(centro.x - larguraJanela / 2, centro.y - alturaJanela / 2, larguraJanela, alturaJanela);
 		setResizable(true);
 		setTitle("Agenda Eventos Esportivos");
 	}
@@ -93,6 +98,9 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 			TelaAdicionarPartida telaEscolherPartida = new TelaAdicionarPartida(listaEsportes.getSelectedValue());
 			this.setVisible(false);
 			telaEscolherPartida.setVisible(true);
+		}
+		else if(e.getActionCommand().equals("Cancelar")) {
+			this.dispose();
 		}
 	}
 }

@@ -4,12 +4,15 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.GraphicsEnvironment;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -67,21 +70,46 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener{
 		panelBoxSelectPaises.add(panelSelectsPaises);
 		
 		
+		//Criando botões da janela de seleção de esporte
+		JButton buttonCancelar = new JButton("Cancelar");
+		buttonCancelar.setActionCommand("Cancelar");
+		buttonCancelar.addActionListener(this);	
+        JButton buttonSelecionar = new JButton("Selecionar");
+        buttonSelecionar.setActionCommand("Selecionar");
+        buttonSelecionar.addActionListener(this);
+		
+		//Adicionando botões ao seu painel
+		JPanel panelBotoesEsporte = new JPanel();
+		panelBotoesEsporte.setLayout(new BoxLayout(panelBotoesEsporte, BoxLayout.LINE_AXIS));
+		panelBotoesEsporte.setBorder(BorderFactory.createEmptyBorder(0, 20, 20, 20));
+		panelBotoesEsporte.add(Box.createHorizontalGlue());
+		panelBotoesEsporte.add(buttonCancelar);
+		panelBotoesEsporte.add(Box.createRigidArea(new Dimension(10, 0)));
+		panelBotoesEsporte.add(buttonSelecionar);
 		
 		
 		ct.add(panelLabel, BorderLayout.PAGE_START);
 		ct.add(panelBoxSelectPaises, BorderLayout.CENTER);
+		ct.add(panelBotoesEsporte, BorderLayout.PAGE_END);
 		//ct.add(panelBoxSelectPaises);
 		
-		setSize(600, 400);
+		int larguraJanela = 600;
+        int alturaJanela = 400;
+		setSize(larguraJanela, alturaJanela);
+		Point centro = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
+		setBounds(centro.x - larguraJanela / 2, centro.y - alturaJanela / 2, larguraJanela, alturaJanela);
 		setResizable(true);
 		setTitle("Adicionar partida de " + esporte);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		if(e.getActionCommand().equals("Selecionar")) {
+			
+		}
+		else if(e.getActionCommand().equals("Cancelar")) {
+			this.dispose();
+		}
 	}
 	
 }
