@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -114,8 +115,8 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	private JPanel montaEtapaPaises() {
 		//Adicionando selects dos países
 		BancoSelecao bs = BancoSelecao.getInstance();
-		comboBoxPaises1 = new JComboBox<Selecao>(bs.encontraSelecoesPorEsporte(esporte.getID()));
-		comboBoxPaises2 = new JComboBox<Selecao>(bs.encontraSelecoesPorEsporte(esporte.getID()));
+		comboBoxPaises1 = new JComboBox<Selecao>(bs.getSelecoesPorEsporte(esporte.getID()));
+		comboBoxPaises2 = new JComboBox<Selecao>(bs.getSelecoesPorEsporte(esporte.getID()));
 		JPanel panelSelectsPaises = new JPanel();
 		panelSelectsPaises.setLayout(new BoxLayout(panelSelectsPaises, BoxLayout.LINE_AXIS));
 		panelSelectsPaises.setBorder(BorderFactory.createEmptyBorder(0, T_BORDA, T_BORDA, T_BORDA));
@@ -225,6 +226,10 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		else if(e.getActionCommand().equals("Salvar")) {
 			if(esporte instanceof Futebol) {
+				if(fieldPlacarFutebol1.getText().isEmpty() || fieldPlacarFutebol2.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Campos de gols são obrigatórios!");
+					return;
+				}
 				((PartidaFutebol) partida).setPlacarParticipante1(Integer.parseInt(fieldPlacarFutebol1.getText()));
 				((PartidaFutebol) partida).setPlacarParticipante2(Integer.parseInt(fieldPlacarFutebol2.getText()));
 				((PartidaFutebol) partida).calculaVencedor();
@@ -235,10 +240,15 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 					((PartidaFutebol) partida).setData(ft.parse(fieldData.getText() + " " + fieldHora.getText()));
 				} catch(ParseException ex){ 
 					JOptionPane.showMessageDialog(null, "Campos de data e hora estão em formatos inválidos. Tente novamente.");
+					return;
 				}
 				((PartidaFutebol) partida).setDescricao(textAreaDescricao.getText());
 				BancoSelecao bs = BancoSelecao.getInstance();
-				bs.salvarPartidaFutebol((PartidaFutebol) partida);
+				try {
+					bs.salvarPartidaFutebol((PartidaFutebol) partida);
+				} catch (IOException e1) {
+					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar. Tente novamente.");
+				}
 			}
 		}
 		

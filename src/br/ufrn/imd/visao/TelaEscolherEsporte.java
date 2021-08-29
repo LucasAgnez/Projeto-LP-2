@@ -42,7 +42,7 @@ public class TelaEscolherEsporte extends JFrame implements ActionListener {
 	
 		
 		
-        listaEsportes = new JList<Esporte>(bs.encontraEsportes());
+        listaEsportes = new JList<Esporte>(bs.getEsportes());
         listaEsportes.setSelectedIndex(0);
 		listaEsportes.setFont(listaEsportes.getFont().deriveFont(22.0f));
 		listaEsportes.setFixedCellHeight(44);

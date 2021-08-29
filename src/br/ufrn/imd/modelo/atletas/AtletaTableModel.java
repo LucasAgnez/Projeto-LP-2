@@ -15,7 +15,7 @@ public class AtletaTableModel extends AbstractTableModel {
 
 	
 	public AtletaTableModel(String s) {
-		dados = bs.buscarAtleta(s);
+		dados = bs.getAtletas(s);
 	}
 
 	@Override

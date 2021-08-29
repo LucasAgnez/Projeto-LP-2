@@ -51,6 +51,7 @@ public class BancoSelecao {
 		//Setando as partidas
 		for(Selecao selecao : this.selecoes) {
 			Esporte esporte = selecao.getEsporte();
+			
 			if(esporte instanceof Futebol) {
 				((Futebol)esporte).setPartidas(this.buscaPartidasFutebol());
 			}
@@ -59,6 +60,9 @@ public class BancoSelecao {
 			}
 			else if(esporte instanceof Basquete) {
 				((Basquete) esporte).setPartidas(this.buscaPartidasBasquete());
+				for(PartidaBasquete b : ((Basquete) esporte).getPartidas()) {
+					System.out.println(b.getPontuacaoParticipante1() + " " + b.getPontuacaoParticipante2());
+				}
 			}
 		}
 		
@@ -80,8 +84,8 @@ public class BancoSelecao {
 				String line = sc.nextLine();
 				String[] data= line.split(",");
 				
-				tmpPartida.setParticipante1(this.encontraSelecaoPorID(Integer.parseInt(data[0])));
-				tmpPartida.setParticipante2(this.encontraSelecaoPorID(Integer.parseInt(data[1])));
+				tmpPartida.setParticipante1(this.getSelecaoPorID(Integer.parseInt(data[0])));
+				tmpPartida.setParticipante2(this.getSelecaoPorID(Integer.parseInt(data[1])));
 				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
 						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
 				tmpPartida.setVencedor(vencedor);
@@ -123,8 +127,8 @@ public class BancoSelecao {
 				String line = sc.nextLine();
 				String[] data= line.split(",");
 				
-				tmpPartida.setParticipante1(this.encontraSelecaoPorID(Integer.parseInt(data[0])));
-				tmpPartida.setParticipante2(this.encontraSelecaoPorID(Integer.parseInt(data[1])));
+				tmpPartida.setParticipante1(this.getSelecaoPorID(Integer.parseInt(data[0])));
+				tmpPartida.setParticipante2(this.getSelecaoPorID(Integer.parseInt(data[1])));
 				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
 						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
 				tmpPartida.setVencedor(vencedor);
@@ -174,8 +178,8 @@ public class BancoSelecao {
 				String line = sc.nextLine();
 				String[] data= line.split(",");
 				
-				tmpPartida.setParticipante1(this.encontraSelecaoPorID(Integer.parseInt(data[0])));
-				tmpPartida.setParticipante2(this.encontraSelecaoPorID(Integer.parseInt(data[1])));
+				tmpPartida.setParticipante1(this.getSelecaoPorID(Integer.parseInt(data[0])));
+				tmpPartida.setParticipante2(this.getSelecaoPorID(Integer.parseInt(data[1])));
 				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
 						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
 				tmpPartida.setVencedor(vencedor);
@@ -270,7 +274,7 @@ public class BancoSelecao {
 	}
 	
 	
-	public Selecao encontraSelecaoPorID(int ID) {
+	public Selecao getSelecaoPorID(int ID) {
 		for(Selecao selecao : this.selecoes) {
 			if(selecao.getID() == ID) {
 				return selecao;
@@ -287,7 +291,7 @@ public class BancoSelecao {
 		this.selecoes = selecoes;
 	}
 	
-	public Selecao[] encontraSelecoesPorEsporte(int ID){
+	public Selecao[] getSelecoesPorEsporte(int ID){
 		HashSet<Selecao> selecoesEsporte = new HashSet<Selecao>();
 		for(Selecao selecao : this.selecoes) {
 			if(selecao.getEsporte().getID() == ID) {
@@ -297,7 +301,7 @@ public class BancoSelecao {
 		return selecoesEsporte.toArray(Selecao[]::new);
 	}
 	
-	public Esporte[] encontraEsportes() {
+	public Esporte[] getEsportes() {
 		//URL urlEsportes = getClass().getResource("esportes.csv");
 		File fileEsportes = new File("resources" + File.separator + "esportes.csv");
 		Scanner sc;
@@ -346,12 +350,12 @@ public class BancoSelecao {
 	
 	public ArrayList<PartidaFutebol> getPartidasFutebol(){
 		ArrayList<PartidaFutebol> partidas = new ArrayList<PartidaFutebol>();
-	for(Selecao s : selecoes) {
-		if(s.getEsporte() instanceof Futebol) {
-			((Futebol)s.getEsporte()).getPartidas();
+		for(Selecao s : selecoes) {
+			if(s.getEsporte() instanceof Futebol) {
+				((Futebol)s.getEsporte()).getPartidas();
+			}
 		}
-	}
-	return partidas;
+		return partidas;
 	}
 	
 	public ArrayList<PartidaBasquete> getPartidasBasquete(){
@@ -377,15 +381,15 @@ public class BancoSelecao {
 	}
 	
 	public HashSet<PartidaFutebol> getPartidasFutebolPorSelecao(String pais){
-	HashSet<PartidaFutebol> partidas = new HashSet<PartidaFutebol>();
-	for(Selecao s : selecoes) {
-		if(s.getPais().equalsIgnoreCase(pais)) {
-			if(s.getEsporte() instanceof Futebol) {
-				((Futebol)s.getEsporte()).getPartidas();
+		HashSet<PartidaFutebol> partidas = new HashSet<PartidaFutebol>();
+		for(Selecao s : selecoes) {
+			if(s.getPais().equalsIgnoreCase(pais)) {
+				if(s.getEsporte() instanceof Futebol) {
+					((Futebol)s.getEsporte()).getPartidas();
+				}
 			}
 		}
-	}
-	return partidas;
+		return partidas;
 	}
 	
 	public HashSet<PartidaBasquete> getPartidasBasquetePorSelecao(String pais){
@@ -398,7 +402,7 @@ public class BancoSelecao {
 			}
 		}
 		return partidas;
-		}
+	}
 	
 	public HashSet<PartidaVolei> getPartidasVoleiPorSelecao(String pais){
 		HashSet<PartidaVolei> partidas = new HashSet<PartidaVolei>();
@@ -412,8 +416,7 @@ public class BancoSelecao {
 		return partidas;
 	}
 	
-
-	public ArrayList<Atleta>  buscarAtleta(String nome) {
+	public ArrayList<Atleta>  getAtletas(String nome) {
 		ArrayList<Atleta> atls = new ArrayList<Atleta>();
 		for(Selecao s : selecoes) {
 			for(Atleta a : s.getTime()) {
@@ -426,7 +429,7 @@ public class BancoSelecao {
 		return atls;
 	}
 
-	public void salvarPartidaFutebol(PartidaFutebol partida) {
+	public void salvarPartidaFutebol(PartidaFutebol partida) throws IOException{
 		String linha = String.valueOf(partida.getParticipante1().getID()) + "," + 
 				String.valueOf(partida.getParticipante2().getID()) + "," +
 				String.valueOf(partida.getVencedor().getID()) + "," + 
@@ -435,16 +438,10 @@ public class BancoSelecao {
 				String.valueOf(partida.getPlacarParticipante2()) + "," + 
 				String.format("%td/%<tm/%<tY %<tH:%<tM", partida.getData());
 		
-		try
-		{
-		    FileWriter fw = new FileWriter("resources" + File.separator + "partidas_futebol.csv", true); //the true will append the new data
-		    fw.write(System.getProperty("line.separator") + linha);//appends the string to the file
-		    fw.close();
-		}
-		catch(IOException ioe)
-		{
-		    System.err.println("IOException: " + ioe.getMessage());
-		}		
+		
+	    FileWriter fw = new FileWriter("resources" + File.separator + "partidas_futebol.csv", true); 
+	    fw.write(System.getProperty("line.separator") + linha);
+	    fw.close();	
 	}
 		
 }
