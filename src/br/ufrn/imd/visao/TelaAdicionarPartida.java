@@ -19,9 +19,11 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import br.ufrn.imd.controle.BancoSelecao;
+import br.ufrn.imd.modelo.atletas.Selecao;
 import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.esportes.Futebol;
 import br.ufrn.imd.modelo.partidas.Partida;
@@ -33,10 +35,13 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	private static final int T_BORDA = 20;
 	
 	private JPanel panelCardCentral;
-	private JComboBox<String> paises1;
-	private JComboBox<String> paises2;
+	private JComboBox<Selecao> comboBoxPaises1;
+	private JComboBox<Selecao> comboBoxPaises2;
 	private JTextField fieldPlacarFutebol1;
 	private JTextField fieldPlacarFutebol2;
+	private JTextArea textAreaDescricao;
+	private JButton buttonCancelar;
+	private JButton buttonSelecionar;
 	
 	private Partida partida;
 	private Esporte esporte;
@@ -69,10 +74,10 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		
 		//Criando botões da janela de seleção de esporte
-		JButton buttonCancelar = new JButton("Cancelar");
+		buttonCancelar = new JButton("Cancelar");
 		buttonCancelar.setActionCommand("Cancelar");
 		buttonCancelar.addActionListener(this);	
-        JButton buttonSelecionar = new JButton("Avançar");
+        buttonSelecionar = new JButton("Avançar");
         buttonSelecionar.setActionCommand("Avançar");
         buttonSelecionar.addActionListener(this);
 		
@@ -104,19 +109,19 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	private JPanel montaEtapaPaises() {
 		//Adicionando selects dos países
 		BancoSelecao bs = BancoSelecao.getInstance();
-		paises1 = new JComboBox<String>(bs.encontraPaisesPorEsporte(esporte.getID()));
-		paises2 = new JComboBox<String>(bs.encontraPaisesPorEsporte(esporte.getID()));
+		comboBoxPaises1 = new JComboBox<Selecao>(bs.encontraSelecoesPorEsporte(esporte.getID()));
+		comboBoxPaises2 = new JComboBox<Selecao>(bs.encontraSelecoesPorEsporte(esporte.getID()));
 		JPanel panelSelectsPaises = new JPanel();
 		panelSelectsPaises.setLayout(new BoxLayout(panelSelectsPaises, BoxLayout.LINE_AXIS));
 		panelSelectsPaises.setBorder(BorderFactory.createEmptyBorder(0, T_BORDA, T_BORDA, T_BORDA));
 		panelSelectsPaises.add(Box.createVerticalGlue());
-		paises1.setMaximumSize(new Dimension(400, 30));
-		paises2.setMaximumSize(new Dimension(400, 30));
-		panelSelectsPaises.add(paises1);
+		comboBoxPaises1.setMaximumSize(new Dimension(400, 30));
+		comboBoxPaises2.setMaximumSize(new Dimension(400, 30));
+		panelSelectsPaises.add(comboBoxPaises1);
 		JLabel labelX = new JLabel("X");
 		labelX.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 30));
 		panelSelectsPaises.add(labelX);
-		panelSelectsPaises.add(paises2);
+		panelSelectsPaises.add(comboBoxPaises2);
 		return panelSelectsPaises;
 	}
 	
@@ -127,9 +132,10 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		}
 		
 		
-		JPanel panelPartida = new JPanel();
-		panelPartida.setLayout(new BoxLayout(panelPartida, BoxLayout.LINE_AXIS));
+		JPanel panelPlacares = new JPanel();
+		panelPlacares.setLayout(new BoxLayout(panelPlacares, BoxLayout.LINE_AXIS));
 		JLabel labelX = new JLabel("X");
+		labelX.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 30));
 		
 
 		fieldPlacarFutebol1 = new JTextField();
@@ -156,10 +162,20 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		});
 		
 		
-		panelPartida.add(fieldPlacarFutebol1);
-		panelPartida.add(labelX);
-		panelPartida.add(fieldPlacarFutebol2);
+		panelPlacares.add(fieldPlacarFutebol1);
+		panelPlacares.add(labelX);
+		panelPlacares.add(fieldPlacarFutebol2);
 		
+		JPanel panelDescricao = new JPanel();
+		panelDescricao.setLayout(new BoxLayout(panelDescricao, BoxLayout.LINE_AXIS));
+		textAreaDescricao = new JTextArea();
+		panelDescricao.add(textAreaDescricao);
+		
+		JPanel panelPartida = new JPanel();
+		panelPartida.setLayout(new BoxLayout(panelPartida, BoxLayout.PAGE_AXIS));
+		
+		panelPartida.add(panelPlacares);
+		panelPartida.add(panelDescricao);
 		
 		return panelPartida;
 	}
@@ -167,21 +183,38 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Avançar")) {
+			
 			if(esporte instanceof Futebol) {
-				((PartidaFutebol) partida).setPlacarParticipante1(Integer.parseInt(fieldPlacarFutebol1.getText()));
-				((PartidaFutebol) partida).setPlacarParticipante2(Integer.parseInt(fieldPlacarFutebol2.getText()));
-				((PartidaFutebol) partida).setParticipante1(null);
-				((PartidaFutebol) partida).setParticipante2(null);
-				((PartidaFutebol) partida).setVencedor(null);
-				((PartidaFutebol) partida).setData(null);
-				((PartidaFutebol) partida).setDescricao(null);
+				((PartidaFutebol) partida).setParticipante1((Selecao) comboBoxPaises1.getSelectedItem());
+				((PartidaFutebol) partida).setParticipante2((Selecao) comboBoxPaises2.getSelectedItem());
 			}
 			
 			CardLayout cl = (CardLayout)(panelCardCentral.getLayout());
 	        cl.show(panelCardCentral, "Teste2");
+	        buttonSelecionar.setText("Salvar");
+	        buttonSelecionar.setActionCommand("Salvar");
+	        buttonCancelar.setText("Voltar");
+	        buttonCancelar.setActionCommand("Voltar");
+		}
+		else if(e.getActionCommand().equals("Salvar")) {
+			if(esporte instanceof Futebol) {
+				((PartidaFutebol) partida).setPlacarParticipante1(Integer.parseInt(fieldPlacarFutebol1.getText()));
+				((PartidaFutebol) partida).setPlacarParticipante2(Integer.parseInt(fieldPlacarFutebol2.getText()));
+				((PartidaFutebol) partida).calculaVencedor();
+				((PartidaFutebol) partida).setData(null);
+				((PartidaFutebol) partida).setDescricao(null);
+			}
 		}
 		else if(e.getActionCommand().equals("Cancelar")) {
 			this.dispose();
+		}
+		else if(e.getActionCommand().equals("Voltar")) {
+			CardLayout cl = (CardLayout)(panelCardCentral.getLayout());
+	        cl.show(panelCardCentral, "Teste");
+	        buttonSelecionar.setText("Avançar");
+	        buttonSelecionar.setActionCommand("Avançar");
+	        buttonCancelar.setText("Cancelar");
+	        buttonCancelar.setActionCommand("Cancelar");
 		}
 	}
 	

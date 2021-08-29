@@ -34,4 +34,13 @@ public class PartidaFutebol extends Partida {
 	public void setPlacarParticipante2(int placarParticipante2) {
 		this.placarParticipante2 = placarParticipante2;
 	}
+	
+	public void calculaVencedor() {
+		if(placarParticipante1 > placarParticipante2) {
+			this.vencedor = this.participante1;
+		}
+		else {
+			this.vencedor = this.participante1;
+		}
+	}
 }

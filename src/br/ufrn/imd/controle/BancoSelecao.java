@@ -282,14 +282,14 @@ public class BancoSelecao {
 		this.selecoes = selecoes;
 	}
 	
-	public String[] encontraPaisesPorEsporte(int ID){
-		HashSet<String> paises = new HashSet<String>();
+	public Selecao[] encontraSelecoesPorEsporte(int ID){
+		HashSet<Selecao> selecoesEsporte = new HashSet<Selecao>();
 		for(Selecao selecao : this.selecoes) {
 			if(selecao.getEsporte().getID() == ID) {
-				paises.add(selecao.getPais());
+				selecoesEsporte.add(selecao);
 			}
 		}
-		return paises.toArray(String[]::new);
+		return selecoesEsporte.toArray(Selecao[]::new);
 	}
 	
 	public Esporte[] encontraEsportes() {

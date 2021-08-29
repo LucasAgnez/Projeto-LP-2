@@ -50,4 +50,9 @@ public class Selecao {
 		time.add(atleta);
 	}
 	
+	@Override
+    public String toString() {
+        return this.pais;
+    }
+	
 }
