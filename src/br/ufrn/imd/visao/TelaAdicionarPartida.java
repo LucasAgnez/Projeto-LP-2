@@ -53,18 +53,16 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	private JComboBox<Selecao> comboBoxPaises2;
 	private JTextField fieldPlacarFutebol1;
 	private JTextField fieldPlacarFutebol2;
-	private JTextField fieldSet1;
-	private JTextField fieldSet2;
-	private JTextField fieldSet3;
-	private JTextField fieldSet4;
-	private JTextField fieldSet5;
-	private JTextField fieldSet6;
-	private JTextField fieldSet7;
-	private JTextField fieldSet8;
-	private JTextField fieldSet9;
-	private JTextField fieldSet10;
-	private JTextField fieldSet11;
-	private JTextField fieldSet12;
+	private JTextField fieldSet1 = new JTextField();
+	private JTextField fieldSet2 = new JTextField();
+	private JTextField fieldSet3 = new JTextField();
+	private JTextField fieldSet4 = new JTextField();
+	private JTextField fieldSet5 = new JTextField();
+	private JTextField fieldSet6 = new JTextField();
+	private JTextField fieldSet7 = new JTextField();
+	private JTextField fieldSet8 = new JTextField();
+	private JTextField fieldSet9 = new JTextField();
+	private JTextField fieldSet10 = new JTextField();
 	private JTextField fieldData;
 	private JTextField fieldHora;
 	private JTextArea textAreaDescricao;
@@ -173,8 +171,8 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 			JScrollPane sp = new JScrollPane(montaPainelPontosVolei());
 			sp.setBorder(null);
 			panelPontos.add(sp);
-			panelPontos.setPreferredSize(new Dimension(300, 300));
-			alturaJanela = 750;
+			panelPontos.setPreferredSize(new Dimension(300, 200));
+			alturaJanela = 700;
 		}
 		
 		
@@ -303,7 +301,6 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		panelSets.add(montaSets(fieldSet5, fieldSet6));
 		panelSets.add(montaSets(fieldSet7, fieldSet8));
 		panelSets.add(montaSets(fieldSet9, fieldSet10));
-		panelSets.add(montaSets(fieldSet11, fieldSet12));
 		
 		return panelSets;
 	}
@@ -316,7 +313,7 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		JPanel grupoPlacar1 = new JPanel();
 		grupoPlacar1.setLayout(new BoxLayout(grupoPlacar1, BoxLayout.PAGE_AXIS));
-		field1 = new JTextField();
+		//field1 = new JTextField();
 		field1.setMaximumSize(new Dimension(400, 30));
 		JLabel labelPlacar1 = new JLabel("Pontos");
 		labelPlacar1.setMinimumSize(new Dimension(400, 30));
@@ -327,7 +324,7 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		JPanel grupoPlacar2 = new JPanel();
 		grupoPlacar2.setLayout(new BoxLayout(grupoPlacar2, BoxLayout.PAGE_AXIS));
-		field2 = new JTextField();
+		//field2 = new JTextField();
 		field2.setMaximumSize(new Dimension(400, 30));
 		JLabel labelPlacar2 = new JLabel("Pontos");
 		labelPlacar2.setMinimumSize(new Dimension(400, 30));
@@ -445,7 +442,45 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 				this.dispose();
 			}
 			else if(esporte instanceof Volei) {
+				if(fieldSet1.getText().isEmpty() || fieldSet2.getText().isEmpty() || fieldSet3.getText().isEmpty() || fieldSet4.getText().isEmpty() || 
+						fieldSet5.getText().isEmpty() || fieldSet6.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Os pontos dos primeiros 3 sets são obrigatórios!", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+					return;
+				}
+				((PartidaVolei) partida).setPontosSet1Parti1(Integer.parseInt(fieldSet1.getText()));
+				((PartidaVolei) partida).setPontosSet1Parti2(Integer.parseInt(fieldSet2.getText()));
+				((PartidaVolei) partida).setPontosSet2Parti1(Integer.parseInt(fieldSet3.getText()));
+				((PartidaVolei) partida).setPontosSet2Parti2(Integer.parseInt(fieldSet4.getText()));
+				((PartidaVolei) partida).setPontosSet3Parti1(Integer.parseInt(fieldSet5.getText()));
+				((PartidaVolei) partida).setPontosSet3Parti2(Integer.parseInt(fieldSet6.getText()));
+				if(!fieldSet7.getText().isEmpty() && !fieldSet8.getText().isEmpty()){
+					((PartidaVolei) partida).setPontosSet4Parti1(Integer.parseInt(fieldSet7.getText()));
+					((PartidaVolei) partida).setPontosSet4Parti2(Integer.parseInt(fieldSet8.getText()));
+					if(!fieldSet9.getText().isEmpty() && !fieldSet10.getText().isEmpty()){
+						((PartidaVolei) partida).setPontosSet5Parti1(Integer.parseInt(fieldSet9.getText()));
+						((PartidaVolei) partida).setPontosSet5Parti2(Integer.parseInt(fieldSet10.getText()));
+					}
+				}
+					
+				((PartidaVolei) partida).calculaVencedor();
 				
+				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+				
+				try{ 
+					((PartidaVolei) partida).setData(ft.parse(fieldData.getText() + " " + fieldHora.getText()));
+				} catch(ParseException ex){ 
+					JOptionPane.showMessageDialog(null, "Campos de data e hora estão em formatos inválidos.", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+					return;
+				}
+				((PartidaVolei) partida).setDescricao(textAreaDescricao.getText());
+				BancoSelecao bs = BancoSelecao.getInstance();
+				try {
+					bs.salvarPartidaVolei((PartidaVolei) partida);
+				} catch (IOException e1) {
+					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar.", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+				}
+				JOptionPane.showMessageDialog(null, "Partida salva com sucesso!", "Sucesso!", JOptionPane.PLAIN_MESSAGE);
+				this.dispose();
 			}
 		}
 		
