@@ -311,7 +311,6 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		JPanel grupoPlacar1 = new JPanel();
 		grupoPlacar1.setLayout(new BoxLayout(grupoPlacar1, BoxLayout.PAGE_AXIS));
-		//field1 = new JTextField();
 		field1.setMaximumSize(new Dimension(400, 30));
 		JLabel labelPlacar1 = new JLabel("Pontos");
 		labelPlacar1.setMinimumSize(new Dimension(400, 30));
@@ -322,7 +321,6 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		JPanel grupoPlacar2 = new JPanel();
 		grupoPlacar2.setLayout(new BoxLayout(grupoPlacar2, BoxLayout.PAGE_AXIS));
-		//field2 = new JTextField();
 		field2.setMaximumSize(new Dimension(400, 30));
 		JLabel labelPlacar2 = new JLabel("Pontos");
 		labelPlacar2.setMinimumSize(new Dimension(400, 30));
