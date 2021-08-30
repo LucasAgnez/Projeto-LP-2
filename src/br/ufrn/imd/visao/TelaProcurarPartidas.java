@@ -1,14 +1,17 @@
 package br.ufrn.imd.visao;
 
 import java.awt.Container;
-import java.awt.FlowLayout;
 import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTable;
 
 import br.ufrn.imd.modelo.esportes.Basquete;
@@ -21,6 +24,7 @@ import br.ufrn.imd.modelo.tablemodel.PartidaVoleiTableModel;
 
 public class TelaProcurarPartidas extends JFrame implements ActionListener{
 	
+	private static final int T_BORDA = 20;
 	private static final long serialVersionUID = 1L;
 	PartidaFutebolTableModel pftm;
 	PartidaVoleiTableModel pvtm;
@@ -31,21 +35,35 @@ public class TelaProcurarPartidas extends JFrame implements ActionListener{
 	public TelaProcurarPartidas(Esporte e) {
 		Container ct = this.getContentPane();
 		ct.setLayout((new GridLayout(1, 1)));
-		setLayout(new FlowLayout());
+		
+		JPanel panelTabela = new JPanel();
+		panelTabela.setLayout(new BoxLayout(panelTabela, BoxLayout.PAGE_AXIS));
+		
+		
+		JLabel labelTabela = new JLabel("Partidas");
+		labelTabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
+		panelTabela.add(labelTabela);
+		
 		if(e instanceof Futebol) {
-			pftm = new PartidaFutebolTableModel();
+			pftm = new PartidaFutebolTableModel(e);
 			tabela = new JTable(pftm);
 		}
 		else if (e instanceof Volei) {
-			pvtm = new PartidaVoleiTableModel();
+			pvtm = new PartidaVoleiTableModel(e);
 			tabela = new JTable(pvtm);
 		}
 		else if(e instanceof Basquete) {
-			pbtm = new PartidaBasqueteTableModel();
+			pbtm = new PartidaBasqueteTableModel(e);
 			tabela = new JTable(pbtm);
 		}
+
+		tabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
+		panelTabela.add(tabela);
 		
-		ct.add(tabela);
+		panelTabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
+		
+		
+		ct.add(panelTabela);
 		
 		
 		int larguraJanela = 600;

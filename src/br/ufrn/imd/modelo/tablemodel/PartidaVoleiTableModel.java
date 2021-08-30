@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
 import br.ufrn.imd.controle.BancoSelecao;
+import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.partidas.PartidaVolei;
 
 public class PartidaVoleiTableModel extends AbstractTableModel{
@@ -12,7 +13,7 @@ public class PartidaVoleiTableModel extends AbstractTableModel{
 	private BancoSelecao bs = BancoSelecao.getInstance();
 	private ArrayList<PartidaVolei> dados;
 	
-	public PartidaVoleiTableModel() {
+	public PartidaVoleiTableModel(Esporte e) {
 		dados = bs.getPartidasVolei();
 	}
 

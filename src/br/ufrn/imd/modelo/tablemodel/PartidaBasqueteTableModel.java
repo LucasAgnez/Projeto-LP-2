@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
 import br.ufrn.imd.controle.BancoSelecao;
+import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.partidas.PartidaBasquete;
 
 public class PartidaBasqueteTableModel extends AbstractTableModel{
@@ -13,7 +14,7 @@ public class PartidaBasqueteTableModel extends AbstractTableModel{
 	private ArrayList<PartidaBasquete> dados;
 
 	
-	public PartidaBasqueteTableModel() {
+	public PartidaBasqueteTableModel(Esporte e) {
 		dados = bs.getPartidasBasquete();
 	}
 
