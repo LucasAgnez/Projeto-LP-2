@@ -1,15 +1,18 @@
 package br.ufrn.imd.visao;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.FlowLayout;
 import java.awt.GraphicsEnvironment;
-import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTable;
 
 import br.ufrn.imd.modelo.tablemodel.AtletaTableModel;
@@ -17,18 +20,34 @@ import br.ufrn.imd.modelo.tablemodel.AtletaTableModel;
 public class TelaExibirAtletas extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
+	private static final int T_BORDA = 20;
+	
 	AtletaTableModel atm;
 	JTable tabela;
 	
+	
 	public TelaExibirAtletas(String s) throws FileNotFoundException {
 		Container ct = this.getContentPane();
-		ct.setLayout((new GridLayout(1, 1)));
+		ct.setLayout((new BorderLayout()));
 		
-		setLayout(new FlowLayout());
+		JPanel panelTabela = new JPanel();
+		panelTabela.setLayout(new BoxLayout(panelTabela, BoxLayout.PAGE_AXIS));
+		
+		
+		JLabel labelTabela = new JLabel("Atletas");
+		labelTabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
+		panelTabela.add(labelTabela);
+		
 		atm = new AtletaTableModel(s);
 		
 		tabela = new JTable(atm);
-		ct.add(tabela);
+		tabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
+		panelTabela.add(tabela);
+		
+		panelTabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
+		
+		
+		ct.add(panelTabela);
 		
 		int larguraJanela = 600;
 		int alturaJanela = 400;

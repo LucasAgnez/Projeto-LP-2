@@ -11,6 +11,7 @@ public class PartidaFutebolTableModel extends AbstractTableModel{
 	private static final long serialVersionUID = 1L;
 	private BancoSelecao bs = BancoSelecao.getInstance();
 	private ArrayList<PartidaFutebol> dados;
+	private String[] colunas = {"Data", "Participante 1","Gols", "Participante 2","Descricao"};
 	
 	public PartidaFutebolTableModel() {
 		dados = bs.getPartidasFutebol();
@@ -18,19 +19,7 @@ public class PartidaFutebolTableModel extends AbstractTableModel{
 
 	@Override
 	public String getColumnName(int column) {
-		switch(column) {
-			case 0:
-				return "Data";
-			case 1: 
-				return "Participante 1";
-			case 2:	
-				return "Gols";
-			case 3:
-				return "Participante 2";
-			case 4:
-				return "Descricao";
-		}
-		return null;
+		return colunas[column];
 	}
 	
 	@Override
