@@ -15,6 +15,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -70,12 +71,16 @@ public class TelaProcurarAtletas extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Confirmar")) {
 			String s = fieldAtletaBuscado.getText();
+			if(s.isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Campo de pesquisa não pode ficar vazio.", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+				return;
+			}
 			TelaExibirAtletas telaExibirAtletas = null;
 			try {
 				telaExibirAtletas = new TelaExibirAtletas(s);
 			} catch (FileNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				JOptionPane.showMessageDialog(null, "Erro na hora de consultar banco de dados.", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+				return;
 			}
 			telaExibirAtletas.setVisible(true);
 		}

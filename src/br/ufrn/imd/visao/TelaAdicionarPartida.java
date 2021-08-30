@@ -404,6 +404,7 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 					bs.salvarPartidaFutebol((PartidaFutebol) partida);
 				} catch (IOException e1) {
 					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar.", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+					return;
 				}
 				JOptionPane.showMessageDialog(null, "Partida salva com sucesso!", "Sucesso!", JOptionPane.PLAIN_MESSAGE);
 				this.dispose();
@@ -432,6 +433,7 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 					bs.salvarPartidaBasquete((PartidaBasquete) partida);
 				} catch (IOException e1) {
 					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar.", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+					return;
 				}
 				JOptionPane.showMessageDialog(null, "Partida salva com sucesso!", "Sucesso!", JOptionPane.PLAIN_MESSAGE);
 				this.dispose();
@@ -473,6 +475,7 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 					bs.salvarPartidaVolei((PartidaVolei) partida);
 				} catch (IOException e1) {
 					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar.", "Tente novamente", JOptionPane.ERROR_MESSAGE);
+					return;
 				}
 				JOptionPane.showMessageDialog(null, "Partida salva com sucesso!", "Sucesso!", JOptionPane.PLAIN_MESSAGE);
 				this.dispose();
