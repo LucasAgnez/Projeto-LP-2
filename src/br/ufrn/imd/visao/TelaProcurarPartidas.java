@@ -12,6 +12,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import br.ufrn.imd.modelo.esportes.Basquete;
@@ -58,7 +59,9 @@ public class TelaProcurarPartidas extends JFrame implements ActionListener{
 		}
 
 		tabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
-		panelTabela.add(tabela);
+		JScrollPane sp = new JScrollPane(tabela);
+		sp.setBorder(null);
+		panelTabela.add(sp);
 		
 		panelTabela.setBorder(BorderFactory.createEmptyBorder(T_BORDA, T_BORDA, T_BORDA, T_BORDA));
 		
