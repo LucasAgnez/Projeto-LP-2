@@ -446,5 +446,27 @@ public class BancoSelecao {
 	    fw.close();	
 	    partidasBasquete.add(partida);
 	}
+	
+	public void salvarPartidaVolei(PartidaVolei partida) throws IOException{
+		String linha = String.valueOf(partida.getParticipante1().getID()) + "," + 
+				String.valueOf(partida.getParticipante2().getID()) + "," +
+				partida.getDescricao() + "," +
+				String.valueOf(partida.getPontosSet1Parti1()) + "," +
+				String.valueOf(partida.getPontosSet1Parti2()) + "," + 
+				String.valueOf(partida.getPontosSet2Parti1()) + "," +
+				String.valueOf(partida.getPontosSet2Parti2()) + "," + 
+				String.valueOf(partida.getPontosSet3Parti1()) + "," +
+				String.valueOf(partida.getPontosSet3Parti2()) + "," +
+				String.valueOf(partida.getPontosSet4Parti2()) + "," + 
+				String.valueOf(partida.getPontosSet5Parti1()) + "," +
+				String.valueOf(partida.getPontosSet5Parti2()) + "," + 
+				String.format("%td/%<tm/%<tY %<tH:%<tM", partida.getData());
+		
+		
+	    FileWriter fw = new FileWriter("resources" + File.separator + "partidas_volei.csv", true); 
+	    fw.write(System.getProperty("line.separator") + linha);
+	    fw.close();	
+	    partidasVolei.add(partida);
+	}
 		
 }
