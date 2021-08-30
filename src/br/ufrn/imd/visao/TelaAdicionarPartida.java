@@ -30,10 +30,12 @@ import br.ufrn.imd.controle.BancoSelecao;
 import br.ufrn.imd.modelo.atletas.Selecao;
 import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.esportes.Futebol;
+import br.ufrn.imd.modelo.esportes.Volei;
 import br.ufrn.imd.modelo.esportes.Basquete;
 import br.ufrn.imd.modelo.partidas.Partida;
 import br.ufrn.imd.modelo.partidas.PartidaBasquete;
 import br.ufrn.imd.modelo.partidas.PartidaFutebol;
+import br.ufrn.imd.modelo.partidas.PartidaVolei;
 
 public class TelaAdicionarPartida extends JFrame implements ActionListener {
 	
@@ -236,6 +238,14 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 			if(esporte instanceof Futebol) {
 				((PartidaFutebol) partida).setParticipante1((Selecao) comboBoxPaises1.getSelectedItem());
 				((PartidaFutebol) partida).setParticipante2((Selecao) comboBoxPaises2.getSelectedItem());
+			}
+			else if(esporte instanceof Basquete) {
+				((PartidaBasquete) partida).setParticipante1((Selecao) comboBoxPaises1.getSelectedItem());
+				((PartidaBasquete) partida).setParticipante2((Selecao) comboBoxPaises2.getSelectedItem());
+			}
+			else if(esporte instanceof Volei) {
+				((PartidaVolei) partida).setParticipante1((Selecao) comboBoxPaises1.getSelectedItem());
+				((PartidaVolei) partida).setParticipante2((Selecao) comboBoxPaises2.getSelectedItem());
 			}
 			labelTitulo.setText("Adicione dados da partida:");
 			CardLayout cl = (CardLayout)(panelCardCentral.getLayout());
