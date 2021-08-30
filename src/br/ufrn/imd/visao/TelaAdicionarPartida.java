@@ -182,10 +182,14 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		labelDescricao.setBorder(BorderFactory.createEmptyBorder(0, 0, 5, 0));
 		JPanel panelDescricao = new JPanel();
 		panelDescricao.setLayout(new BoxLayout(panelDescricao, BoxLayout.LINE_AXIS));
-		textAreaDescricao = new JTextArea();
+		textAreaDescricao = new JTextArea(5, 30);
 		panelDescricao.setBorder(BorderFactory.createEmptyBorder(T_BORDA/2, 0, T_BORDA, 0));
 		grupoDescricao.add(labelDescricao);
-		grupoDescricao.add(textAreaDescricao);
+		textAreaDescricao.setLineWrap(true);
+		JScrollPane spDescricao = new JScrollPane(textAreaDescricao);
+		spDescricao.setBorder(null);
+		grupoDescricao.add(spDescricao);
+		
 		
 		panelDescricao.add(grupoDescricao);
 		
