@@ -30,7 +30,9 @@ import br.ufrn.imd.controle.BancoSelecao;
 import br.ufrn.imd.modelo.atletas.Selecao;
 import br.ufrn.imd.modelo.esportes.Esporte;
 import br.ufrn.imd.modelo.esportes.Futebol;
+import br.ufrn.imd.modelo.esportes.Basquete;
 import br.ufrn.imd.modelo.partidas.Partida;
+import br.ufrn.imd.modelo.partidas.PartidaBasquete;
 import br.ufrn.imd.modelo.partidas.PartidaFutebol;
 
 public class TelaAdicionarPartida extends JFrame implements ActionListener {
@@ -137,6 +139,11 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		if(esporte instanceof Futebol) {
 			partida = new PartidaFutebol();
+			panelPontos = montaPainelPontosFutebol();
+			panelPontos.setPreferredSize(new Dimension(100, 30));
+		}
+		else if(esporte instanceof Basquete) {
+			partida = new PartidaBasquete();
 			panelPontos = montaPainelPontosFutebol();
 			panelPontos.setPreferredSize(new Dimension(100, 30));
 		}
@@ -249,6 +256,8 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 				} catch (IOException e1) {
 					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar. Tente novamente.");
 				}
+				JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+				this.dispose();
 			}
 		}
 		

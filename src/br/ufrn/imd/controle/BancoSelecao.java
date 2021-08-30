@@ -185,6 +185,16 @@ public class BancoSelecao {
 				tmpPartida.setPlacarParticipante1(Integer.parseInt(data[3]));
 				tmpPartida.setPlacarParticipante2(Integer.parseInt(data[4]));
 				tmpPartida.calculaVencedor();
+				
+				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+				
+				try{ 
+					tmpPartida.setData(ft.parse(data[5])); 
+				} catch(ParseException e){ 
+					System.err.println("Erro ao analisar data usando " + ft); 
+					System.exit(1);
+				}
+				
 				partidas.add(tmpPartida);
 				
 			}			
