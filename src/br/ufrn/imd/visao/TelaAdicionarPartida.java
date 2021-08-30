@@ -105,7 +105,7 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		ct.add(panelBotoes, BorderLayout.PAGE_END);
 		
 		//Configurando tamanho, posição e título da janela
-		int larguraJanela = 600;
+		int larguraJanela = 400;
         int alturaJanela = 400;
 		setSize(larguraJanela, alturaJanela);
 		Point centro = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
@@ -184,10 +184,25 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		panelPlacares.setLayout(new BoxLayout(panelPlacares, BoxLayout.LINE_AXIS));
 		JLabel labelX = new JLabel("X");
 		labelX.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 30));
+		
+		JPanel grupoPlacar1 = new JPanel();
+		grupoPlacar1.setLayout(new BoxLayout(grupoPlacar1, BoxLayout.PAGE_AXIS));
 		fieldPlacarFutebol1 = new JTextField();
-		fieldPlacarFutebol2 = new JTextField();
 		fieldPlacarFutebol1.setMaximumSize(new Dimension(200, 30));
+		JLabel labelPlacar1 = new JLabel("Gols");
+		grupoPlacar1.add(labelPlacar1);
+		grupoPlacar1.add(fieldPlacarFutebol1);
+		grupoPlacar1.setMaximumSize(new Dimension(200, 30));
+		
+		JPanel grupoPlacar2 = new JPanel();
+		grupoPlacar2.setLayout(new BoxLayout(grupoPlacar2, BoxLayout.PAGE_AXIS));
+		fieldPlacarFutebol2 = new JTextField();
 		fieldPlacarFutebol2.setMaximumSize(new Dimension(200, 30));
+		JLabel labelPlacar2 = new JLabel("Gols");
+		grupoPlacar2.add(labelPlacar2);
+		grupoPlacar2.add(fieldPlacarFutebol2);
+		grupoPlacar2.setMaximumSize(new Dimension(200, 30));
+		
 		
 		//Ignora qualquer entrada que não for número ou a tecla de backspace
 		fieldPlacarFutebol1.addKeyListener(new KeyAdapter() {
@@ -207,9 +222,9 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 			}
 		});
 		
-		panelPlacares.add(fieldPlacarFutebol1);
+		panelPlacares.add(grupoPlacar1);
 		panelPlacares.add(labelX);
-		panelPlacares.add(fieldPlacarFutebol2);
+		panelPlacares.add(grupoPlacar2);
 		
 		return panelPlacares;
 	}
@@ -256,7 +271,35 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 				} catch (IOException e1) {
 					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar. Tente novamente.");
 				}
-				JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+				JOptionPane.showMessageDialog(null, "Partida salva com sucesso!");
+				this.dispose();
+			}
+			
+			else if(esporte instanceof Basquete) {
+				if(fieldPlacarFutebol1.getText().isEmpty() || fieldPlacarFutebol2.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Campos de pontos são obrigatórios!");
+					return;
+				}
+				((PartidaBasquete) partida).setPontuacaoParticipante1(Integer.parseInt(fieldPlacarFutebol1.getText()));
+				((PartidaBasquete) partida).setPontuacaoParticipante2(Integer.parseInt(fieldPlacarFutebol2.getText()));
+				((PartidaBasquete) partida).calculaVencedor();
+				
+				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+				
+				try{ 
+					((PartidaBasquete) partida).setData(ft.parse(fieldData.getText() + " " + fieldHora.getText()));
+				} catch(ParseException ex){ 
+					JOptionPane.showMessageDialog(null, "Campos de data e hora estão em formatos inválidos. Tente novamente.");
+					return;
+				}
+				((PartidaBasquete) partida).setDescricao(textAreaDescricao.getText());
+				BancoSelecao bs = BancoSelecao.getInstance();
+				try {
+					bs.salvarPartidaBasquete((PartidaBasquete) partida);
+				} catch (IOException e1) {
+					JOptionPane.showMessageDialog(null, "Um problema aconteceu na hora de salvar. Tente novamente.");
+				}
+				JOptionPane.showMessageDialog(null, "Partida salva com sucesso!");
 				this.dispose();
 			}
 		}
