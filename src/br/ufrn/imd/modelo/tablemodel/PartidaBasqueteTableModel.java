@@ -1,6 +1,7 @@
 package br.ufrn.imd.modelo.tablemodel;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -15,7 +16,9 @@ public class PartidaBasqueteTableModel extends AbstractTableModel{
 
 	
 	public PartidaBasqueteTableModel(Esporte e) {
-		dados = bs.getPartidasBasquete();
+		dados = (ArrayList<PartidaBasquete>) bs.getPartidasBasquete().stream()
+				.filter(p -> p.getParticipante1().getEsporte().getGenero().equals(e.getGenero()))
+				.collect(Collectors.toList());
 	}
 
 	@Override

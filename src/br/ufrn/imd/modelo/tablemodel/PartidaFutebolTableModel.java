@@ -1,6 +1,7 @@
 package br.ufrn.imd.modelo.tablemodel;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -15,7 +16,9 @@ public class PartidaFutebolTableModel extends AbstractTableModel{
 	private String[] colunas = {"Data", "Participante 1","Gols", "Participante 2","Descricao"};
 	
 	public PartidaFutebolTableModel(Esporte e) {
-		dados = bs.getPartidasFutebol();
+		dados = (ArrayList<PartidaFutebol>) bs.getPartidasFutebol().stream()
+				.filter(p -> p.getParticipante1().getEsporte().getGenero().equals(e.getGenero()))
+				.collect(Collectors.toList());
 	}
 
 	@Override
