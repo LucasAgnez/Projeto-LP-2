@@ -196,19 +196,17 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		//Define painel de data e hora
 		fieldData = new JTextField();
 		fieldHora = new JTextField();
-		fieldData.setMinimumSize(new Dimension(400, 30));
-		fieldHora.setMinimumSize(new Dimension(400, 30));
 		JPanel panelDataHora = new JPanel();
 	
-		panelDataHora.setPreferredSize(new Dimension(800, 65));
+		
 		panelDataHora.setLayout(new BoxLayout(panelDataHora, BoxLayout.LINE_AXIS));
-		fieldData.setMaximumSize(new Dimension(200, 30));
-		fieldHora.setMaximumSize(new Dimension(200, 30));
+		panelDataHora.setPreferredSize(new Dimension(860, 65));
 		
 		JPanel grupoData = new JPanel();
 		grupoData.setLayout(new BoxLayout(grupoData, BoxLayout.PAGE_AXIS));
-		JLabel labelData = new JLabel("Data");
+		JLabel labelData = new JLabel("Data (--/--/----)");
 		labelData.setMinimumSize(new Dimension(400, 30));
+		fieldData.setMaximumSize(new Dimension(400, 30));
 		labelData.setBorder(BorderFactory.createEmptyBorder(0, 0, 5, 0));
 		grupoData.add(labelData);
 		grupoData.add(fieldData);
@@ -216,8 +214,9 @@ public class TelaAdicionarPartida extends JFrame implements ActionListener {
 		
 		JPanel grupoHora = new JPanel();
 		grupoHora.setLayout(new BoxLayout(grupoHora, BoxLayout.PAGE_AXIS));
-		JLabel labelHora = new JLabel("Hora");
+		JLabel labelHora = new JLabel("Hora (--:--)");
 		labelHora.setMinimumSize(new Dimension(400, 30));
+		fieldHora.setMaximumSize(new Dimension(400, 30));
 		labelHora.setBorder(BorderFactory.createEmptyBorder(0, 0, 5, 0));
 		grupoHora.add(labelHora);
 		grupoHora.add(fieldHora);
