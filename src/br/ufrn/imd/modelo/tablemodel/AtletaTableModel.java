@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
-
 import br.ufrn.imd.controle.BancoSelecao;
 import br.ufrn.imd.modelo.atletas.Atleta;
 import br.ufrn.imd.modelo.atletas.AtletaColetivo;

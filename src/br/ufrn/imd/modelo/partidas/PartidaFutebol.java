@@ -14,12 +14,6 @@ public class PartidaFutebol extends Partida {
 		super(participante1, participante2);
 		this.placarParticipante1 = placarParticipante1;
 		this.placarParticipante2 = placarParticipante2;
-		if(placarParticipante1 > placarParticipante2) {
-			setVencedor(participante1);
-		}
-		else if(placarParticipante1 < placarParticipante2) {
-			setVencedor(participante2);
-		}
 	}
 
 	public int getPlacarParticipante1() {
@@ -40,7 +34,7 @@ public class PartidaFutebol extends Partida {
 			this.vencedor = this.participante1;
 		}
 		else {
-			this.vencedor = this.participante1;
+			this.vencedor = this.participante2;
 		}
 	}
 }

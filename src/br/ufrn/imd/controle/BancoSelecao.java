@@ -89,16 +89,14 @@ public class BancoSelecao {
 				
 				tmpPartida.setParticipante1(this.getSelecaoPorID(Integer.parseInt(data[0])));
 				tmpPartida.setParticipante2(this.getSelecaoPorID(Integer.parseInt(data[1])));
-				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
-						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
-				tmpPartida.setVencedor(vencedor);
-				tmpPartida.setDescricao(data[3]);
-				tmpPartida.setPontuacaoParticipante1(Integer.parseInt(data[4]));
-				tmpPartida.setPontuacaoParticipante2(Integer.parseInt(data[5]));
+				tmpPartida.setDescricao(data[2]);
+				tmpPartida.setPontuacaoParticipante1(Integer.parseInt(data[3]));
+				tmpPartida.setPontuacaoParticipante2(Integer.parseInt(data[4]));
+				tmpPartida.calculaVencedor();
 				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 				
 				try{ 
-					tmpPartida.setData(ft.parse(data[6])); 
+					tmpPartida.setData(ft.parse(data[5])); 
 				} catch(ParseException e){ 
 					System.err.println("Erro ao analisar data usando " + ft); 
 					System.exit(1);
@@ -132,24 +130,24 @@ public class BancoSelecao {
 				
 				tmpPartida.setParticipante1(this.getSelecaoPorID(Integer.parseInt(data[0])));
 				tmpPartida.setParticipante2(this.getSelecaoPorID(Integer.parseInt(data[1])));
-				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
-						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
-				tmpPartida.setVencedor(vencedor);
-				tmpPartida.setDescricao(data[3]);
-				tmpPartida.setPontosSet1Parti1(Integer.parseInt(data[4]));
-				tmpPartida.setPontosSet1Parti2(Integer.parseInt(data[5]));
-				tmpPartida.setPontosSet2Parti1(Integer.parseInt(data[6]));
-				tmpPartida.setPontosSet2Parti2(Integer.parseInt(data[7]));
-				tmpPartida.setPontosSet3Parti1(Integer.parseInt(data[8]));
-				tmpPartida.setPontosSet3Parti2(Integer.parseInt(data[9]));
-				tmpPartida.setPontosSet4Parti1(Integer.parseInt(data[10]));
-				tmpPartida.setPontosSet4Parti2(Integer.parseInt(data[11]));
-				tmpPartida.setPontosSet5Parti1(Integer.parseInt(data[12]));
-				tmpPartida.setPontosSet5Parti2(Integer.parseInt(data[13]));
+				tmpPartida.setDescricao(data[2]);
+				tmpPartida.setPontosSet1Parti1(Integer.parseInt(data[3]));
+				tmpPartida.setPontosSet1Parti2(Integer.parseInt(data[4]));
+				tmpPartida.setPontosSet2Parti1(Integer.parseInt(data[5]));
+				tmpPartida.setPontosSet2Parti2(Integer.parseInt(data[6]));
+				tmpPartida.setPontosSet3Parti1(Integer.parseInt(data[7]));
+				tmpPartida.setPontosSet3Parti2(Integer.parseInt(data[8]));
+				tmpPartida.setPontosSet4Parti1(Integer.parseInt(data[9]));
+				tmpPartida.setPontosSet4Parti2(Integer.parseInt(data[10]));
+				tmpPartida.setPontosSet5Parti1(Integer.parseInt(data[11]));
+				tmpPartida.setPontosSet5Parti2(Integer.parseInt(data[12]));
 				SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 				
+				tmpPartida.calculaSets();
+				tmpPartida.calculaVencedor();
+				
 				try{ 
-					tmpPartida.setData(ft.parse(data[14])); 
+					tmpPartida.setData(ft.parse(data[13])); 
 				} catch(ParseException e){ 
 					System.err.println("Erro ao analisar data usando " + ft); 
 					System.exit(1);
@@ -183,13 +181,10 @@ public class BancoSelecao {
 				
 				tmpPartida.setParticipante1(this.getSelecaoPorID(Integer.parseInt(data[0])));
 				tmpPartida.setParticipante2(this.getSelecaoPorID(Integer.parseInt(data[1])));
-				Selecao vencedor = tmpPartida.getParticipante1().getID() == Integer.parseInt(data[2])? 
-						tmpPartida.getParticipante1() : tmpPartida.getParticipante2(); 
-				tmpPartida.setVencedor(vencedor);
-				tmpPartida.setDescricao(data[3]);
-				tmpPartida.setPlacarParticipante1(Integer.parseInt(data[4]));
-				tmpPartida.setPlacarParticipante2(Integer.parseInt(data[5]));
-				
+				tmpPartida.setDescricao(data[2]);
+				tmpPartida.setPlacarParticipante1(Integer.parseInt(data[3]));
+				tmpPartida.setPlacarParticipante2(Integer.parseInt(data[4]));
+				tmpPartida.calculaVencedor();
 				partidas.add(tmpPartida);
 				
 			}			

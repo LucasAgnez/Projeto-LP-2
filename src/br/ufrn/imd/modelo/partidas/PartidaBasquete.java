@@ -34,4 +34,12 @@ public class PartidaBasquete extends Partida{
 	public void setPontuacaoParticipante2(int pontuacaoParticipante2) {
 		this.pontuacaoParticipante2 = pontuacaoParticipante2;
 	}
+	public void calculaVencedor() {
+		if(pontuacaoParticipante1 > pontuacaoParticipante2) {
+			setVencedor(participante1);
+		}
+		else {
+			setVencedor(participante2);
+		}
+	}
 }

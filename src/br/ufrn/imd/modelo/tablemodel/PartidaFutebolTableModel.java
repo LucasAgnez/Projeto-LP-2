@@ -28,8 +28,6 @@ public class PartidaFutebolTableModel extends AbstractTableModel{
 			case 3:
 				return "Participante 2";
 			case 4:
-				return "Vencedor";
-			case 5:
 				return "Descricao";
 		}
 		return null;
@@ -44,7 +42,7 @@ public class PartidaFutebolTableModel extends AbstractTableModel{
 	@Override
 	public int getColumnCount() {
 		// TODO Auto-generated method stub
-		return 6;
+		return 5;
 	}
 
 	@Override
@@ -59,8 +57,6 @@ public class PartidaFutebolTableModel extends AbstractTableModel{
 			case 3:
 				return dados.get(linha).getParticipante2();
 			case 4:
-				return dados.get(linha).getVencedor();
-			case 5:
 				return dados.get(linha).getDescricao();
 		}
 		return null;

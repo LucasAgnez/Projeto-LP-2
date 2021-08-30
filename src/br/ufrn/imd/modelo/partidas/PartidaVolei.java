@@ -108,5 +108,34 @@ public class PartidaVolei extends Partida{
 	public void setPontosSet5Parti2(int pontosSet5Parti2) {
 		this.pontosSet5Parti2 = pontosSet5Parti2;
 	}
+	
+	public void calculaSets() {
+		setsParticipante1 = 0;
+		setsParticipante2 = 0;
+		
+		if(pontosSet1Parti1 > pontosSet1Parti2) { setsParticipante1++;}
+		else if(pontosSet1Parti1 < pontosSet1Parti2) { setsParticipante2++;}
+		
+		if(pontosSet2Parti1 > pontosSet2Parti2) { setsParticipante1++;}
+		else if(pontosSet2Parti1 < pontosSet2Parti2) { setsParticipante2++;}
+		
+		if(pontosSet3Parti1 > pontosSet3Parti2) { setsParticipante1++;}
+		else if(pontosSet3Parti1 < pontosSet3Parti2) { setsParticipante2++;}
+		
+		if(pontosSet4Parti1 > pontosSet4Parti2) { setsParticipante1++;}
+		else if(pontosSet4Parti1 < pontosSet4Parti2) { setsParticipante2++;} 
+		
+		if(pontosSet5Parti1 > pontosSet5Parti2) { setsParticipante1++;}	
+		else if(pontosSet5Parti1 < pontosSet5Parti2) { setsParticipante2++;}
+	}
+	
+	public void calculaVencedor() {
+		if(setsParticipante1 > setsParticipante2 ) {
+			setVencedor(participante1);
+		}
+		else {
+			setVencedor(participante2);
+		}
+	}
 
 }
