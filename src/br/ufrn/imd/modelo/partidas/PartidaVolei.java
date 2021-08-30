@@ -130,6 +130,7 @@ public class PartidaVolei extends Partida{
 	}
 	
 	public void calculaVencedor() {
+		calculaSets();
 		if(setsParticipante1 > setsParticipante2 ) {
 			setVencedor(participante1);
 		}
