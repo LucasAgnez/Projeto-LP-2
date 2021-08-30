@@ -58,7 +58,7 @@ public class TelaProcurarAtletas extends JFrame implements ActionListener {
 		ct.add(panelBotoes);
 
 		int larguraJanela = 600;
-		int alturaJanela = 400;
+		int alturaJanela = 150;
 		setSize(larguraJanela, alturaJanela);
 		Point centro = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
 		setBounds(centro.x - larguraJanela / 2, centro.y - alturaJanela / 2, larguraJanela, alturaJanela);
