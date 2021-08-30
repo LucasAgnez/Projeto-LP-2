@@ -55,7 +55,7 @@ public class AtletaTableModel extends AbstractTableModel {
 			case 0:
 				return dados.get(linha).getNome();
 			case 1:
-				return String.format("%td/%<tm/%<tY %<tH:%<tM", dados.get(linha).getDataNascimento());
+				return String.format("%td/%<tm/%<tY", dados.get(linha).getDataNascimento());
 			case 2:
 				return dados.get(linha).getPeso();
 			case 3:
