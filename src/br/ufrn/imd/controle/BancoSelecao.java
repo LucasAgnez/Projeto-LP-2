@@ -457,7 +457,8 @@ public class BancoSelecao {
 				String.valueOf(partida.getPontosSet2Parti2()) + "," + 
 				String.valueOf(partida.getPontosSet3Parti1()) + "," +
 				String.valueOf(partida.getPontosSet3Parti2()) + "," +
-				String.valueOf(partida.getPontosSet4Parti2()) + "," + 
+				String.valueOf(partida.getPontosSet4Parti1()) + "," +
+				String.valueOf(partida.getPontosSet4Parti2()) + "," +
 				String.valueOf(partida.getPontosSet5Parti1()) + "," +
 				String.valueOf(partida.getPontosSet5Parti2()) + "," + 
 				String.format("%td/%<tm/%<tY %<tH:%<tM", partida.getData());
